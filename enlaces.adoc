@@ -1,0 +1,3 @@
+* https://web.archive.org/web/20120316134026/http://www.visualland.net/view.php?cid=1028&protocol=Encapsulation&title=2.%20Router%20encap&ctype=1
+* https://web.archive.org/web/20120807024653/http://learn-networking.com/tcp-ip/how-encapsulation-works-within-the-tcpip-model
+* https://keepcoding.io/blog/que-es-subnetting/#:~:text=El%20Subnetting%20o%20subneteo%20es,principal%20y%20a%20un%20mismo%20dominio.
