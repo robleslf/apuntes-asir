@@ -1,0 +1,400 @@
+TEMA 1
+SISTEMA INFORMÁTICO. ESTRUCTURA
+FUNCIONAL.
+Introducción a la Informática
+El término informática proviene de la conjunción de dos palabras: "información" y "automática". La informática nos permite gestionar la información en forma de datos e instrucciones, nos permite controlar sistemas de maquinaria, crear y modificar enormes bases de datos, realizar los efectos especiales de una película, realizar tareas rutinarias como la confección de documentos, llevar la contabilidad de una empresa, etc.
+Podemos definir la informática como: "Ciencia que estudia el tratamiento racional y automático de la información además de la tecnología para mantenerla conservada y utilizarla de manera eficiente y económica".
+La principal herramienta que actualmente nos permite el tratamiento automático de la información es el ordenador, que podemos definir como "Máquina compuesta de elementos físicos, en su mayoría de origen electrónico, capaz de realizar diferentes operaciones sobre la información: lectura, almacenamiento, cálculos, comparaciones y escritura a gran velocidad y con gran precisión".
+
+Historia de la informática
+En 1937, la Universidad de Harvard, un equipo de ingenieros de IBM, comenzó a desarrollar un proyecto que en 1944 culminó en la primera computadora electromecánica, denominada calculadora automática de secuencia controlada, aunque conocida popularmente como MARK I. Tenía 16,6 metros de largo, 2,6 de alto, pesaba 70 toneladas y estaba constituida por 800.000 piezas móviles, y su cableado era de 800.000 metros. Sumaba dos números en menos de un segundo y los multiplicaba en menos de tres. Podía trabajar con operandos de hasta 23 cifras.
+Fueron las exigencias militares, concretamente la necesidad de elaborar tablas para el cálculo de trayectoria de proyectiles, las que indujeron a los científicos estadounidenses a construir lo que se considera el primer ordenador electrónico, el ENIAC (Electronic Numerical Integrator And Calculator), que entró en funcionamiento en 1945 y estaba compuesto por 18.000 válvulas y un consumo de 160 Kw (lo mismo que 2666 bombillas de 60w). Era mil veces más rápido que el MARK I. En 1951 se construye la primera computadora puesta a la venta, el UNIVAC I, a partir de ahí se disparó el desarrollo de nuevas máquinas y su producción en serie.
+
+Generaciones de ordenadores
+Desde que en la primera parte de la década de los cincuenta comenzaron a utilizarse los ordenadores con fines comerciales, estos evolucionaron de tal manera que cabe destacar cinco generaciones:
+PRIMERA GENERACIÓN (1940-1952): Los ordenadores electrónicos de la primera generación fueron diseñados con VÁLVULAS ELECTRÓNICAS DE VACÍO. Su tamaño era enorme y su mantenimiento muy complicado y la fiabilidad escasa. El tiempo medio entre dos averías era de media hora. Los tiempos de cálculo de sus circuitos eran de varios microsegundos, por lo que la ejecución de programas largos era de varios días. Utilizaban como lenguaje de programación el LENGUAJE MÁQUINA. Como único soporte para almacenar la información utilizaban las TARJETAS PERFORADAS o CINTA PERFORADA.
+
+Generaciones de ordenadores
+SEGUNDA GENERACIÓN (1952-1964): Las válvulas son sustituidas por TRANSISTORES. Tal innovación redujo considerablemente el tamaño de los ordenadores y aumentó su fiabilidad, en consecuencia se vio aumentada su capacidad de cálculo y reducido su consumo. Su campo de utilización, hasta ahora científico y militar, se amplió al administrativo y universitario.
+Ofrecen la posibilidad de simultanear el cálculo puro con operaciones de entrada/salida. Aparece por primera vez la MEMORIA INTERNA a base de núcleos de ferrita y como memoria externa los primeros SOPORTES MAGNÉTICOS (la cinta magnética y los tambores magnéticos). Aparecen los LENGUAJES DE PROGRAMACIÓN el ensamblador, y algunos de alto nivel (COBOL, FORTRAN, ALGOL...).
+
+Generaciones de ordenadores
+TERCERA GENERACIÓN (1964-1971): El elemento más significativo es el CIRCUITO INTEGRADO, que consiste en el encapsulamiento de una gran cantidad de componentes electrónicos discretos, conformando uno o varios circuitos con una función determinada, sobre una pastilla de plástico.
+El tamaño de los ordenadores volvió a reducirse una vez más, aumentando su potencia de cálculo y su fiabilidad. Se pasó así de ordenadores capaces de ejecutar miles de instrucciones por segundo a otros que podían ejecutar millones de ellas en ese mismo tiempo. La miniaturización se extendió a todos los circuitos de la computadora.
+El software evolucionó de forma considerable, con la aparición de varios SISTEMAS OPERATIVOS. Comenzaron a utilizarse las memorias de semiconductores y los DISCOS MAGNÉTICOS.
+
+Generaciones de ordenadores
+CUARTA GENERACIÓN (1971-1981): En 1971, se produjo una nueva revolución en el mundo de los ordenadores, originada por el nacimiento del MICROPROCESADOR. Tecnología de muy alta integración y elevadísima velocidad y fiabilidad, introduciendo toda la UCP en una pastilla.
+La tecnología utilizada permitió la fabricación de microcomputadores y ordenadores personales de alta fiabilidad, velocidad y economía. Comenzaron a utilizarse los DISQUETES o floppy-disk como unidad de almacenamiento externo.
+Aparecieron una multitud de lenguajes de todo tipo y las REDES de transmisión de datos para conectar ordenadores.
+
+Generaciones de ordenadores
+QUINTA GENERACIÓN (1981- ): Al aumento constante de velocidad de proceso, y la miniaturización de sus componentes, hay que añadir la proliferación de las redes de ordenadores y dispositivos (redes integradas).
+Se crean ordenadores con "Inteligencia Artificial". Aparecen los lenguajes naturales (Lenguajes de quinta generación). Se integran en un mismo proyecto datos, imágenes y voz (MULTIMEDIA). Se generaliza el uso de la red de redes, INTERNET...
+
+Generaciones de ordenadores. Resumen
+• En 1945 se creó el primer ordenador llamado ENIAC.
+• En 1951 se pone a la venta el primer ordenador llamado UNIVAC I, luego UNIVAC II y UNIV
+
+AC III.
+• En cada generación los ordenadores son más potentes, pequeños y fiables.
+
+PAUSAR SI QUIERES VER LA TABLA; SI NO, CONTINUAMOS; TE DEJO 10 SEGUNDOS: 1, 2, 3, 4, 5, 6, 7, 8, 9 Y 10; SEGUIMOS:
+
+SISTEMAS INFORMÁTICOS
+
+El conjunto de órdenes o instrucciones que se introducen en un ordenador para realizar un proceso determinado se denomina programa. El conjunto de varios programas se llama aplicación informática. Por ejemplo, una aplicación informática puede ser un programa bancario, que consta de varios programas, cada uno de los cuales tiene una finalidad concreta: nóminas, préstamos, contabilidad... Así, el conjunto de instrucciones, programas y aplicaciones informáticas queda definido bajo el término software. Por otro lado, es necesario considerar que para que estos programas funcionen y puedan generar la información que el usuario necesita, se necesitan ciertos componentes físicos. Estos componentes físicos se agrupan bajo la denominación de hardware.
+
+SISTEMAS INFORMÁTICOS
+
+Sistema Informático: Hardware y software necesario para satisfacer determinadas necesidades del usuario. El hardware son los componentes físicos (tangibles), como el monitor, teclado, microprocesador, memoria, etc. El software es la parte intangible (programas y aplicaciones). Se puede dividir en:
+
+- Software base: Aquella parte del software sin la cual el ordenador no puede funcionar. También se denomina Sistema operativo.
+- Software de aplicación: La parte del software que sirve para procesar la información.
+
+Firmware: Es la parte intangible de los componentes hardware. Por ejemplo, el software con el que están programadas las memorias ROM, el software con el que se configuran dispositivos de comunicaciones como routers y switches, etc. Este software no es fácilmente modificable, una vez que se graba en un componente hardware queda prácticamente invariable a lo largo de la vida de este.
+
+Personal informático: Son las personas que utilizan, desarrollan o mantienen el hardware y el software.
+
+S.I. CAPAS
+
+ESTRUCTURA DEL PC. Modelo Von Neumann
+
+Toda computadora se basa en el modelo de Von Neumann expuesto en 1946 por el matemático húngaro John Louis Von Neumann. Una computadora está formada por tres partes fundamentales (Microprocesador, Memoria Principal y Unidades de E/S), las cuales desde el punto de vista del funcionamiento son independientes.
+
+CPU (Unidad Central de Proceso): Es el centro nervioso del ordenador, controla y gobierna todas las operaciones. Recibe información, la interpreta y la procesa mediante órdenes que envía a otros componentes del ordenador para que actúen en el momento y de la manera precisa.
+
+Unidad Aritmético-Lógica (UAL): Realiza operaciones aritméticas y lógicas, como sumas, restas, comparaciones, etc. Recibe datos de la U.C., realiza la operación y devuelve el resultado a la memoria principal.
+
+Unidad de Control (UC): Controla y dirige todas las operaciones del ordenador. Contiene elementos como el contador de programa, el registro de instrucción, el decodificador, el reloj y el secuenciador.
+
+Memoria Principal: Almacena las instrucciones y datos necesarios para el procesamiento. Cada posición de memoria tiene una dirección única.
+
+Unidades de Entrada y Salida (E/S): Permiten el intercambio de datos con el exterior y su almacenamiento.
+
+UNIDAD DE COMA FLOTANTE
+
+Hoy en día, la UCP también incluye una FPU (Floating Point Unit), una unidad de cálculo especializada en números de coma flotante, que alivia la carga de la UAL en cálculos matemáticos.
+
+Memoria Principal: Almacena instrucciones y datos necesarios para el procesamiento. Cada posición de memoria tiene una dirección única. Los registros asociados son el RDM (Registro de dirección de memoria), RIM (Registro de intercambio de memoria), selector de memoria y otros registros relacionados.
+
+En resumen, la estructura funcional de una computadora incluye la UCP, UAL, memoria principal y unidades de E/S, con sus respectivos registros y componentes que permiten el procesamiento de datos y la ejecución de programas.
+
+Procesador y Memoria
+Unidad de Control
+Memoria
+Central
+Unidad Aritmético-Lógica
+Instrucción
+Direcciones
+Datos y/o Resultados RIM
+R
+D
+M
+Señal de control R/W
+Selector de Memoria
+CACHÉ DEL PROCESADOR
+La memoria caché se utiliza para guardar las posiciones de la memoria principal
+más utilizadas. Almacenando la información en la caché, se incrementa
+enormemente la velocidad de adquisición de los datos.
+Cuando la caché contiene los datos que necesita la CPU, no hay tiempos de
+espera y se denomina acierto de caché. Cuando la caché no contiene los
+datos, se denomina fallo de caché, y la CPU tendrá que esperar hasta que la
+memoria principal entregue los datos.
+En la práctica existen al menos dos memorias caché. Se llaman
+memoria caché de Nivel 1 (L1), de Nivel 2 (L2), y si existe de Nivel 3 (L3).
+
+CACHÉ DEL PROCESADOR
+Pregunta: Si tener la memoria caché cerca del procesador es tan
+beneficioso, ¿por qué no se utiliza memoria caché para toda la
+memoria principal?
+Por una simple razón, la memoria caché generalmente utiliza un tipo de
+chip de memoria llamado SRAM (RAM estático), que es más caro y
+requiere más espacio físico por megabyte que el DRAM, que normalmente
+se utiliza para la memoria principal.
+Asimismo, mientras la memoria caché mejora el rendimiento general del
+sistema, esto se hace hasta cierto punto; el beneficio real de la memoria caché es
+almacenar las instrucciones que se utilizan con más frecuencia. Una
+memoria caché más grande mantendría más datos, pero si eso no se
+necesita con frecuencia, no hay un gran beneficio en tenerlo junto al
+procesador.
+
+CPU Y MP
+0 000
+3 011
+4 100
+5 101
+6 110
+7 111
+1 001
+2 010
+8
+Bus de Direcciones
+Memoria
+CPU Principal
+UC
+3
+Bus de Datos
+R1 R2 R3 R4
+AC
+Datos Posición
+ALU
+caché
+R
+D
+M
+RIM
+Celda de Memoria
+Ver ejemplo de ejecución de instrucción
+BUS
+El bus es el elemento de comunicación entre los diferentes componentes del
+ordenador. Físicamente, su descripción es un conjunto de cables físicos
+utilizados para la transmisión de datos entre los componentes de un sistema
+informático.
+Los buses se caracterizan por:
+• Ancho: El número y disposición de sus líneas (cada línea transmite un
+bit).
+• Frecuencia: Se mide en Hz, es el número de paquetes de datos que
+pueden ser enviados o recibidos por segundo.
+• Velocidad de transferencia: Cantidad de datos que se pueden transmitir
+por unidad de tiempo.
+
+BUS
+El bus puede ser un cuello de botella. Los buses están constituidos por
+entre 50 y 100 líneas distintas que a su vez se dividen en los siguientes
+subconjuntos.
+• Bus de datos: Transmite información entre la CPU y el resto de las
+unidades.
+• Bus de direcciones: Contiene la dirección del destino (de la memoria o
+E/S) al que van dirigidos los datos que se están transmitiendo por las líneas de
+datos.
+• Bus de control: Mediante las líneas de control se transmiten las órdenes
+procedentes de la unidad de control a las otras unidades.
+Algunos diseños utilizan líneas eléctricas multiplexadas para el bus de
+direcciones y el bus de datos. Esto significa que un mismo conjunto de líneas
+eléctricas se comporta unas veces como bus de direcciones y otras veces como
+bus de datos, pero nunca al mismo tiempo. Una línea de control permite
+discernir cuál de las dos funciones está activa.
+
+BUS
+Bus del sistema: Hay un único bus compartido que interconecta tanto al
+procesador como a la memoria principal, así como a todos los dispositivos de
+entrada/salida. A este bus se le conoce con el nombre de bus del sistema.
+Cuando se habla del ancho del bus de datos y el ancho del bus de direcciones,
+nos referimos al ancho de este bus.
+Antiguamente teníamos el Bus Frontal del sistema (FSB), actualmente este bus
+fue sustituido por Intel QuickPath Interconnect y posteriormente DMI en Intel y
+Hypertransport y posteriormente UMI en AMD.
+Buses de E/S: Los dispositivos de entrada/salida se comunican entre sí a través
+de un bus dedicado que recibe el nombre de bus de entrada/salida. Como los
+dispositivos de entrada/salida requieren estar conectados con la memoria
+principal, se habilita un acceso a esta desde el bus de entrada/salida mediante un
+dispositivo llamado adaptador de bus. Esta organización libera tráfico entre el
+procesador y la memoria, separando las transacciones de entrada/salida.
+Independientemente de la velocidad del bus del sistema, tenemos la velocidad
+interna del microprocesador. Esta velocidad es mucho mayor que las anteriores y
+es la que suele anunciarse en un ordenador.
+
+Placas base antiguas
+En algunas arquitecturas, la memoria RAM se comunica directamente
+con el procesador sin pasar por el Northbridge.
+• En AMD, esta tecnología se llama HyperTransport.
+• En Intel, Intel QuickPath Interconnect (disponible a partir de socket 1156) y DMI.
+
+Desaparece FSB
+Desaparece Intel QuickPath Interconnect
+Desaparece Chipset Norte y Chipset Sur
+En esta placa de Intel desaparece el chipset sur.
+Quedando un único Chip llamado (PCH) -
+Platform Controller Hub
+Tiene la tecnología:
+DMI (Direct Media Interface) - Mejora de
+Intel Quick Path Interconnect
+FDI - FDI (Flexible Display Interface). Este
+enlace surge del hecho de tener una tarjeta
+gráfica Integrada en el propio procesador.
+Ahora necesitamos llevar los gráficos desde
+este elemento a la pantalla. Esta línea lleva los
+datos desde el procesador a las partes del
+chipset encargadas de darle servicio.
+DMI 1.0 transfiere 10 Gbps
+DMI 2.0 fue introducida en 2011 y transfiere
+20 Gbps.
+
+Placa moderna Intel
+
+Placa Base Moderna AMD
+
+Medidas de Información
+En el sistema binario solo existen dos símbolos diferentes: 1 y 0.
+
+ Una
+información que solo puede tomar como valores el 0 y el 1 se denomina bit y
+forma la unidad básica de información.
+Un ordenador, debido a su construcción basada fundamentalmente en
+circuitos electrónicos digitales, trabaja con el sistema binario (1, 0). Este es el
+motivo que nos obliga a transformar internamente todos nuestros datos,
+tanto numéricos como alfanuméricos, a una representación binaria para que la
+máquina sea capaz de procesarlos.
+
+Medidas de Información
+Capacidad
+Byte: Agrupación de 8 bits.
+1 KB (kilobyte) = 1000 bytes = 10^3 bytes
+1 MB (megabyte) = 1000 KB = 10^6 bytes
+1 GB (gigabyte) = 1000 MB = 10^9 bytes
+1 TB (terabyte) = 1000 GB = 10^12 bytes
+1 PB (petabyte) = 1000 TB = 10^15 bytes
+1 EB (exabyte) = 1000 PB = 10^18 bytes
+1 ZB (zettabyte) = 1000 EB = 10^21 bytes
+1 YB (yottabyte) = 1000 ZB = 10^24 bytes
+
+Byte: Agrupación de 8 bits.
+1 KiB (kibibyte) = 1024 bytes = 2^10 bytes
+1 MiB (mebibyte) = 1024 KiB = 2^20 bytes
+1 GiB (gibibyte) = 1024 MiB = 2^30 bytes
+1 TiB (tebibyte) = 1024 GiB = 2^40 bytes
+1 PiB (pebibyte) = 1024 TiB = 2^50 bytes
+1 EiB (exbibyte) = 1024 PiB = 2^60 bytes
+1 ZiB (zebibyte) = 1024 EiB = 2^70 bytes
+1 YiB (yobibyte) = 1024 ZiB = 2^80 bytes
+
+Medidas de Información
+Capacidad
+¡Problema! Hasta hace unos años (1999), no existían los KiB, MiB, GiB...
+Tampoco se utilizaban las potencias de diez cuando se medía la
+información.
+Antes:
+1 KB = 1024 bytes.
+1 MB = 1024 KB bytes.
+...
+Esto hoy en día no debería ser correcto. La transparencia anterior es cómo
+se debe nombrar y hacer las conversiones según los estándares. Pero...
+muchos fabricantes y comerciantes aún utilizan la nomenclatura incorrecta.
+
+Medidas de Información
+Capacidad
+Solución: Conocer el problema.
+1. Cuando un fabricante te habla de 4 GB de memoria RAM, se refiere a 4
+GiB.
+2. Cuando un fabricante dice que la caché es de 256 KB, significa que tiene
+256 KiB.
+3. Cuando un fabricante dice que un disco duro tiene 500 GB, significa que
+tiene 500 GB = 500 * 1000 MB.
+4. En general, capacidades de memorias principales siempre se utilizan
+múltiplos de 1024 y capacidades de memorias secundarias se utilizan
+múltiplos de 1000.
+
+Medidas de Información
+Capacidad
+Medida formal para la capacidad
+Convertir 24756 bits a KiB y KB
+24756 / 8 / 1000 = 3,072 KB
+24756 / 8 / 1024 = 3 KiB
+
+Convertir 6291456 bytes a MiB y MB
+6291456 / 1024 / 1024 = 6 MiB
+6291456 / 1000 / 1000 = 6,29 MB
+
+Medidas de Información
+Capacidad
+Engaño en la capacidad de los discos
+¿Cuál es la capacidad real de un disco duro SATA publicitado de 500 GB?
+Los fabricantes hacen la trampa de pasar de una medida a otra
+realizando multiplicaciones/divisiones por/entre 1000 en lugar de 1024.
+500 GB * 1000 * 1000 * 1000 = 500000000000 bytes
+Pero en realidad, el sistema operativo Windows lo reconoce como
+500000000000 / 1024 / 1024 / 1024 = 465,66 GB o más formalmente
+465,66 GiB
+
+Hay que tener en cuenta:
+• Según el fabricante, la cantidad del disco puede variar ligeramente y para ahorrar costes
+suele redondearse a la baja.
+• La capacidad expresada con prefijo decimal resulta en una cifra mayor que si se expresara
+con prefijo binario.
+• Cuanto mayor capacidad tiene un disco duro, mayor es la discrepancia entre las cifras que
+expresan esta capacidad con prefijo decimal y binario.
+
+Medidas de Información
+Frecuencia de un Bus y Transferencia
+La frecuencia de un bus se mide en Hz (ciclos por segundo).
+1 Hz = 1 ciclo/seg
+1 KHz = 1000 Hz
+1 MHz = 1000 KHz
+Existen buses que en cada ciclo realizan varias transferencias (una, dos,
+tres...). Hoy en día, los fabricantes pueden utilizar otra unidad para indicar la
+velocidad de un bus, que son las T/s o Transferencias/seg.
+1 MT/s = 10^6 transferencias/seg
+1 GT/s = 10^9 transferencias/seg
+Por ejemplo, si un bus trabaja a 100 MHz y realiza 4 transferencias en cada
+ciclo, entonces:
+100 Mciclos/seg * 4 transferencias/ciclo = 400 MT/s
+
+Medidas de Información
+Taxa de transferencia ou Ancho de banda
+Es la velocidad a la que se transmiten los datos por un canal, también
+puede denominarse bit rate.
+Tasa de Transferencia = Ancho de bus * Velocidad del bus (frecuencia)
+Se mide en información por segundo, por lo tanto:
+1 bps = 1 bit/seg = 1 b/seg
+1 Byte/seg = 1 B/seg = 8 bits/seg
+1 KB/seg = 1000 Byte/seg
+1 MB/seg = 1000 KB/seg = 1000000 B/seg
+
+Problema: Si tengo un bus que tiene un ancho de 32 bits y trabaja a 200
+Hz y realiza una transferencia por ciclo, significa que hace 200 transferencias
+de datos por segundo. Para calcular el ancho de banda:
+200 ciclos/seg * 32 bits/transferencia * 1 transferencia/ciclo * 1 byte/8 bits = 800 B/seg
+
+Medidas de Información
+Direcciónamiento
+Número de direcciones de memoria capaz de gestionar.
+Depende del tamaño del bus de direcciones. Así, con un tamaño de X bits podemos
+direccionar 2^X direcciones.
+Por ejemplo, con 32 bits podemos direccionar 2^32 = 4 GB de memoria.
+
+Medidas de Información
+Velocidad de procesamiento
+La velocidad de procesamiento se mide en Hz y múltiplos del Hz. Indica el
+número de ciclos por segundo a los que trabaja el microprocesador. Cada
+instrucción del conjunto de instrucciones que entiende el procesador lleva una
+serie de ciclos para ejecutarse. Habrá instrucciones que se ejecuten en dos
+ciclos, otras en tres, otras en cuatro...
+1 Hz = 1 ciclo/seg
+1 KHz = 1000 Hz
+1 MHz = 1000 KHz
+
+Medidas de Información
+Velocidad de procesamiento
+Problema: Si un microprocesador tiene una frecuencia de 300 KHz y un programa tiene 100 instrucciones de las cuales el 25% se ejecutan en un solo ciclo, un 50% necesitan dos ciclos para ejecutarse y el resto necesitan 5 ciclos para ejecutarse, ¿cuántos ciclos de microprocesador necesita el programa para ejecutarse completo? ¿cuánto tiempo le lleva?
+25 instrucciones * 1 ciclo/instrucción + 50 instrucciones * 2 ciclos/instrucción + 25 instrucciones * 5 ciclos/instrucción = 250 ciclos
+300 KHz = 300 * 1000 ciclos/segundo => 1/300000 segundos/ciclo
+250 ciclos * 1/300000 segundos/ciclo = 0,00083333 segundos
+
+Medidas de Información
+Rendimiento de un computador
+FLOPS: Operaciones en punto flotante por segundo.
+Medida del rendimiento de un computador, especialmente en cálculos científicos que utilizan un gran número de operaciones en coma flotante.
+1 MFLOPS = 106 FLOPS
+1 GFLOPS = 109 FLOPS
+1 TFLOPS = 1012 FLOPS
+...
+¡CUIDADO! No se debe tomar como única medida para valorar la capacidad de un computador.
+
+Sistemas de Codificación
+Sistemas de codificación numérica
+Un sistema de numeración es el conjunto de símbolos y reglas que se utilizan para representar cantidades y datos numéricos. Estos sistemas de codificación numérica se caracterizan por la base.
+- Binario: Utiliza dos símbolos diferentes, cero y uno (Es el sistema que utiliza la computadora).
+- Octal: Sistema en base 8 que utiliza los números del 0 al 7.
+- Decimal: Sistema en base 10. Utiliza los números del 0 al 9.
+- Hexadecimal: Sistema de numeración en base 16 que utiliza los números del 0 al 9 y las letras de la A a la F.Codificación alfanumérica
+Para representar datos alfanuméricos, se necesitan otros sistemas de codificación llamados Sistemas de Codificación Alfanumérica. Estos sistemas se utilizan para representar una cantidad determinada de símbolos en formato binario, donde a cada símbolo le corresponde una combinación de bits.
+
+La asignación de códigos es arbitraria, lo que significa que cada fabricante podría asignar una combinación diferente al mismo carácter. Para evitar el caos que esto podría causar, se crean códigos que normalizan esta situación y son aceptados como estándares en toda la comunidad informática.
+
+Los sistemas de codificación alfanumérica más utilizados son:
+- EBCDIC: Fue el primer código interno ideado para ordenadores y fue creado por IBM para sus propios ordenadores. Aunque no se utiliza mucho en microcomputadoras, es ampliamente conocido y aceptado internacionalmente, especialmente como código para mainframes (grandes computadoras) y minicomputadoras. Utiliza 8 bits y puede representar 256 caracteres.
+
+- UNICODE: Es un estándar internacional ampliamente utilizado en la mayoría de los sistemas operativos actuales y navegadores de Internet. Permite que un producto de software esté disponible para varias plataformas, idiomas o países sin necesidad de modificar su diseño. Existe una tabla única para todos los países, y existen variantes como UTF-8 (que utiliza de 1 a 4 bytes) y UTF-16 (que utiliza de 16 a 24 bits), además de UTF-32 (los primeros 128 caracteres son iguales a los del ASCII).
+
+- ASCII: Es el Código Estándar Estadounidense y puede representar 128 símbolos en el estándar ASCII, mientras que en la versión extendida (ASCII extendido) se pueden representar 256 símbolos diferentes. El ASCII estándar es universal, pero la versión extendida incorpora caracteres específicos para cada país, ya que los diferentes símbolos no cabrían en una única tabla. Los caracteres a partir del 128 pueden variar entre países y sistemas operativos. Actualmente, se siguen utilizando variantes como ISO-8859-1 (windows-1252), que es la norma ISO que define la codificación del alfabeto latino, incluyendo letras acentuadas y especiales, necesarias para la escritura de las lenguas de Europa occidental como el afrikáans, alemán, aragonés, asturiano, catalán, danés, escocés, español, feroés, finés, francés, gaélico, gallego, inglés, islandés, italiano, neerlandés, noruego, portugués, sueco y euskera.

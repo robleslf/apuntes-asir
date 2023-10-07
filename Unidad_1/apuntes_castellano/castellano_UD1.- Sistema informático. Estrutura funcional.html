@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>TEMA 1
+SISTEMA INFORMÁTICO. ESTRUCTURA
+FUNCIONAL.
+Introducción a la Informática
+El término informática proviene de la conjunción de dos palabras: "información" y "automática". La informática nos permite gestionar la información en forma de datos e instrucciones, nos permite controlar sistemas de maquinaria, crear y modificar enormes bases de datos, realizar los efectos especiales de una película, realizar tareas rutinarias como la confección de documentos, llevar la contabilidad de una empresa, etc.
+Podemos definir la informática como: "Ciencia que estudia el tratamiento racional y automático de la información además de la tecnología para mantenerla conservada y utilizarla de manera eficiente y económica".
+La principal herramienta que actualmente nos permite el tratamiento automático de la información es el ordenador, que podemos definir como "Máquina compuesta de elementos físicos, en su mayoría de origen electrónico, capaz de realizar diferentes operaciones sobre la información: lectura, almacenamiento, cálculos, comparaciones y escritura a gran velocidad y con gran precisión".</p>
+</div>
+<div class="paragraph">
+<p>Historia de la informática
+En 1937, la Universidad de Harvard, un equipo de ingenieros de IBM, comenzó a desarrollar un proyecto que en 1944 culminó en la primera computadora electromecánica, denominada calculadora automática de secuencia controlada, aunque conocida popularmente como MARK I. Tenía 16,6 metros de largo, 2,6 de alto, pesaba 70 toneladas y estaba constituida por 800.000 piezas móviles, y su cableado era de 800.000 metros. Sumaba dos números en menos de un segundo y los multiplicaba en menos de tres. Podía trabajar con operandos de hasta 23 cifras.
+Fueron las exigencias militares, concretamente la necesidad de elaborar tablas para el cálculo de trayectoria de proyectiles, las que indujeron a los científicos estadounidenses a construir lo que se considera el primer ordenador electrónico, el ENIAC (Electronic Numerical Integrator And Calculator), que entró en funcionamiento en 1945 y estaba compuesto por 18.000 válvulas y un consumo de 160 Kw (lo mismo que 2666 bombillas de 60w). Era mil veces más rápido que el MARK I. En 1951 se construye la primera computadora puesta a la venta, el UNIVAC I, a partir de ahí se disparó el desarrollo de nuevas máquinas y su producción en serie.</p>
+</div>
+<div class="paragraph">
+<p>Generaciones de ordenadores
+Desde que en la primera parte de la década de los cincuenta comenzaron a utilizarse los ordenadores con fines comerciales, estos evolucionaron de tal manera que cabe destacar cinco generaciones:
+PRIMERA GENERACIÓN (1940-1952): Los ordenadores electrónicos de la primera generación fueron diseñados con VÁLVULAS ELECTRÓNICAS DE VACÍO. Su tamaño era enorme y su mantenimiento muy complicado y la fiabilidad escasa. El tiempo medio entre dos averías era de media hora. Los tiempos de cálculo de sus circuitos eran de varios microsegundos, por lo que la ejecución de programas largos era de varios días. Utilizaban como lenguaje de programación el LENGUAJE MÁQUINA. Como único soporte para almacenar la información utilizaban las TARJETAS PERFORADAS o CINTA PERFORADA.</p>
+</div>
+<div class="paragraph">
+<p>Generaciones de ordenadores
+SEGUNDA GENERACIÓN (1952-1964): Las válvulas son sustituidas por TRANSISTORES. Tal innovación redujo considerablemente el tamaño de los ordenadores y aumentó su fiabilidad, en consecuencia se vio aumentada su capacidad de cálculo y reducido su consumo. Su campo de utilización, hasta ahora científico y militar, se amplió al administrativo y universitario.
+Ofrecen la posibilidad de simultanear el cálculo puro con operaciones de entrada/salida. Aparece por primera vez la MEMORIA INTERNA a base de núcleos de ferrita y como memoria externa los primeros SOPORTES MAGNÉTICOS (la cinta magnética y los tambores magnéticos). Aparecen los LENGUAJES DE PROGRAMACIÓN el ensamblador, y algunos de alto nivel (COBOL, FORTRAN, ALGOL&#8230;&#8203;).</p>
+</div>
+<div class="paragraph">
+<p>Generaciones de ordenadores
+TERCERA GENERACIÓN (1964-1971): El elemento más significativo es el CIRCUITO INTEGRADO, que consiste en el encapsulamiento de una gran cantidad de componentes electrónicos discretos, conformando uno o varios circuitos con una función determinada, sobre una pastilla de plástico.
+El tamaño de los ordenadores volvió a reducirse una vez más, aumentando su potencia de cálculo y su fiabilidad. Se pasó así de ordenadores capaces de ejecutar miles de instrucciones por segundo a otros que podían ejecutar millones de ellas en ese mismo tiempo. La miniaturización se extendió a todos los circuitos de la computadora.
+El software evolucionó de forma considerable, con la aparición de varios SISTEMAS OPERATIVOS. Comenzaron a utilizarse las memorias de semiconductores y los DISCOS MAGNÉTICOS.</p>
+</div>
+<div class="paragraph">
+<p>Generaciones de ordenadores
+CUARTA GENERACIÓN (1971-1981): En 1971, se produjo una nueva revolución en el mundo de los ordenadores, originada por el nacimiento del MICROPROCESADOR. Tecnología de muy alta integración y elevadísima velocidad y fiabilidad, introduciendo toda la UCP en una pastilla.
+La tecnología utilizada permitió la fabricación de microcomputadores y ordenadores personales de alta fiabilidad, velocidad y economía. Comenzaron a utilizarse los DISQUETES o floppy-disk como unidad de almacenamiento externo.
+Aparecieron una multitud de lenguajes de todo tipo y las REDES de transmisión de datos para conectar ordenadores.</p>
+</div>
+<div class="paragraph">
+<p>Generaciones de ordenadores
+QUINTA GENERACIÓN (1981- ): Al aumento constante de velocidad de proceso, y la miniaturización de sus componentes, hay que añadir la proliferación de las redes de ordenadores y dispositivos (redes integradas).
+Se crean ordenadores con "Inteligencia Artificial". Aparecen los lenguajes naturales (Lenguajes de quinta generación). Se integran en un mismo proyecto datos, imágenes y voz (MULTIMEDIA). Se generaliza el uso de la red de redes, INTERNET&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Generaciones de ordenadores. Resumen
+• En 1945 se creó el primer ordenador llamado ENIAC.
+• En 1951 se pone a la venta el primer ordenador llamado UNIVAC I, luego UNIVAC II y UNIV</p>
+</div>
+<div class="paragraph">
+<p>AC III.
+• En cada generación los ordenadores son más potentes, pequeños y fiables.</p>
+</div>
+<div class="paragraph">
+<p>PAUSAR SI QUIERES VER LA TABLA; SI NO, CONTINUAMOS; TE DEJO 10 SEGUNDOS: 1, 2, 3, 4, 5, 6, 7, 8, 9 Y 10; SEGUIMOS:</p>
+</div>
+<div class="paragraph">
+<p>SISTEMAS INFORMÁTICOS</p>
+</div>
+<div class="paragraph">
+<p>El conjunto de órdenes o instrucciones que se introducen en un ordenador para realizar un proceso determinado se denomina programa. El conjunto de varios programas se llama aplicación informática. Por ejemplo, una aplicación informática puede ser un programa bancario, que consta de varios programas, cada uno de los cuales tiene una finalidad concreta: nóminas, préstamos, contabilidad&#8230;&#8203; Así, el conjunto de instrucciones, programas y aplicaciones informáticas queda definido bajo el término software. Por otro lado, es necesario considerar que para que estos programas funcionen y puedan generar la información que el usuario necesita, se necesitan ciertos componentes físicos. Estos componentes físicos se agrupan bajo la denominación de hardware.</p>
+</div>
+<div class="paragraph">
+<p>SISTEMAS INFORMÁTICOS</p>
+</div>
+<div class="paragraph">
+<p>Sistema Informático: Hardware y software necesario para satisfacer determinadas necesidades del usuario. El hardware son los componentes físicos (tangibles), como el monitor, teclado, microprocesador, memoria, etc. El software es la parte intangible (programas y aplicaciones). Se puede dividir en:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Software base: Aquella parte del software sin la cual el ordenador no puede funcionar. También se denomina Sistema operativo.</p>
+</li>
+<li>
+<p>Software de aplicación: La parte del software que sirve para procesar la información.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Firmware: Es la parte intangible de los componentes hardware. Por ejemplo, el software con el que están programadas las memorias ROM, el software con el que se configuran dispositivos de comunicaciones como routers y switches, etc. Este software no es fácilmente modificable, una vez que se graba en un componente hardware queda prácticamente invariable a lo largo de la vida de este.</p>
+</div>
+<div class="paragraph">
+<p>Personal informático: Son las personas que utilizan, desarrollan o mantienen el hardware y el software.</p>
+</div>
+<div class="paragraph">
+<p>S.I. CAPAS</p>
+</div>
+<div class="paragraph">
+<p>ESTRUCTURA DEL PC. Modelo Von Neumann</p>
+</div>
+<div class="paragraph">
+<p>Toda computadora se basa en el modelo de Von Neumann expuesto en 1946 por el matemático húngaro John Louis Von Neumann. Una computadora está formada por tres partes fundamentales (Microprocesador, Memoria Principal y Unidades de E/S), las cuales desde el punto de vista del funcionamiento son independientes.</p>
+</div>
+<div class="paragraph">
+<p>CPU (Unidad Central de Proceso): Es el centro nervioso del ordenador, controla y gobierna todas las operaciones. Recibe información, la interpreta y la procesa mediante órdenes que envía a otros componentes del ordenador para que actúen en el momento y de la manera precisa.</p>
+</div>
+<div class="paragraph">
+<p>Unidad Aritmético-Lógica (UAL): Realiza operaciones aritméticas y lógicas, como sumas, restas, comparaciones, etc. Recibe datos de la U.C., realiza la operación y devuelve el resultado a la memoria principal.</p>
+</div>
+<div class="paragraph">
+<p>Unidad de Control (UC): Controla y dirige todas las operaciones del ordenador. Contiene elementos como el contador de programa, el registro de instrucción, el decodificador, el reloj y el secuenciador.</p>
+</div>
+<div class="paragraph">
+<p>Memoria Principal: Almacena las instrucciones y datos necesarios para el procesamiento. Cada posición de memoria tiene una dirección única.</p>
+</div>
+<div class="paragraph">
+<p>Unidades de Entrada y Salida (E/S): Permiten el intercambio de datos con el exterior y su almacenamiento.</p>
+</div>
+<div class="paragraph">
+<p>UNIDAD DE COMA FLOTANTE</p>
+</div>
+<div class="paragraph">
+<p>Hoy en día, la UCP también incluye una FPU (Floating Point Unit), una unidad de cálculo especializada en números de coma flotante, que alivia la carga de la UAL en cálculos matemáticos.</p>
+</div>
+<div class="paragraph">
+<p>Memoria Principal: Almacena instrucciones y datos necesarios para el procesamiento. Cada posición de memoria tiene una dirección única. Los registros asociados son el RDM (Registro de dirección de memoria), RIM (Registro de intercambio de memoria), selector de memoria y otros registros relacionados.</p>
+</div>
+<div class="paragraph">
+<p>En resumen, la estructura funcional de una computadora incluye la UCP, UAL, memoria principal y unidades de E/S, con sus respectivos registros y componentes que permiten el procesamiento de datos y la ejecución de programas.</p>
+</div>
+<div class="paragraph">
+<p>Procesador y Memoria
+Unidad de Control
+Memoria
+Central
+Unidad Aritmético-Lógica
+Instrucción
+Direcciones
+Datos y/o Resultados RIM
+R
+D
+M
+Señal de control R/W
+Selector de Memoria
+CACHÉ DEL PROCESADOR
+La memoria caché se utiliza para guardar las posiciones de la memoria principal
+más utilizadas. Almacenando la información en la caché, se incrementa
+enormemente la velocidad de adquisición de los datos.
+Cuando la caché contiene los datos que necesita la CPU, no hay tiempos de
+espera y se denomina acierto de caché. Cuando la caché no contiene los
+datos, se denomina fallo de caché, y la CPU tendrá que esperar hasta que la
+memoria principal entregue los datos.
+En la práctica existen al menos dos memorias caché. Se llaman
+memoria caché de Nivel 1 (L1), de Nivel 2 (L2), y si existe de Nivel 3 (L3).</p>
+</div>
+<div class="paragraph">
+<p>CACHÉ DEL PROCESADOR
+Pregunta: Si tener la memoria caché cerca del procesador es tan
+beneficioso, ¿por qué no se utiliza memoria caché para toda la
+memoria principal?
+Por una simple razón, la memoria caché generalmente utiliza un tipo de
+chip de memoria llamado SRAM (RAM estático), que es más caro y
+requiere más espacio físico por megabyte que el DRAM, que normalmente
+se utiliza para la memoria principal.
+Asimismo, mientras la memoria caché mejora el rendimiento general del
+sistema, esto se hace hasta cierto punto; el beneficio real de la memoria caché es
+almacenar las instrucciones que se utilizan con más frecuencia. Una
+memoria caché más grande mantendría más datos, pero si eso no se
+necesita con frecuencia, no hay un gran beneficio en tenerlo junto al
+procesador.</p>
+</div>
+<div class="paragraph">
+<p>CPU Y MP
+0 000
+3 011
+4 100
+5 101
+6 110
+7 111
+1 001
+2 010
+8
+Bus de Direcciones
+Memoria
+CPU Principal
+UC
+3
+Bus de Datos
+R1 R2 R3 R4
+AC
+Datos Posición
+ALU
+caché
+R
+D
+M
+RIM
+Celda de Memoria
+Ver ejemplo de ejecución de instrucción
+BUS
+El bus es el elemento de comunicación entre los diferentes componentes del
+ordenador. Físicamente, su descripción es un conjunto de cables físicos
+utilizados para la transmisión de datos entre los componentes de un sistema
+informático.
+Los buses se caracterizan por:
+• Ancho: El número y disposición de sus líneas (cada línea transmite un
+bit).
+• Frecuencia: Se mide en Hz, es el número de paquetes de datos que
+pueden ser enviados o recibidos por segundo.
+• Velocidad de transferencia: Cantidad de datos que se pueden transmitir
+por unidad de tiempo.</p>
+</div>
+<div class="paragraph">
+<p>BUS
+El bus puede ser un cuello de botella. Los buses están constituidos por
+entre 50 y 100 líneas distintas que a su vez se dividen en los siguientes
+subconjuntos.
+• Bus de datos: Transmite información entre la CPU y el resto de las
+unidades.
+• Bus de direcciones: Contiene la dirección del destino (de la memoria o
+E/S) al que van dirigidos los datos que se están transmitiendo por las líneas de
+datos.
+• Bus de control: Mediante las líneas de control se transmiten las órdenes
+procedentes de la unidad de control a las otras unidades.
+Algunos diseños utilizan líneas eléctricas multiplexadas para el bus de
+direcciones y el bus de datos. Esto significa que un mismo conjunto de líneas
+eléctricas se comporta unas veces como bus de direcciones y otras veces como
+bus de datos, pero nunca al mismo tiempo. Una línea de control permite
+discernir cuál de las dos funciones está activa.</p>
+</div>
+<div class="paragraph">
+<p>BUS
+Bus del sistema: Hay un único bus compartido que interconecta tanto al
+procesador como a la memoria principal, así como a todos los dispositivos de
+entrada/salida. A este bus se le conoce con el nombre de bus del sistema.
+Cuando se habla del ancho del bus de datos y el ancho del bus de direcciones,
+nos referimos al ancho de este bus.
+Antiguamente teníamos el Bus Frontal del sistema (FSB), actualmente este bus
+fue sustituido por Intel QuickPath Interconnect y posteriormente DMI en Intel y
+Hypertransport y posteriormente UMI en AMD.
+Buses de E/S: Los dispositivos de entrada/salida se comunican entre sí a través
+de un bus dedicado que recibe el nombre de bus de entrada/salida. Como los
+dispositivos de entrada/salida requieren estar conectados con la memoria
+principal, se habilita un acceso a esta desde el bus de entrada/salida mediante un
+dispositivo llamado adaptador de bus. Esta organización libera tráfico entre el
+procesador y la memoria, separando las transacciones de entrada/salida.
+Independientemente de la velocidad del bus del sistema, tenemos la velocidad
+interna del microprocesador. Esta velocidad es mucho mayor que las anteriores y
+es la que suele anunciarse en un ordenador.</p>
+</div>
+<div class="paragraph">
+<p>Placas base antiguas
+En algunas arquitecturas, la memoria RAM se comunica directamente
+con el procesador sin pasar por el Northbridge.
+• En AMD, esta tecnología se llama HyperTransport.
+• En Intel, Intel QuickPath Interconnect (disponible a partir de socket 1156) y DMI.</p>
+</div>
+<div class="paragraph">
+<p>Desaparece FSB
+Desaparece Intel QuickPath Interconnect
+Desaparece Chipset Norte y Chipset Sur
+En esta placa de Intel desaparece el chipset sur.
+Quedando un único Chip llamado (PCH) -
+Platform Controller Hub
+Tiene la tecnología:
+DMI (Direct Media Interface) - Mejora de
+Intel Quick Path Interconnect
+FDI - FDI (Flexible Display Interface). Este
+enlace surge del hecho de tener una tarjeta
+gráfica Integrada en el propio procesador.
+Ahora necesitamos llevar los gráficos desde
+este elemento a la pantalla. Esta línea lleva los
+datos desde el procesador a las partes del
+chipset encargadas de darle servicio.
+DMI 1.0 transfiere 10 Gbps
+DMI 2.0 fue introducida en 2011 y transfiere
+20 Gbps.</p>
+</div>
+<div class="paragraph">
+<p>Placa moderna Intel</p>
+</div>
+<div class="paragraph">
+<p>Placa Base Moderna AMD</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+En el sistema binario solo existen dos símbolos diferentes: 1 y 0.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> Una
+información que solo puede tomar como valores el 0 y el 1 se denomina bit y
+forma la unidad básica de información.
+Un ordenador, debido a su construcción basada fundamentalmente en
+circuitos electrónicos digitales, trabaja con el sistema binario (1, 0). Este es el
+motivo que nos obliga a transformar internamente todos nuestros datos,
+tanto numéricos como alfanuméricos, a una representación binaria para que la
+máquina sea capaz de procesarlos.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Capacidad
+Byte: Agrupación de 8 bits.
+1 KB (kilobyte) = 1000 bytes = 10^3 bytes
+1 MB (megabyte) = 1000 KB = 10^6 bytes
+1 GB (gigabyte) = 1000 MB = 10^9 bytes
+1 TB (terabyte) = 1000 GB = 10^12 bytes
+1 PB (petabyte) = 1000 TB = 10^15 bytes
+1 EB (exabyte) = 1000 PB = 10^18 bytes
+1 ZB (zettabyte) = 1000 EB = 10^21 bytes
+1 YB (yottabyte) = 1000 ZB = 10^24 bytes</p>
+</div>
+<div class="paragraph">
+<p>Byte: Agrupación de 8 bits.
+1 KiB (kibibyte) = 1024 bytes = 2^10 bytes
+1 MiB (mebibyte) = 1024 KiB = 2^20 bytes
+1 GiB (gibibyte) = 1024 MiB = 2^30 bytes
+1 TiB (tebibyte) = 1024 GiB = 2^40 bytes
+1 PiB (pebibyte) = 1024 TiB = 2^50 bytes
+1 EiB (exbibyte) = 1024 PiB = 2^60 bytes
+1 ZiB (zebibyte) = 1024 EiB = 2^70 bytes
+1 YiB (yobibyte) = 1024 ZiB = 2^80 bytes</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Capacidad
+¡Problema! Hasta hace unos años (1999), no existían los KiB, MiB, GiB&#8230;&#8203;
+Tampoco se utilizaban las potencias de diez cuando se medía la
+información.
+Antes:
+1 KB = 1024 bytes.
+1 MB = 1024 KB bytes.
+&#8230;&#8203;
+Esto hoy en día no debería ser correcto. La transparencia anterior es cómo
+se debe nombrar y hacer las conversiones según los estándares. Pero&#8230;&#8203;
+muchos fabricantes y comerciantes aún utilizan la nomenclatura incorrecta.</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Capacidad
+Solución: Conocer el problema.
+1. Cuando un fabricante te habla de 4 GB de memoria RAM, se refiere a 4
+GiB.
+2. Cuando un fabricante dice que la caché es de 256 KB, significa que tiene
+256 KiB.
+3. Cuando un fabricante dice que un disco duro tiene 500 GB, significa que
+tiene 500 GB = 500 * 1000 MB.
+4. En general, capacidades de memorias principales siempre se utilizan
+múltiplos de 1024 y capacidades de memorias secundarias se utilizan
+múltiplos de 1000.</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Capacidad
+Medida formal para la capacidad
+Convertir 24756 bits a KiB y KB
+24756 / 8 / 1000 = 3,072 KB
+24756 / 8 / 1024 = 3 KiB</p>
+</div>
+<div class="paragraph">
+<p>Convertir 6291456 bytes a MiB y MB
+6291456 / 1024 / 1024 = 6 MiB
+6291456 / 1000 / 1000 = 6,29 MB</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Capacidad
+Engaño en la capacidad de los discos
+¿Cuál es la capacidad real de un disco duro SATA publicitado de 500 GB?
+Los fabricantes hacen la trampa de pasar de una medida a otra
+realizando multiplicaciones/divisiones por/entre 1000 en lugar de 1024.
+500 GB * 1000 * 1000 * 1000 = 500000000000 bytes
+Pero en realidad, el sistema operativo Windows lo reconoce como
+500000000000 / 1024 / 1024 / 1024 = 465,66 GB o más formalmente
+465,66 GiB</p>
+</div>
+<div class="paragraph">
+<p>Hay que tener en cuenta:
+• Según el fabricante, la cantidad del disco puede variar ligeramente y para ahorrar costes
+suele redondearse a la baja.
+• La capacidad expresada con prefijo decimal resulta en una cifra mayor que si se expresara
+con prefijo binario.
+• Cuanto mayor capacidad tiene un disco duro, mayor es la discrepancia entre las cifras que
+expresan esta capacidad con prefijo decimal y binario.</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Frecuencia de un Bus y Transferencia
+La frecuencia de un bus se mide en Hz (ciclos por segundo).
+1 Hz = 1 ciclo/seg
+1 KHz = 1000 Hz
+1 MHz = 1000 KHz
+Existen buses que en cada ciclo realizan varias transferencias (una, dos,
+tres&#8230;&#8203;). Hoy en día, los fabricantes pueden utilizar otra unidad para indicar la
+velocidad de un bus, que son las T/s o Transferencias/seg.
+1 MT/s = 10^6 transferencias/seg
+1 GT/s = 10^9 transferencias/seg
+Por ejemplo, si un bus trabaja a 100 MHz y realiza 4 transferencias en cada
+ciclo, entonces:
+100 Mciclos/seg * 4 transferencias/ciclo = 400 MT/s</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Taxa de transferencia ou Ancho de banda
+Es la velocidad a la que se transmiten los datos por un canal, también
+puede denominarse bit rate.
+Tasa de Transferencia = Ancho de bus * Velocidad del bus (frecuencia)
+Se mide en información por segundo, por lo tanto:
+1 bps = 1 bit/seg = 1 b/seg
+1 Byte/seg = 1 B/seg = 8 bits/seg
+1 KB/seg = 1000 Byte/seg
+1 MB/seg = 1000 KB/seg = 1000000 B/seg</p>
+</div>
+<div class="paragraph">
+<p>Problema: Si tengo un bus que tiene un ancho de 32 bits y trabaja a 200
+Hz y realiza una transferencia por ciclo, significa que hace 200 transferencias
+de datos por segundo. Para calcular el ancho de banda:
+200 ciclos/seg * 32 bits/transferencia * 1 transferencia/ciclo * 1 byte/8 bits = 800 B/seg</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Direcciónamiento
+Número de direcciones de memoria capaz de gestionar.
+Depende del tamaño del bus de direcciones. Así, con un tamaño de X bits podemos
+direccionar 2^X direcciones.
+Por ejemplo, con 32 bits podemos direccionar 2^32 = 4 GB de memoria.</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Velocidad de procesamiento
+La velocidad de procesamiento se mide en Hz y múltiplos del Hz. Indica el
+número de ciclos por segundo a los que trabaja el microprocesador. Cada
+instrucción del conjunto de instrucciones que entiende el procesador lleva una
+serie de ciclos para ejecutarse. Habrá instrucciones que se ejecuten en dos
+ciclos, otras en tres, otras en cuatro&#8230;&#8203;
+1 Hz = 1 ciclo/seg
+1 KHz = 1000 Hz
+1 MHz = 1000 KHz</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Velocidad de procesamiento
+Problema: Si un microprocesador tiene una frecuencia de 300 KHz y un programa tiene 100 instrucciones de las cuales el 25% se ejecutan en un solo ciclo, un 50% necesitan dos ciclos para ejecutarse y el resto necesitan 5 ciclos para ejecutarse, ¿cuántos ciclos de microprocesador necesita el programa para ejecutarse completo? ¿cuánto tiempo le lleva?
+25 instrucciones * 1 ciclo/instrucción + 50 instrucciones * 2 ciclos/instrucción + 25 instrucciones * 5 ciclos/instrucción = 250 ciclos
+300 KHz = 300 * 1000 ciclos/segundo &#8658; 1/300000 segundos/ciclo
+250 ciclos * 1/300000 segundos/ciclo = 0,00083333 segundos</p>
+</div>
+<div class="paragraph">
+<p>Medidas de Información
+Rendimiento de un computador
+FLOPS: Operaciones en punto flotante por segundo.
+Medida del rendimiento de un computador, especialmente en cálculos científicos que utilizan un gran número de operaciones en coma flotante.
+1 MFLOPS = 106 FLOPS
+1 GFLOPS = 109 FLOPS
+1 TFLOPS = 1012 FLOPS
+&#8230;&#8203;
+¡CUIDADO! No se debe tomar como única medida para valorar la capacidad de un computador.</p>
+</div>
+<div class="paragraph">
+<p>Sistemas de Codificación
+Sistemas de codificación numérica
+Un sistema de numeración es el conjunto de símbolos y reglas que se utilizan para representar cantidades y datos numéricos. Estos sistemas de codificación numérica se caracterizan por la base.
+- Binario: Utiliza dos símbolos diferentes, cero y uno (Es el sistema que utiliza la computadora).
+- Octal: Sistema en base 8 que utiliza los números del 0 al 7.
+- Decimal: Sistema en base 10. Utiliza los números del 0 al 9.
+- Hexadecimal: Sistema de numeración en base 16 que utiliza los números del 0 al 9 y las letras de la A a la F.Codificación alfanumérica
+Para representar datos alfanuméricos, se necesitan otros sistemas de codificación llamados Sistemas de Codificación Alfanumérica. Estos sistemas se utilizan para representar una cantidad determinada de símbolos en formato binario, donde a cada símbolo le corresponde una combinación de bits.</p>
+</div>
+<div class="paragraph">
+<p>La asignación de códigos es arbitraria, lo que significa que cada fabricante podría asignar una combinación diferente al mismo carácter. Para evitar el caos que esto podría causar, se crean códigos que normalizan esta situación y son aceptados como estándares en toda la comunidad informática.</p>
+</div>
+<div class="paragraph">
+<p>Los sistemas de codificación alfanumérica más utilizados son:
+- EBCDIC: Fue el primer código interno ideado para ordenadores y fue creado por IBM para sus propios ordenadores. Aunque no se utiliza mucho en microcomputadoras, es ampliamente conocido y aceptado internacionalmente, especialmente como código para mainframes (grandes computadoras) y minicomputadoras. Utiliza 8 bits y puede representar 256 caracteres.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>UNICODE: Es un estándar internacional ampliamente utilizado en la mayoría de los sistemas operativos actuales y navegadores de Internet. Permite que un producto de software esté disponible para varias plataformas, idiomas o países sin necesidad de modificar su diseño. Existe una tabla única para todos los países, y existen variantes como UTF-8 (que utiliza de 1 a 4 bytes) y UTF-16 (que utiliza de 16 a 24 bits), además de UTF-32 (los primeros 128 caracteres son iguales a los del ASCII).</p>
+</li>
+<li>
+<p>ASCII: Es el Código Estándar Estadounidense y puede representar 128 símbolos en el estándar ASCII, mientras que en la versión extendida (ASCII extendido) se pueden representar 256 símbolos diferentes. El ASCII estándar es universal, pero la versión extendida incorpora caracteres específicos para cada país, ya que los diferentes símbolos no cabrían en una única tabla. Los caracteres a partir del 128 pueden variar entre países y sistemas operativos. Actualmente, se siguen utilizando variantes como ISO-8859-1 (windows-1252), que es la norma ISO que define la codificación del alfabeto latino, incluyendo letras acentuadas y especiales, necesarias para la escritura de las lenguas de Europa occidental como el afrikáans, alemán, aragonés, asturiano, catalán, danés, escocés, español, feroés, finés, francés, gaélico, gallego, inglés, islandés, italiano, neerlandés, noruego, portugués, sueco y euskera.</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2023-10-07 15:59:39 +0200
+</div>
+</div>
+</body>
+</html>
