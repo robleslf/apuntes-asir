@@ -1,0 +1,86 @@
+/* Fuentes */
+@font-face {
+    font-family: "Mooly";
+    src: url(../fonts/Mooli/Mooli-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(../fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
+
+/* Estilos generales */
+body {
+    font-family: "Raleway", Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background: linear-gradient(135deg, #e9e9e9, #a09d9d); /* Colores más oscuros para el fondo */
+}
+
+h1, h2 {
+    color: #337f81; /* Un púrpura oscuro para títulos */
+    font-family: "Orbitron", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h3 {
+    color: #082b49; /* Un azul más elegante para encabezados de tercer nivel */
+    font-family: "Mooly", sans-serif;
+}
+
+p {
+    line-height: 1.6;
+    font-family: "Mooly", sans-serif;
+    font-size: large;
+}
+
+ul, ol {
+    margin: 10px 0;
+    padding-left: 20px;
+    font-size: large;
+}
+
+li {
+    margin-bottom: 5px;
+    font-size: large;
+    font-family: "Mooly", sans-serif;
+}
+
+/* Estilos para listas dentro de listas */
+ul ul, ol ul, ul ol, ol ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+/* Estilos para enlaces */
+a {
+    color: #5bc0de; /* Un azul claro para enlaces normales */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+strong {
+    color: #35302d; /* Un marrón oscuro para texto fuerte */
+}
+
+.destacado {
+    border: 2px solid #6b3c8e; /* Borde púrpura sólido */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(107, 60, 142, 0.5); /* Sombra púrpura */
+    background: linear-gradient(135deg, #337ab7, #5bc0de); /* Fondo con degradado azul */
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.destacado:hover {
+    transform: scale(1.05);
+}

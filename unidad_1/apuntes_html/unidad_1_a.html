@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/hoja1.css" type="text/css">
+    <title>Unidad 1 – Caracterización de las redes locales</title>
+</head>
+<body>
+    <h1>Unidad 1 – Caracterización de las redes locales</h1>
+
+    <h2>Introducción</h2>
+
+    <p>En la actividad que nos ocupa se aprenderán los siguientes conceptos y manejo de destrezas:</p>
+
+    <ul>
+        <li>Características</li>
+        <li>Tipos</li>
+        <li>Topología</li>
+        <li>Arquitectura</li>
+        <li>Elementos de una red</li>
+        <li>Mapa físico y lógico de una red local</li>
+    </ul>
+
+    <h2>Conceptos</h2>
+
+    <h3>Información:</h3>
+        <p>Todo aquello que a través de nuestros sentidos penetra en nuestro sistema nervioso y produce un aumento en nuestros conocimientos.</p>
+
+    <h3>Comunicación:</h3>
+
+    <p>Acto por el cual un individuo establece con otros un contacto que le permite intercambiar información.</p>
+
+    <p>Antes de comenzar a comunicarnos, establecemos reglas o acuerdos que rigen la conversación.
+    Estas reglas o protocolos deben respetarse para que el mensaje se envíe y comprenda correctamente. Algunos de los protocolos que rigen con éxito las comunicaciones humanas son:</p>
+
+    <ul>
+        <li>emisor y receptor identificados,</li>
+        <li>método de comunicación consensuado (cara a cara, teléfono, carta, fotografía),</li>
+        <li>idioma y gramática comunes,</li>
+        <li>velocidad y puntualidad en la entrega, y</li>
+        <li>requisitos de confirmación o acuse de recibo</li>
+    </ul>
+
+    <p>Las técnicas utilizadas en las comunicaciones de red comparten estos fundamentos con las conversaciones humanas.</p>
+
+
+    <h3>Telecomunicaciones:</h3>
+
+    <p>El conjunto de medios técnicos que permiten la comunicación a distancia. Normalmente se trata de transmitir información sonora (voz, música) o visual (imágenes estáticas o en movimiento) por ondas electromagnéticas a través de diversos medios (aire, vacío, cable de cobre, fibra óptica, etc.).</p>
+
+    <h3>Telemática:</h3>
+
+    <p>TELECOMUNICACIONES+INFORMÁTICA. Trata del uso de las telecomunicaciones para enriquecer las posibilidades de la informática (y no al revés), es decir, del uso de medios de comunicación a distancia para conexiones informáticas (ordenador-ordenador u ordenador-periférico).</p>
+
+    <h3>Modelo simplificado de todo sistema de comunicación:</h3>
+
+    <img src="assets/000png.png" alt="Esquema de sistema de comunicación">
+
+    <p>Los elementos básicos que forman parte de todo sistema de comunicaciones son:</p>
+
+    <ul>
+        <li><strong>Mensaje:</strong> es la información que se quiere transmitir</li>
+        <li><strong>Fuente:</strong> Genera los datos a ser transmitidos</li>
+        <li><strong>Transmisor:</strong> Convierte los datos en señales capaces de ser transmitidas</li>
+        <li><strong>Medio </strong>o canal de Transmisión: Medio sobre el cual se transmiten los datos</li>
+        <li><strong>Receptor:</strong> Convierte la señal recibida en datos</li>
+        <li><strong>Destino:</strong> Toma los datos del receptor</li>
+    </ul>
+
+    <p>Ejemplo:</p>
+
+    <img src="assets/001.png" alt="Ejemplo de sistema de comunicación">
+
+    <h2>Características</h2>
+
+    <p>En el ámbito de las Tecnologías de la Información y Comunicaciones (TICs) es frecuente oír hablar de las redes de voz y de las redes de datos. </p>
+    <p>Las primeras han sido diseñadas para la transmisión de voz humana y las segundas para el intercambio de información en forma de datos lo que implica diferencias en su estructura y funcionamiento. </p>
+    <p>Un caso particular de las redes de datos son las redes de ordenadores que las podemos definir como un conjunto de ordenadores autónomos interconectados entre sí y que pueden compartir recursos. No se incluyen en esta definición la conexión de un ordenador con un periférico (por ejemplo, impresora), aunque ésta pueda estar conectada a la red.</p>
+    <p>Elementos principales de las redes de datos:</p>
+
+    <ul>
+        <li>Nodo - Dispositivo conectado a una red en el que se ejecuta algún tipo de proceso. Pueden ser sistemas finales (PCs, impresoras, ...) o equipos de interconexión (modems, routers, ...)</li>
+        <li>Enlace - Vínculo existente entre dos nodos, a través del cual fluye la información (cable de cobre, fibra óptica, ...).</li>
+        <li>Protocolo - Conjunto de reglas previamente establecidas que definen los
+            procedimientos para que dos o más procesos intercambien información. Estas reglas definen la sintaxis, la semántica y la sincronización del intercambio (protocolo IP, protocolo HTTP, ...).</li>
+    </ul>
+
+    <h2>Arquitectura de una red de datos</h2>
+        <h3>Los Orígenes</h3>
+        <p>Las primeras redes de ordenadores se diseñaban pensando únicamente en el <p>
+            Hardware que se iba a utilizar en cada momento. No se tenían en cuenta cuestiones como la evolución de la tecnología, ni la interconexión y compatibilidad con otros desarrollos.</p>
+            Además, los fabricantes no querían compartir sus desarrollos con sus competidores.
+        </p>
+        <p>Al extenderse las instalaciones en red se vio que con cada nuevo desarrollo era necesario reescribir los programas de comunicaciones.</p>
+        <p>Al aparecer Hardware nuevo, la poca modularidad del Software hacía que muy pocos desarrollos se pudieran reaprovechar.</p>
+        <p>El problema comenzó a solucionarse cuando los fabricantes comenzaron a organizar la arquitectura de sus redes. Con ello se pretendía independizar diversos módulos Software que realizaban funciones específicas del Hardware sobre el cual lo realizaban.</p>
+        <p>La primera arquitectura de redes comercial fue presentada por IBM en 1974: SNA (Systems Network Architecture).</p>
+        <p>SNA define una serie de niveles cada uno de los cuales ofrece sus servicios al siguiente que los utiliza para implementar los suyos propios.</p>
+        <p>SNA ha sido la base de todas las arquitecturas de redes actuales.</p>
+
+        <h3>Definiciones</h3>
+            <h4>Arquitectura de una red</h4>
+
+                <p>Descripción de una red mediante la combinación de estándares y protocolos. Define las reglas de una red y cómo interactúan sus elementos.</p>
+
+            <h4>Protocolo de red</h4>
+
+                <p>Es una especificación que determina la manera en qué se envían los mensajes, cómo se direccionan a través de la red y como se interpretan en los dispositivos destino.</p>
+
+            <h4>Arquitectura basada en niveles</h4>
+
+                <p><u>Para reducir la complejidad de su diseño y facilitar la modularidad y reutilización, los aspectos de la comunicación se dividen en capas o niveles.</u></p>
+
+                <p>Tendremos n capas o niveles, cada uno de los cuales se construye sobre su predecesor. Dentro de cada nivel puede haber uno o varios protocolos de red.</p>
+
+                <img src="assets/002.png" alt="Niveles">
+
+                <p>Las ideas básicas en las que se basan las arquitecturas en niveles o capas son:</p>
+
+                <ul>
+                    <li>La capa n ofrece una serie de servicios a la capa n+1 que los usa para implementar los suyos propios.</li>
+                    <li>La capa n+1 no necesita conocer cómo implementa la capa n sus servicios.</li>
+                    <li>Se establece una comunicación virtual entre elementos de la capa n de equipos distintos y una comunicación real entre elementos de capas adyacentes en el mismo equipo.</li>
+                    <li>La unión entre dos capas adyacentes se realiza a través de una interfaz. En ella se definen los servicios que la capa inferior ofrece a la superior.</li>
+                    <li>Aunque se cambie el modo de implementar los servicios de una capa (por ejemplo, al utilizar dos protocolos distintos), los interfaces deben de respetarse siempre (la forma de acceder a los servicios).</li>
+                </ul>
+
+                <p>Así, cada nivel n del emisor conversará virtualmente con su homólogo nivel n del receptor.</p>
+                <p>Según esto, definimos un protocolo de la capa n como el conjunto de normas, reglas y convenciones utilizadas para la comunicación entre capas de un mismo nivel n.</p>
+
+
+            <h3>Proceso de envío y recepción</h3>
+
+            <p>Cuando un sistema quiere enviar un mensaje a otro, <u>la información debe de descender por los distintos niveles de la arquitectura hasta el medio físico y, a través de este, alcanzar el sistema remoto</u>.</p>
+
+            <img src="assets/003.png" alt="Envío y recepción">
+
+            <p>Mientras los datos de la aplicación van descendiendo por los distintos niveles van sufriendo transformaciones y los distintos protocolos le agregan información en cada nivel. Esto comúnmente se conoce como proceso de encapsulación.</p>
+
+            <img src="assets/004.png" alt="Encapsulación">
+
+            <p>Estas operaciones son reversibles y en el sistema remoto se realizan en sentido inverso para entregar un mensaje idéntico al original.</p>
+
+
+            <h2>Decisiones de diseño</h2>
+<p>Al diseñar una arquitectura de red hay una serie de aspectos y decisiones que hay que tener en cuenta:</p>
+<ul>
+    <li>Identificación y encaminamiento: Los paquetes han de poder ser trasladados desde un emisor a un receptor, para ello estos deben de estar correctamente identificados, así como la forma de llegar de unos a otros.</li>
+    <li>Modos de transmisión de datos: Los protocolos pueden estar diseñados para admitir comunicación simplex, semiduplex o full duplex.</li>
+    <li>Control de errores: Los canales de comunicación no siempre son fiables por lo que deben de suministrarse mecanismos de control de errores.</li>
+    <li>Control del orden de recepción de los paquetes: Cuando usamos conmutación de paquetes, los paquetes pueden llegar en orden distinto al que salieron.</li>
+    <li>Control de flujo y congestión: Hay que contemplar la posibilidad de que la información introducida en una red sea superior a la que es capaz de gestionar. Para ello hay que desarrollar protocolos que traten de evitar la congestión de una red y que permitan tomar decisiones en caso de que se produzcan dichas situaciones.</li>
+    <li>Tamaño de los paquetes: Se deben de especificar los tamaños mínimos y máximos de los paquetes, así como habilitar mecanismos de fragmentación y reagrupamiento.</li>
+    <li>Multiplexación y demultiplexación: Habilitar mecanismos para que una capa inferior pueda soportar distintas comunicaciones de capas superiores. En el medio físico esto es prácticamente obligatorio.</li>
+</ul>
+
+<h2>Modelos de referencia</h2>
+<p>Hoy en día las dos arquitecturas de red más extendidas, y por ello consideradas como modelos de referencia, son OSI y TCP/IP:</p>
+<ul>
+    <li>OSI (Open Systems Interconnection) desarrollada por ISO, es un modelo sobre todo teórico ya que en la realidad hay niveles y protocolos que apenas se utilizan.</li>
+    <li>TCP/IP (Transport Control Protocol/Internet Protocol) utilizada en Internet, es un modelo más práctico que teórico porque más que una arquitectura bien detallada y definida es una recopilación de los distintos protocolos más utilizados en Internet.</li>
+</ul>
+
+<h2>Modelo OSI</h2>
+<p><strong>Descripción</strong></p>
+<p>OSI fue definido en 1977 por la Organización Internacional de Estándares (ISO) para tratar de poner orden en el caos de tecnologías y protocolos diseñados por los distintos fabricantes para comunicaciones de datos.</p>
+<p>Por otro lado, la ISO pretendía impedir que ninguna de las arquitecturas de fabricantes existentes adquiriese una posición hegemónica, especialmente la arquitectura SNA de IBM (aunque principalmente se haya basado en ella).</p>
+<p>OSI define 7 capas o niveles:</p>
+
+<img src="assets/005.png" alt="Niveles">
+
+<h2>Funciones y servicios en el modelo OSI</h2>
+<p>Como modelo de referencia, el modelo OSI proporciona una amplia lista de funciones y servicios que pueden definirse en cada capa. También describe la interacción de cada capa con las capas directamente por encima y por debajo de él, lo que se conoce como interfaz entre las capas.</p>
+
+<h2>Ejemplo de comunicación en el modelo OSI</h2>
+<p>Un ejemplo de comunicación entre equipos terminales (PCs) a través de una red con nodos de comunicaciones sería:</p>
+
+<img src="assets/006.png" alt="Ejemplo de comunicación entre equipos terminales.">
+
+<h2>Niveles del modelo OSI</h2>
+
+<h3>NIVEL 1 (NIVEL FÍSICO)</h3>
+<p>Su función va a ser transmitir bits a través de un canal de comunicación (si pongo un 1, que llegue un 1). La unidad de transmisión es el bit.</p>
+<p>Define características:</p>
+<ul>
+    <li>Mecánicas: Tienen que ver con la forma del conector, número de pines, longitud y espaciado entre pines, etc.</li>
+    <li>Eléctricas: Tienen que ver con impedancias, niveles de voltaje, duración del bit, etc.</li>
+    <li>Funcionales: Asigna funciones a los pines (Pin 1 para tierra, pin 2 para transmitir datos, etc.)</li>
+    <li>Procedimentales: Por ejemplo, la secuencia de eventos que deben ocurrir para que se establezca una comunicación (cuando yo quiera transmitir, enciendo el pin 4, si usted está listo para recibir, me contesta encendiendo el pin 5, luego yo...)</li>
+</ul>
+
+<h3>NIVEL 2 (NIVEL DE ENLACE)</h3>
+<p>Se encarga de asociar conjuntos de bits en tramas, por lo tanto, la unidad de transmisión es la trama.</p>
+<p>Algunas funciones de este nivel son:</p>
+<ul>
+    <li>Sincronización de trama: Identifica el inicio y fin de cada trama.</li>
+    <li>Control de errores: detección y/o corrección de errores de bit que se puedan producir.</li>
+    <li>Control de flujo: se encarga de que no se envíen más tramas que las que el receptor puede recibir.</li>
+</ul>
+
+<h3>NIVEL 3 (NIVEL DE RED)</h3>
+<p>Se encarga de decidir por dónde van a ir los paquetes de datos del nodo inicial al final. La unidad de transmisión es el paquete.</p>
+<p>Algunas funciones de este nivel son:</p>
+<ul>
+    <li>Encaminamiento de los paquetes: encontrar un camino a través de diferentes redes desde el origen hasta el destino.</li>
+    <li>Control de congestión en las líneas: establecer política de actuación en caso de haber saturación en las líneas.</li>
+    <li>Interconexión de redes diferentes entre sí: conectar redes de diferentes tecnologías a nivel de enlace y que puedan tener distintos tamaños de trama.</li>
+</ul>
+
+<h3>NIVEL 4 (NIVEL DE TRANSPORTE)</h3>
+<p>Es el primer nivel que se comunica entre extremos (no nodo a nodo como los niveles inferiores).</p>
+<p>Por lo tanto, este nivel lo tendrán los equipos terminales (equipos origen y destino), pero no lo tendrán los nodos de interconexión. La unidad de transmisión es el segmento.</p>
+<p>Funciones típicas de este nivel son:</p>
+<ul>
+    <li>Fiabilidad extremo a extremo: garantiza que lo que se envía se recibe. Tiene mecanismos para detectar la pérdida de datos.</li>
+    <li>Recepción en el orden correcto: los paquetes se pueden desordenar en el transporte, por eso hay métodos para reestablecer el orden original.</li>
+    <li>Control del flujo extremo a extremo, para no desbordar al extremo final.</li>
+</ul>
+
+<h3>Los siguientes tres niveles OSI (sesión, presentación y aplicación) son normalmente agrupados en otras arquitecturas de red en un único nivel de aplicación. No obstante, OSI define individualmente los 3 con sus características propias.</h3>
+
+<h3>NIVEL 5 (NIVEL DE SESIÓN)</h3>
+<p>Principalmente en este nivel se incluyen mecanismos para controlar el "diálogo" entre aplicaciones permitiendo el trabajo en modo de sesiones (abrir sesión, mantenerla y cerrarla) y control del sincronismo o "turnos" (ahora una, ahora otra, etc).</p>
+<p>También se incluirían en este nivel mecanismos de "puntos de verificación": en caso de que haya algún problema (caída de la red, error en el HD, …) sólo se tengan que enviar los datos que se han perdido a partir del último punto de verificación chequeado.</p>
+
+<h3>NIVEL 6 (NIVEL DE PRESENTACIÓN)</h3>
+<p>La capa de presentación da formato a los datos que deberán presentarse a la capa de aplicación. Se puede ver como el traductor de la red. Esta capa puede traducir datos de un formato utilizado por la capa de aplicación en el equipo origen a un formato común y después convertir el formato común a un formato conocido por la capa de aplicación del equipo destino.</p>
+<p>Se incluyen en esta capa funciones de:</p>
+<ul>
+    <li>Traducción de distintos formatos de representación de la información (por ejemplo, ASCII a EBCDIC).</li>
+    <li>Compresión de datos: para reducir el número de bits que se transmiten en la red.</li>
+    <li>Cifrado de datos: cifrar los datos por motivos de seguridad.</li>
+</ul>
+
+<h3>NIVEL 7 (NIVEL DE APLICACIÓN)</h3>
+<p>En él se encuentran las aplicaciones dirigidas al usuario. No ofrece servicios a otros niveles sino sólo al usuario. Este nivel permite que para el usuario sea transparente el hecho de que se esté teniendo acceso a información o servicios distribuidos.</p>
+<p>En este nivel, aparte de las aplicaciones finales del usuario, se engloban también una serie de aplicaciones que por su transcendencia se han querido estandarizar como protocolos, por ejemplo: HTTP, FTP, LDAP, SMTP...</p>
+
+<h2>Modelo TCP/IP</h2>
+
+<h3>Descripción general</h3>
+<p>La arquitectura TCP/IP (Transmission Control Protocol/Internet Protocol) es la arquitectura de red más aceptada hoy en día. La mayoría de sistemas operativos en uso hoy día ofrecen soporte para TCP/IP, y las redes de gran tamaño utilizan TCP/IP para una gran parte de su tráfico de red.</p>
+<p>TCP/IP es una pila de protocolos estándar que se utiliza para la comunicación entre equipos.</p>
+<p>TCP/IP ha sido diseñado para la comunicación a través de redes de gran escala.</p>
+<p>Los diversos protocolos de la pila TCP /IP funcionan conjuntamente para que la comunicación en la red pueda producirse. Este proceso implica múltiples actividades, incluyendo la resolución de nombres de equipo a direcciones IP; determinar la ubicación del equipo de destino; y empaquetar, direccionar y enrutar los datos para que lleguen a su destino satisfactoriamente.</p>
+
+<h3>Protocolos y capas TCP/IP</h3>
+<p>TCP/IP organiza el proceso de comunicación asignando las actividades anteriormente mencionadas a varios protocolos de la pila TCP/IP.</p>
+<p>TCP/IP utiliza un modelo de comunicación de cuatro capas (aplicación, transporte, Internet e interfaz de red) para transmitir datos de una ubicación a otra. Todos los protocolos que pertenecen a la pila de protocolos TCP/IP están ubicados en alguna de estas capas.</p>
+
+<img src="assets/007.png" alt="Comparación OSI con TCP/IP">
+
+<img src="assets/008.png" alt="Capas TCP/IP">
+
+<h3>Capa de aplicaciones</h3>
+<p>La capa de aplicaciones es la de mayor nivel de la pila TCP/IP. Todas las aplicaciones y utilidades están contenidas en esta capa y la utilizan para obtener acceso a la red. Los protocolos de esta capa se utilizan para formatear e intercambiar información de usuario. Entre ellos, se incluyen:</p>
+<ul>
+    <li>Protocolo de transferencia de hipertexto (Hypertext Transfer Protocol, HTTP): HTTP se utiliza para transferir los archivos que forman las páginas Web de la World Wide Web.</li>
+    <li>Protocolo de transferencia de archivos (File Transfer Protocol, FTP): FTP se utiliza para la transferencia interactiva de archivos.</li>
+</ul>
+
+<h3>Capa de Transporte</h3>
+<p>La capa de Transporte proporciona la capacidad de ordenar y garantizar la comunicación entre equipos. La capa de Transporte también especifica el identificador único de la aplicación a la que deben entregarse los datos.</p>
+<p>La capa de transporte tiene dos protocolos principales que controlan el método de entrega de datos. Son los siguientes:</p>
+<ul>
+    <li>Protocolo de control de transmisión (Transmission Control Protocol, TCP): TCP garantiza la entrega de los datos mediante acuse de recibo.</li>
+    <li>Protocolo de datagramas de usuario (User Datagram Protocol, UDP): UDP proporciona una rápida entrega de los datos, pero no la garantiza.</li>
+</ul>
+
+<h3>Capa de Internet</h3>
+<p>La capa de Internet es la responsable de direccionar, empaquetar y enrutar los datos a transmitir. Esta capa contiene cuatro protocolos principales:</p>
+<ul>
+    <li>Protocolo Internet (Internet Protocol, IP): IP es el responsable de direccionar los datos a transmitir y enviarlos a su destino.</li>
+    <li>Protocolo de resolución de direcciones (Address Resolution Protocol, ARP): ARP es el responsable de identificar la dirección MAC (media access control) del adaptador de red del equipo de destino.</li>
+    <li>Protocolo de mensajes de control en Internet (Internet Control Message Protocol, ICMP): ICMP es el responsable de proporcionar funciones de diagnóstico e información de errores debidos a la entrega incorrecta de datos.</li>
+    <li>Protocolo de administración de grupos de Internet (Internet Group Management Protocol, IGMP): IGMP es responsable de la administración de la multidifusión en TCP/IP.</li>
+</ul>
+
+<h3>Capa de Interfaz de red</h3>
+<p>La capa de Interfaz de red es la responsable de enviar los datos en el medio físico de la red y recibir datos desde el mismo. La capa de Interfaz de red no contiene el tipo de protocolos incluidos en las otras tres capas. Básicamente lo que dice la arquitectura TCP/IP de este nivel es que aquí se pueden incluir todos aquellos estándares y protocolos de niveles de enlace y físico que sean capaces de transmitir paquetes IP (por ejemplo, Ethernet, redes Wifi, ATM, Frame Relay, X.25, ...) ... incluso por palomas mensajeras (RFC 1149) ;-)</p>
+
+<h3>Comparación entre el modelo OSI y TCP/IP</h3>
+<p>Inicialmente, el modelo OSI fue diseñado para proporcionar un marco sobre el cual crear un conjunto de protocolos abiertos. La visión era que este conjunto de protocolos se utilizara para desarrollar una red internacional que no dependiera de sistemas propietarios.</p>
+<p>Lamentablemente, OSI llegó tarde. La velocidad a la que fue adoptada Internet basada en TCP/IP y la proporción en la que se expandió ocasionaron que el desarrollo y la aceptación de la suite de protocolos OSI quedaran atrás.</p>
+<p>Aunque pocos de los protocolos desarrollados mediante las especificaciones OSI son de uso masivo en la actualidad, el modelo OSI de siete capas ha realizado aportes importantes para el desarrollo de otros protocolos y productos para todos los tipos de nuevas redes.</p>
+
+<h3>Elementos de una red de datos y telecomunicaciones</h3>
+    <p>Los elementos son:</p>
+    <ul>
+        <li>Hosts</li>
+        <li>Medios</li>
+        <li>Adaptador de red</li>
+        <li>Armario de distribución</li>
+        <li>Panel de parcheo</li>
+        <li>Elementos de conexión y guiado</li>
+        <li>Electrónica de red</li>
+    </ul>
+
+    <h4>Hosts</h4>
+    <p>Son los equipos que se conectan directamente a un segmento de red: computadoras,
+    impresoras, escáner, otros dispositivos…</p>
+    <p>Suministran a los usuarios conexión a la red, por medio de la cual se comparte, crea y obtiene
+    información.</p>
+    <p>No existe una simbología estandarizada para hosts.</p>
+    <p>No forman parte de ninguna capa en especial y operan dentro de las 7 capas.</p>
+
+    <img src="assets/009.png" alt="PC, MAC, Impresora, Servidor">
+
+    <h4>Medios</h4>
+    <p>Son los que transportan la información.</p>
+    <p>Se debe tener en cuenta la longitud del cable, el costo, la facilidad de instalación y la cantidad de computadoras.</p>
+
+    <img src="assets/010.png" alt="Medios">
+
+    <h4>Adaptador de red</h4>
+    <ul>
+        <li>Normalmente en forma de tarjeta PCI, USB, PCMCIA, etc.</li>
+        <li>Modelo de adaptador se identifica por las siglas NIC.</li>
+        <li>Puertos más comunes para par trenzado y cable coaxial.</li>
+        <li>Cada NIC identificado con una MAC (48 bits) al ser fabricado.</li>
+    </ul>
+
+    <img src="assets/011.png" alt="Adapatador de red">
+    <img src="assets/012.png" alt="Adapatador de red 2">
+
+    <h4>Armario de distribución</h4>
+    <ul>
+        <li>Puerta de cristal o material transparente.</li>
+        <li>Walls y puertas desmontables.</li>
+        <li>Techo y suelo pueden tener una abertura para pasar cableado por ellos.</li>
+        <li>Producto rackeable: interior con cuatro bastidores: armazón de 19”, universal.</li>
+        <li>Bastidores con agujeros cada 5cm: unidad U.</li>
+        <li>Armazón de bastidores con conexión a tierra.</li>
+    </ul>
+
+    <img src="assets/013.png" alt="Armario de distribución">
+
+    <h4>Panel de parcheo</h4>
+    <ul>
+        <li>Organiza líneas de entrada y salida.</li>
+        <li>Se conectan cables de par trenzado.</li>
+        <li>Típicamente ocupa 1U y tiene 24 tomas; también hay con 48 (2 filas), 72 (3 filas) o 96 tomas (4 filas).</li>
+        <li>Utilizan una codificación que se corresponde con toma del otro lado del cable.</li>
+        <li>En formato modular, en lugar de rosetas se usan regletas modulares.</li>
+        <li>Puede haber paneles de parcheo de fibra óptica.</li>
+    </ul>
+
+    <img src="assets/014.png" alt="Panel de parcheo">
+
+    <h4>Elementos de conexión y guiado</h4>
+    <ul>
+        <li>Llamada toma de usuario, de telecomunicaciones o roseta.</li>
+        <li>Pueden ofrecer una o más conexiones a la red.</li>
+        <li>Para conectar tomas de usuario a armarios se usan latiguillos: entre equipo y toma, o entre panel de parcheo a otro lugar.</li>
+        <li>Los latiguillos se pueden comprar hechos o fabricarse.</li>
+        <li>El cableado de red se conduce a través de soportes de guiado.</li>
+    </ul>
+
+    <h4>Tipos de tomas de usuario</h4>
+
+    <img src="assets/015.png" alt="Tomas de usuario">
+
+    <h4>Tipos de tomas de soportes guiados</h4>
+
+    <img src="assets/016.png" alt="Soportes guiados">
+
+
+
+</body>
+</html>
+
