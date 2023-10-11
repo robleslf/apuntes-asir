@@ -1,0 +1,109 @@
+
+A02. Documentos web con lenguajes de marcas: HTML.
+2.1 Introducción.
+En la actividad que nos ocupa se aprenderán los siguientes conceptos y el manejo de destrezas:
+
+* Describir los diferentes lenguajes empleados por las aplicaciones web.
+* Identificar las diferencias entre HTML y XHTML.
+* Identificar la estructura de un documento HTML.
+* Reconocer los principales elementos de los lenguajes HTML y XHTML.
+* Utilizar los lenguajes HTML y XHTML en tareas de creación y modificación de documentos web.
+2.2 Actividad.
+2.2.1 Lenguajes empleados por las aplicaciones web.
+Para crear una aplicación web, debemos utilizar una serie de lenguajes que nos permiten diseñar y programar la aplicación. A continuación, expondremos algunos de los lenguajes más utilizados, diferenciando entre los lenguajes del lado del cliente y del servidor.
+2.2.1.1 Lenguajes del lado del cliente.
+Los lenguajes del lado del cliente son aquellos que pueden ser interpretados directamente por el navegador web. Son completamente independientes del servidor, lo que permite que la página pueda alojarse en cualquier servidor. Lo único que se necesita es que el navegador tenga instalados los complementos adecuados. El código es visible para el cliente, lo que puede afectar a la seguridad. Estos son los más importantes:
+
+* HTML (Hypertext Markup Language). Se trata de un lenguaje de marcas que permite crear contenido estático en los documentos web, definiendo su estructura. Este será el lenguaje que trataremos en la presente actividad.
+* CSS (Cascade Style Sheet). Es un lenguaje utilizado para definir la presentación de un documento web. Este lenguaje se tratará en la próxima actividad.
+* JavaScript. Es un lenguaje de programación que permite crear scripts del lado del cliente para, por ejemplo, controlar el navegador o alterar el contenido que se muestra en los documentos web.
+* AJAX (Asyncronous JavaScript and XML). Se trata de un conjunto de tecnologías web que permite que las páginas web se actualicen de forma asíncrona intercambiando pequeñas cantidades de datos con el servidor de manera que sea posible actualizar partes de la página sin recargar la página completa. Las páginas web que no utilizan AJAX deben recargar la página completa cuando el contenido cambia.
+
+2.2.1.2 Lenguajes del lado del servidor.
+Son aquellos lenguajes que son reconocidos, ejecutados e interpretados por el propio servidor y se envían al cliente en un formato comprensible para él. Son independientes del navegador utilizado. Además, el código puede ocultarse al cliente, que solo verá el código HTML finalizado. Algunos de los más populares son:
+
+* PHP. Lenguaje de script multiplataforma creado especialmente para la generación de páginas web dinámicas, ya que puede ser incrustado dentro del código HTML.
+* Java: páginas JSP y Servlets. Orientadas a desarrollar páginas web en Java. En las páginas JSP, el código Java se incluye en el documento HTML y se ejecuta en el servidor para incluir contenido de manera dinámica. Mientras que los Servlets son aplicaciones Java completas en el servidor que tienen como uso más común la generación de contenido de forma dinámica en las páginas web a partir de los parámetros que envían los navegadores web.
+* ASP punto NET. Es la sucesora de Active Server Pages (ASP) desarrollada y comercializada por Microsoft. Consiste en un conjunto de clases punto NET utilizadas para crear páginas web. Se utiliza en servidores Windows.
+* Python. Es un lenguaje multiplataforma y multiparadigma, ya que permite el desarrollo de estilos diferentes de programación. Es un lenguaje simple, versátil y rápido de desarrollar. Incide en una sintaxis que favorezca un código legible.
+* Perl. Es un lenguaje de programación muy práctico para extraer información de archivos de texto y generar informes a partir del contenido de los archivos.
+
+2.2.2 HTML y XHTML.
+HTML es un lenguaje de marcas que se utiliza para definir el contenido y la estructura de las páginas web. Actualmente, la última versión es HTML5, cuya versión definitiva se publicó en octubre de 2014.
+XHTML es una adaptación de HTML para cumplir con las restricciones de XML, por lo que mantiene casi todas sus etiquetas y características, añadiendo algunas restricciones y elementos propios de XML. En los próximos apartados nos centraremos en XHTML 1.0, ya que es una versión más estricta y limpia que HTML.
+
+2.2.2.1 Elementos fundamentales.
+Etiquetas.
+Las etiquetas definen cada uno de los elementos de un documento HTML. Comienzan con el símbolo < y terminan con >. Las etiquetas pueden o no tener contenido; en caso de tenerlo, se abren y cierran de la siguiente manera:
+menor que, etiqueta, mayor que.
+...
+menor que, slash, etiqueta, mayor que.
+Si no tienen contenido, se abren y cierran en la misma marca de la siguiente manera:
+menor que, etiqueta, slash, mayor que.
+
+Atributos.
+Las etiquetas pueden contener atributos, que sirven para configurar algunas de las características de las etiquetas en las que se emplean. Estos aparecen en la etiqueta de apertura (nunca de cierre) de la siguiente manera:
+<etiqueta atributo1="valorAtributo1" atributo2="valorAtributo2" ...>
+...
+</etiqueta>.
+
+Comentarios.
+Permiten indicar anotaciones en el código que no serán evaluadas por los navegadores. Se incluyen entre los símbolos <!-- y -->. Por ejemplo:
+<!-- Este es mi comentario -->.
+
+2.2.2.2 Diferencias entre HTML y XHTML.
+Las principales restricciones de XHTML que no existen en HTML son las siguientes:
+
+- Todos los nombres de etiquetas y atributos se escriben en minúscula.
+- Todos los valores de los atributos van entre comillas, incluso los numéricos.
+- Todos los atributos deben tener un valor asignado.
+- Todas las etiquetas deben estar cerradas, incluso las vacías.
+- En los comentarios no se deben incluir los guiones dobles.
+
+2.2.2.3 Estructura básica.
+Un documento XHTML está contenido dentro de las etiquetas <html xmlns="http://www.w3.org/1999/xhtml"> y </html>. El siguiente documento XHTML servirá de ejemplo para indicar su estructura básica:
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <title>Mi primer documento HTML
+
+</title>
+ </head>
+ <body>
+ <p>Prueba de documento HTML</p>
+ </body>
+</html>
+
+.
+
+Cabecera.
+La cabezera de un documento XHTML está delimitada por la etiqueta <head>. Contiene información sobre el documento que no será visible para el usuario, excepto su título, indicado mediante la etiqueta <title>, que los navegadores muestran en la parte superior izquierda de la ventana del navegador (o en la pestaña en la que se muestra la página para los navegadores más modernos).
+
+Cuerpo.
+El cuerpo de un documento XHTML contiene todo aquello que se muestra al usuario y está delimitado por la etiqueta <body>.
+2.2.2.4 Entidades de caracteres
+A veces necesitamos incluir en una página web caracteres que tienen un significado especial en HTML, como los símbolos de mayor o menor que, las comillas, o simplemente queremos evitar problemas de codificación en navegadores al incluir los acentos, para ello se utilizan las entidades de caracteres. Algunas de ellas se pueden ver en la siguiente tabla:
+Carácter Entidad HTML Carácter Entidad HTML
+[options="header"]
+|===
+| Carácter | Entidade HTML | Carácter | Endidade HTML
+| á | &aacute; | Á | &Aacute;
+| é | &eacute; | É | &Eacute;
+| í | &iacute; | Í | &Iacute;
+| ó | &oacute; | Ó | &Oacute;
+| ú | &uacute; | Ú | &Uacute;
+| ü | &uuml; | Ü | &Uuml;
+| ñ | &ntilde; | Ñ | &Ntilde;
+| < | &lt; | > | &gt;
+| " | &quote;
+| Espacio | &nbsp;
+|===
+
+Ejemplo
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <title>Documento HTML con entidades</title>
+ </head>
+ <body>
+ <p>Este &eacute; un documento con entidades de car&aacute;cter.</p>
+ </body>
+</html>
