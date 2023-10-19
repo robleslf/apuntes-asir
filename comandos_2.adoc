@@ -179,6 +179,46 @@ cut también funciona como filtro:
 
 * *ls -l | cut -d " " -f1:* aquí le pido un listado largo, y le filtro con el delimitador espacio y columna 1. Ojo con dejar espacio entre la d y la comilla de apertura, no pegarlos nunca. (En este caso va a pasar una cosa no deseada, y es que algunas columnas del listado tienen dos espacios de separación entre ellas, por ejemplo cuando en una columna hay números, algunos son de 3 cifras y otros de 2, por lo que los de 2 tienen un espacio en blanco de más, y cuenta otra columna de más).
 
+* *ls -l | tee nombre.fichero:* muestra el ls por pantalla y a la vez lo guarda en el archivo nombre.fichero.
 
+___
+
+* sort datos.txt: ordena el fichero, sin ningún parámetro simplemente toma el primera caracter de cada registro y lo ordena.
+
+** sort -t -k2 datos.txt: aquí la -t es el delimitador, entonces le estamos diciendo que los dos puntos son el delimitador, la -k es de clave, queremos la segunda clave (el segundo campo); entonces ordena en función de la segunda columna.
+
+** sort-t -k4 -n datos.txt: para ordenar por campos numéricos, lo que haría normalmente es ordenar por primer caracter, y tomaría primero el 1100 antes que un 990, por el 1 y el 9. Por eso hay que añadir el -n de numérico.
+
+** sort-t -k4 -nr datos.txt: la -r es de reverse, lo ordenará de mayor a menor.
+
+sort puede actuar como filtro:
+cut -d: -f3 datos.txt | sort
+
+** cut -d: -f3 datos.txt | sort | uniq: así no habrá datos repetidos.
+** cut -d: -f3 datos.txt | sort | uniq -u: con -u nos muestra solo datos que no se repiten.
+** cut -d: -f3 datos.txt | sort | uniq -c: cuenta cuántas veces se repite cada resultado.
+
+[NOTE]
+Siempre que usemos _unique_ es importante usar el _sort_ antes, porque lo que está comparando el _unique_ es la fila de arriba con la de abajo, y si no están ordenados, va a mostrar repetidos:
+ames
+ames
+ames
+negreira
+santiago
+santiago
+Así compararía santiago con santiago y ames con ames con ames. Si no está ordenado no los compara.
+
+
+----
+* cut -d: -f3 datos.txt | sort | uniq -c | cut -d " " -f2: así no nos muestra la columna que queremos porque hay varios espacion antes y toma más columnas de las que queremos.
+
+* cut -d: -f3 datos.txt | sort | uniq -c | cut -d " " -f8: así sí, porque está en la columna 8 realemnte con lo de los espacios.
+
+* cut -d: -f3 datos.txt | sort | uniq -c | cut -c 9-20: así le pedimos que coja a partir del carácter 8 y coja hasta el 20, en vez de usar delimitadores. 
+
+* cut -d: -f3 datos.txt | sort | uniq -c | cut -c 9-20 | tee ciudades.txt: así además lo guardamos en un fichero ciudades.txt.
+----
+
+ls -l | cut -d " " -f3 | tail +2 | sort | uniq -c | tee usuarios2.txt: me sale cuántos usuarios diferentes hay en el listado y cuántas veces se repiten.
 
 
