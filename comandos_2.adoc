@@ -26,7 +26,7 @@ Tenemos dos tipos de enlaces:
 === Simbólicos
 
 Lo que en Windows son los accesos directos; acceso directo a un fichero o a un directorio. Trabajan sobre.
-    -Ficheros
+    - Ficheros
     - Directorios
 
 [source,bash]
@@ -80,6 +80,8 @@ En el caso de los enlaces duros, los enlaces se repiten, es la única excepción
 En Windows esto no existe.
 
 La idea es la siguiente, crear un fichero y todo el mundo accediendo a él, y modificando. Si uno lo modifica, entra la modificación a todos. Todos ven las modificaciones, porque el fichero es uno, aunque tengamos cada uno el fichero en su propia carpeta personal.
+
+* *ls -lih:* vas a ver los números de inodos y los KB que ocupan.
 
 Para crear un enlace duro:
 
@@ -138,6 +140,8 @@ Tengo dos ficheros: datos.txt y reporte:
 
 * *cat datos.txt reporte >> reporte.datos:* se añade el segundo debajo del primero en un nuevo fichero llamado reporte.datos. El orden en el que se escriben los ficheros es importante.
 
+* *cat dichos_3.txt > dichos.txt:* así unes el fichero dichos_3.txt con el ficheros dichos.txt; queda el fichero dichos.txt con su contenido original y al final se le ha añadido el contenido del fichero dichos.3.txt.
+
 ___
 
 * *cat -n reporte.datos:* enumera cada una de las filas, es solo visual y no modifica el fichero.
@@ -179,17 +183,18 @@ cut también funciona como filtro:
 
 * *ls -l | cut -d " " -f1:* aquí le pido un listado largo, y le filtro con el delimitador espacio y columna 1. Ojo con dejar espacio entre la d y la comilla de apertura, no pegarlos nunca. (En este caso va a pasar una cosa no deseada, y es que algunas columnas del listado tienen dos espacios de separación entre ellas, por ejemplo cuando en una columna hay números, algunos son de 3 cifras y otros de 2, por lo que los de 2 tienen un espacio en blanco de más, y cuenta otra columna de más).
 
+
 * *ls -l | tee nombre.fichero:* muestra el ls por pantalla y a la vez lo guarda en el archivo nombre.fichero.
 
 ___
 
 * sort datos.txt: ordena el fichero, sin ningún parámetro simplemente toma el primera caracter de cada registro y lo ordena.
 
-** sort -t -k2 datos.txt: aquí la -t es el delimitador, entonces le estamos diciendo que los dos puntos son el delimitador, la -k es de clave, queremos la segunda clave (el segundo campo); entonces ordena en función de la segunda columna.
+** sort -t: -k2 datos.txt: aquí la -t es el delimitador, entonces le estamos diciendo que los dos puntos son el delimitador, la -k es de clave, queremos la segunda clave (el segundo campo); entonces ordena en función de la segunda columna.
 
-** sort-t -k4 -n datos.txt: para ordenar por campos numéricos, lo que haría normalmente es ordenar por primer caracter, y tomaría primero el 1100 antes que un 990, por el 1 y el 9. Por eso hay que añadir el -n de numérico.
+** sort -t: -k4 -n datos.txt: para ordenar por campos numéricos, lo que haría normalmente es ordenar por primer caracter, y tomaría primero el 1100 antes que un 990, por el 1 y el 9. Por eso hay que añadir el -n de numérico.
 
-** sort-t -k4 -nr datos.txt: la -r es de reverse, lo ordenará de mayor a menor.
+** sort-t: -k4 -nr datos.txt: la -r es de reverse, lo ordenará de mayor a menor.
 
 sort puede actuar como filtro:
 cut -d: -f3 datos.txt | sort
@@ -220,5 +225,458 @@ Así compararía santiago con santiago y ames con ames con ames. Si no está ord
 ----
 
 ls -l | cut -d " " -f3 | tail +2 | sort | uniq -c | tee usuarios2.txt: me sale cuántos usuarios diferentes hay en el listado y cuántas veces se repiten.
+
+___
+
+cut -d: -f1 datos.txt > estado.civil
+
+
+paste -d: datos.2.txt estado.civil | tee datos.3.txt: si no lo guardas, el paste es solo visual. Para usar el paste lo mejor es crear un archivo temp antes con lo que queremos pegar.
+
+
+cut -d: -f4 datos.3.txt | sort -n -r | head -1
+cut -d: -f4 datos.3.txt | sort -n | tail -1
+
+Ambos comandos nos devolverían lo mismo, en uno usamos reversa y otro no, así que filtramos el primero por el principio o por el final dependiendo.
+
+cut -d: -f4 datos.3.txt |
+
+[NOTE]
+_cut_ trabaja como comando y como filtro.
+
+cut -d: -f5 datos.3.txt | sort | uniq -c | head -2 | tail -1
+
+
+tr [A-Z] [a-z] < datos3.txt > datos.min.txt: tr es un traductor; todo lo que está en mayúsculas lo ponga en minúsculas. Necesita obligatoriamente un redireccionamiento de ENTRADA (<); 
+
+tr ":" "*" < datos.3.txt: que cambie todos los : a *. Aquí es solo visualmente el cambio.
+
+tr [A-Z] [a-z] < datos.3.txt | tr ":" "*": doble traducción, no hace falta poner otra vez el archivo.
+
+
+también funciona como filtro:
+
+cat datos.3.txt | tr [A-Z] X: que todas las mayúsculas las cambie por una X.
+
+cat | tr -d [A-Z]: el -d es de delte, y borrará todos los caractéres que estén en mayúscula.
+
+[NOTE]
+El archivo de entrada y salida no puede ser el mismo, porque entonces habría un bucle ahí que no funcionaría, queda el archivo en blanco.
+
+___
+
+ls -l | tr -d ' ' | cut -d ' ' -f6: aquí al quitar los espacios nos queda solo una columna.
+
+ls -l | tr -s ' ' | cut -d ' ' -f6: aquí el -s nos quita solo los espacios repetidos, que es lo que necesitamos justo para esto.
+
+___
+
+ls -l | tr -s ' ' | cut -d ' ' -f6 | sort | uniq -c: aquí no s diría cada mes y cuántos salen por cada mes.
+
+tr -c [a-z] " " < prueba: el -c es de contrario, va a reemplazar todo lo que no sea minúsculas de la a-z por un espacio en blanco. Lo contrario no son solo las mayúsculas, también números, signos de puntuación... cualquier caracter que no esté entre a-z.
+
+
+* uname -v: muesta la fecha de la última compilación del kernell.
+
+* grep blanca datos: nos va a permitir buscar palabras en ficheros; pueden ser palabras enteras, partes de palabras... El orden es _grep → lo que busco → dónde lo busco._
+    grep bla datos: en este caso nos devolvería tanto blanca, como blanco.
+    
+    Discrimina entre MAY y min, si tengo MARIA en un fichero, pero busco grep maria datos, no nos lo encuentra. Por eso:
+
+    grep -i maria datos: -i de ignore, va a darle igual ahora si son MAY. o min.
+    
+    grep -i maria datos datos.txt datos.2.txt: puedes buscar en varios ficheros a la vez. En la salida de la terminal va a mostrar el nombre del fichero donde aparece y la línea donde aparece en ese fichero.
+
+    grep -i maria datos*: aquí nos trae lo mismo que el anterior, pero como usamos el comodín no hace falta escribir los tres archivos, ya entiende que estás buscando en todos los ficheros que comiencen por _datos_.
+
+    grep -i "Juan Carlos" dat*: en caso de que lo que busquemos tenga espacio en blanco, es OBLIGATORIO meterlo entre comillas, porque si no va a entender que lo que va despues del espacio en blanco es el archivo.
+
+    grep -ic maria dat*: el -c es un contador, entonces nos dice las ocurrencias, es decir, cuántas veces aparece el texto "maria" en cada fichero. La terminal devolvería algo similar a esto:
+                datos:1
+                datos.2.txt:1
+                datos.4.txt:0
+                datos.min.txt:1
+                datos.txt:1
+
+    grep -icv ia *: con el cv de inversa hace lo contrario, cuenta las líneas donde NO aparece.    
+    
+    grep -in santiago datos: el -n númera la línea en la que está lo que busco.
+
+    también funciona como filtro el grep
+
+    ls | grep -iA 1 os: la -A es de after, y lo que hace es traer lo que buscas con el grep y, además, una línea después. El 1 puede ser cualquier número, y entonces serían las n líneas anteriores.
+
+    ls | grep -iB 1 os: la -B es de before, y lo que hace es traer lo que buscas con el grep y, además, una línea anterior.
+
+    ls | grep -iC 1 os: la -C es lo que hace es traer lo que buscas con el grep y, además, una línea después y una línea antes. La -C es por A, B y C.
+
+    grep -in ^a color.txt: busca las líneas que comiencen por a. Es la línea, no la palabra.
+
+    grep -in ^a..l$ color.txt: busca las líneas que comiencen por a, contengan 2 carácteres y finalicen con l.
+
+[NOTE]
+^ Para indicar el comienzo.
+. Para indicar cualquier caracter.
+$ Para indicar el final.
+
+    grep -in ^m..*o$: el asterisco es para indicar que después de los dos caracteres que siguen a la m, vienen más caracteres, pero no se cuántos son.
+
+    grep -in ^m.*ia datos: luego puedes poner tú las combinaciones que necesites.
+
+    ls | grep [0-9]: buscamos todas las entradas que contengan un número en el nombre.
+
+    ls | grep -i s[0-9]: delante del número tiene que haber una s.
+
+    ls | grep -i ^[ce]......: la palabra que busco empieza o por c o por e, y luego tiene tantos caractéres como puntos como mínimo. Es la longitud mínima lo que le indicas, luego puede ser mayor lo que te devuelva.
+
+    ls | grep [24]: busco una entrada que contenga o el 2 o el 4.
+
+[NOTE]
+Cuando escribo algo entre los corchetes se lee de forma individual.
+
+    ls | grep 24: si quisiese buscar un 24 lo pondría así.
+
+    ls | grep ^[a-fA-F]: que empiece por algo que sea de la "a" a la "f" o de la "A" a la "F". En este caso es válido también ls | grep -i [a-f]
+
+    ls | grep -i [aeiou]$: que termine en vocal. Que sería lo mismo que ls | grep [aeiouAEIOU]$
+
+    ls | grep -i [aeiou]...$: empezando por detrás, el cuarto es una vocal.
+
+    ls | grep -i [aeiou][aeiou]: contiene dos vocales juntas, en cualquier posición.
+
+    ls | grep -i [aeiou][aeiou]*: una vocal y la segunda puede que no aparezca.
+
+    ls | grep -i [aeiou][aeiou][aeiou]*: dos vocales obligatorias y la tercera puede que no aparezca.
+
+    La que está pegada al asterisco es opcional, puede que no aparezca ninguna vez.
+
+    ls | grep -i ^[^a-e]: que NO empiece por ninguna letra de la a a la e.
+
+
+    Dentro de los corchetes, el circunflejo ES NEGACIÓN
+    
+
+    ls -a | grep "^\.": el punto hay que escaparlo para que no interprete que es un caracter cualquiera, sino que es un punto lo que buscamos.  SIEMPRE que escapemos algo, hay que meterlo entre comillas.
+
+    ls -a | grep "^[^\.]": que no empiecen por punto
+
+    ls | grep -i "\(tos\|tad\)": estoy buscando que tenga tos, o que tenga tad; el | no es un filtro, es un "o", por lo que hay que escaparlo; además hay que meterlo entre paréntesis para que sepa que es lo que buscamos, lo que pasa que hay que escapar también estos paréntesis, y debemos meterlo entre comillas porque está escapado; puede contener ambas, tanto tos como tad.
+
+
+___
+
+grep asir1 /etc/passwd: con esto nos trae la línea que queremos de nuestro usuario.
+grep -on asir1 /etc/passwd: nos dice en qué línea aparece asir1.
+grep asir1 /etc/passwd | cut -d: -f7: con este filtro sabremos con qué shell estamos trabajando.
+
+passwd: cambia la contraseña
+
+ls -l /etc/passwd
+ls -l /etc/group
+ls -l /etc/shadow: aquí, al contrario que en los anteriores, nos dice que pertenece al grupo shadow. Además tiene otros permisos.
+
+los tres permisos son escritura (w), lectura (r) y   (x).
+
+Los tres primeros caractéres pertenecen al propietario; los tres siguientes al grupo; los últimos a otros.
+
+umask: visualizar la máscara que tenemos. 
+
+La máscara se calcula sobre los ficheros:
+
+rw-rw-rw-
+110110110
+ 6  6  6
+
+Ese es el valor más alto que se le puede dar a un fichero, 666 (para directorio es 777).
+
+rw-r-----
+110100000
+ 6  4  0
+
+Ahora al valor más alto le restamos el nuestro, y ese es nuestro número de máscara (026). 
+
+[NOTE]
+Una máscara SIEMPRE es un número par.
+
+
+umask 026: cambiamos a esa máscara.
+touch abc.txt: creamos el archivo abc.txt
+ls -l : vemos los permisos de abc.txt → -rw-r-----
+
+
+mkdir adir: creamos un directorio
+ls -ld adir/: vemos los permisos de adir → drwxr-x--x
+
+
+Tan pronto cerremos la terminal, la máscara se borra, porque la máscara está en un . fichero de configuración.
+
+En caso de querer dejarla fija:
+
+
+ls -la: vemos ficheros como el .bash_history, que es donde se guarda el historial de comandos para cuando usemos el comando history. .bashrc y .profile guardan tipo de letra, color de fondo de la terminal...
+
+less .bashrc → los valores en mayúscula con un = después son las variables del sistema. Cuando hay # significa comentario.
+
+vi profile → vamos hasta la máscara, descomentamos la línea donde está la máscara, la modificamos por 026 y guardamos con :wq. 
+
+exit
+
+abrimos de nuevo; y verificamos:
+
+touch abcd.txt
+ls -l abcd.txt: los permisos son -rw-rw-r--
+
+chmod: cambio en los permisos.
+
+Hay dos modos de cambiar los permisos, con octal o con forma simbólica.
+
+chmod g+w,o-w dos.txt: le agregas permiso de escritura y le quitas el de escritura.
+
+imaginando un fichero con los permisos r--r----- en el que vemos los permisos, podría hacerse con el modo octal:
+
+chmod 660 dos.txt
+
+chmod 770 dir: esto es cambiar permisos a un directorio con modo octal.
+
+chmod -R 660 dir/*: para los directorios (para los DIRECTORIOS) tengo una recursiva, -R. Cambia todos los permisos de lo que contiene el directorio.
+
+___
+
+== /bin/su
+
+En bin están los comandos, el comando su se utiliza para cambiar de cuentas de usuario.
+
+En permisos de este comando aparece una "s", son los permisos especiales, vienen por defecto.
+En vez de _rwx_, tienen _sst_.
+
+En este caso la "s" la tiene el usuario propietario, es un *permiso de sustitución*; en ese fichero, por unos segundos, va a sustituir al root, porque necesita hacer una comprobación en el fichero "shadow", por lo que por unos segundos hace esa lectura en ese fichero para comprobar que la contraseña es correcta.
+
+Mirar diferencia entre s y S.
+
+== /tmp
+
+Este es el directorio temporal. Cada app que abrimos crea ficheros temporales, que al cerrar el programa, se destruyen. Si guardamos cosas en este directorio, al reiniciar el sistema, se borran. Tiene todos los permisos y además, en la última posición, tiene una "t".
+
+Mirar diferencia entre t y T.
+
+La t es lo que se conoce como sticky bit.
+BUscar qué es.
+
+Limita las escrituras, puede ser sobre fichero o directorio, y significa que pueden modificar pero no eliminar.
+
+Es útil por ejemplo si compartes una carpeta con un grupo, para que puedan editarlo pero no lo eliminen.
+
+___
+
+Si están en mayúscula es que por debajo no hay permisos de ejecución, si están en minúscula, es que sí.
+
+
+sst 
+ugo (usuario, grupo, otro)
+
+Añadir permisos sería:
+
+chmod u+s nombre.txt → para el usuario
+chmod g+s nombre.txt → para el grupo
+chmod o+t nombre.txt → para otros
+
+y todos juntos:
+
+chmod u+s,g+s,o+t nombre.txt
+
+
+chmod o+w,+t nombre.txt: añades los dos permisos a otro
+
+https://www.ionos.es/digitalguide/servidores/know-how/asignacion-de-permisos-de-acceso-con-chmod/
+
+
+___
+comando cuando estamos conectados (lo de remmina)
+
+w: de who, muestra quién está conectado
+
+tenemos tambien el who
+
+who -T: el signo + o - nos muestra qué terminales pueden recibir mensajes con el wall; las que estan con + son las que si
+
+who -q: cuántos usuarios están conectados a la terminal.
+
+who | grep pepito: comprobar si pepito está conectado.
+
+who | grep ^a: comprobar los usuarios conectados que empiezan por a.
+
+who | grep pts/7: qué usuario está en la pts 7
+
+who | grep 192.168.1.42. ver quién está conectado con esa IP.
+
+last -2: los dos últimos en conectarse. Puede ponerse el nº que se quiera.
+
+wall: comando para mandar un mensaje a todos
+
+mesg: si sale _y_, es que sí puede recibir interrupciones del wall; 
+
+mesg n: apagamos el wall para que no me lleguen mensajes del wall
+
+mesg y: encendemos para poder recibir mensajes
+
+mail: la primera vez puede salir que no tengo correo
+
+mail nombredeusuario: enviar un mail a alguien; para enviar es control+d
+
+la _q_ para salir del mail
+
+ls -l /home: la configuración aquí es distinta, están las personas agrupadas por letra, salvo la cuenta principal que está aparte.
+
+cd /home/asir1: permiso denegado
+
+192.168.1.90 → nada esto no es para estudiar es solo una nota
+
+tty: ver donde está mi pseudoterminal, la mía es la 17.
+
+whoami: quién soy o con qué nombre me he logueado. Útil para cuando manejo varias cuentas a la vez.
+
+ls
+
+
+___
+
+https://blog.alcancelibre.org/staticpages/index.php/permisos-sistema-de-archivos
+
+___
+
+
+para buscar cinco caracteres hay que hacerlo de diferentes maneras en ls que en grep
+
+ls ?????
+grep .....
+
+y el asterisco significa diferente
+
+ls ?????*
+grep .....*
+
+se supone que estos dos son los errores mas grandes y fijo q algo asi cae en el examen
+
+
+ls ^???$ → esto es INCORRECTO porque no funciona con el ls, el ^ y el $ son para el grep
+
+el -i en el grep es para que no distinga may. y min., pero en el ls son los inodos.
+
+___
+
+find /home: nos va a permitir encontrar o buscar cosas. find + ruta a partir de donde vamos a buscar
+
+find ~ -atime 7: aquellos que fueron accedidos, por ejemplo los que leí, desde hace 7 días; el 7 puede ser otro número obviamente. a de accedido.
+
+find ~ -atime -7: los de menos de 7 días.
+
+find ~ -atime +10: aquellos de más de diez días.
+
+find ~ -atime 0: en las últimas 24 horas.
+
+find ~ -mtime 4: modificado en los últimos 4 días. m de modificado.
+
+find ~ -name "d*": sigue las mismas reglas que usa el ls. aquí le pedimos que busque lo que empiece por d. Para que termine por d, "*d".
+
+[NOTE]
+Cuando hay un caracter especial como un *, hay que ponerlo entre comillas
+
+find /etc -name "passwd": para buscar nombre del fichero que se llame passwd
+
+find /etc -iname "passwd": sin importar may. y min.
+
+find ~ -iname "passwd" 2>/dev/null: así no nos da los permisos denegados, los manda a la papelera.
+
+find /etc -user felipe: buscar lo que le pertenece a un usuario.
+
+find /etc -group nombregrupo: buscar lo que pertenece a un grupo de usuarios. Está bien añadirle el 2>/dev/null.
+
+find . -group asir1 -user asir1 -iname "f*": tiene que cumplir todas las condiciones, que pertenezca al grupo asir1, al usuario asir1 y el nombre del archivo empiece por f. Se tienen que cumplir las tres (AND).
+
+find . -iname "f*" -type f: el type es el tipo de archivo, en este caso es un fichero (f). Se puede poner l (enlace simbólico), 
+
+find . -type f -nouser 2>/dev/null: un fichero que no tenga propietario.
+find . -type f -nogroup 2>/dev/null: un fichero que no tenga grupo.
+
+Cuando eliminas un grupo, o usuario...el sistema pone un número largísimo al propietario de los archvios que pertenecían a ese grupo o usuario (o queda en blanco), y ahora no tienen grupo o usuario. Por eso hay archivos sin propietario o grupo.
+
+find . -type f -size 4c: un archivo cuyo tamaño sea 4 caracteres
+    4b: 4 bloques
+    1G: 1 giga
+    1k: 1 kilo
+
+    Puede ser +1k, -1G... igual que el -atime. El = es sin nada.
+
+find . -type f -size +1k -size -10k: para buscar en un rango de tamaño hay que usar el -size dos veces.
+
+    el -size 0 es igual que usar -empty, buscar un archivo vacío:
+
+find - -type f -empty
+
+
+find - -type f -executable 2>/dev/null: fichero ordinario que sea ejecutable (que tenga permisos de ejecución).
+
+find /var -perm -1000: perm de permisos. Usar sin el -type, para que funcione. No deberían ir juntos. Con un permiso -1000 busco que tenga un sticky bit. Puede ir el numerito con +, con - o sin nada. Los 0s los ignora.
+
+find /var -perm 777: entradas que tengan esos permisos 777, por lo general con 777 son scripts o executables.
+
+
+___
+
+find . -type f -size -10k -o -empty: el -o es un OR, va a traer los archivos menores de 10k y los vacíos.
+
+find . -type f -empty -perm 664: así es el AND, que estén vacíos Y tengan permisos 664. Así va a entrar en rutas, si solo quiero que me busque archivos del primer nivel y no entre en todos los subdirectorios, hay que limitar la profundidad, agregando *después de la ruta* -maxdepth 1.
+
+find . -maxdepth 1 -type f -empty -perm 664: la profundidad OBLIGATORIAMENTE tiene que estar después de la ruta. Profundidad 1 es el directorio actual.
+
+Si pongo -maxdepth 2 me llegará hasta el nivel 2, pero me incluye el 1 y el 2, en caso de que solo quiera el segundo nivel:
+
+find . -mindepth 2 -maxdepth 2 -type f -empty -perm 664: así afinamos más. Como se dijo antes, la profundidad siempre va después de la ruta.
+
+
+find . -maxdepth 1 ! -type f -empty -perm 664: el ! es negación, es decir, que no sean ficheros, pueden ser directorios. Solamente niega el tipo. Siempre hay un espacio después de la !. Si quisiese que afectase a todos, tendría que poner ! delante de todos.
+
+find . -maxdepth 1 -type f -empty -name "[rR]*"
+find . -maxdepth 1 -type f -empty -iname "r*": es lo mismo que lo de arriba, con el iname no discriminar entre may. y min, con el name a secas puedes pedirle que empiece o por r o por R que es lo mismo.
+
+___
+
+find . -maxdepth 1 -type f -empty -name "[rR]*" -exec rm {} \;: después del -exec siempre va a ir un comando, que es el que queremos que se ejecute. En este caso va a borrar todo lo que está entre las llaves, y en este caso es la lista que ha encontrado el find. Tenemos que poner punto y coma para señalar donde acaba lo del -exec, pero como por lo general el ; en linea de comandos se usa para separar un comando de otro, hay que escaparlo.
+
+find . -maxdepth 1 -type f -empty -name "[rR]*" -exec chmod 666 {} \; 2>/dev/null: aquí le pedimos que cambie los permisos a 666 a los arvchivos que encuentre con el find, pero si alguno no te deja cambiarlo que no lo muestre y lo mande al devnull ese.
+
+
+___
+
+find . -maxdepth 1 -type f -size +0 -name "r*" -exec ls {} \; | head -1: el -size +0 es lo mismo que ! -empty; quiero que me haga un ls de esa búsqueda. Y luego le metemos el filtro head -1 para que muestre solo el primero que encontró, es el primero de lo que está en las {}.
+
+
+find . -maxdepth 1 -type f -size +0 -name "r*" -exec head -1 ls {} \;: esto en cambio es diferente al anterior, porque primero hace el head. Va a ejecutar el head tantas veces como ficheros haya encontrado, con la primera linea de cada fichero.
+
+
+Esto pasa con el head, con el tail...alguno más por ahí.
+___
+
+find / -maxdepth 1 -links +3 -exec ls -l {} \;: el error más común es poner link en singular, pero es *links*. Buscar lo que es porque no lo sé. Creo que pone el número de enlaces que tiene cada fichero o algo así. Puede ser +3, -3, 3... con el número que sea.
+
+find / -maxdepth 1 -links +3 -exec ls -l {} \; > informe.raiz: así lo guardamos.
+
+Podemos guardarlo sin erroreS: find / -maxdepth 1 -links +3 -exec ls -l {} \; 2>/dev/null > informe.raiz
+
+[NOTE]
+Cuando Rosa pida buscar ficheros no hay que poner el -type f; el -type f hay que ponerlo cuando pida ficheros ORDINARIOS. Esto es por lo de que para Linux todo eran ficheros.
+
+[NOTE]
+El enlace duro si lo queremos buscar es un -type f, a diferencia del enlace blando que es -type l
+
+
+
+
+
+
+
+
+
+
 
 
