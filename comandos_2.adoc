@@ -670,6 +670,148 @@ Cuando Rosa pida buscar ficheros no hay que poner el -type f; el -type f hay que
 El enlace duro si lo queremos buscar es un -type f, a diferencia del enlace blando que es -type l
 
 
+___
+
+alias
+Nombres que le ponemos a algo, para no olvidarnos, por ejemplo, en vez de estar todo el rato poniendo _clear_, me creo un alias más corto y lo uso cuando quiera ejecutarlo.
+
+alias c="clear"
+
+Una vez cierre la consola, cuando vuelva a abrirla ya no estarán, se habrán borrado.
+
+Existen ya unois alias predefinidos por Ubuntu, cuando hacemos un less ~/.bashrc se pueden ver, casi al final, algunos. Por ejemplo, hay un alias _la_ para el comando _ls-A_.
+
+Si editamos este fichero y añadimos nuestros alias personalizados, sí que quedarán permanentemente guardados. Si no quiero utilizar alguno, o bien lo elimino, o bien lo comento con # (es lo más sensato).
+Habrá que reiniciar la terminal porque el fichero .bashrc se carga al abrir la terminal.
+
+=== alias contar="echo Hay `ls | wc -l` entradas en mi directorio `pwd`"
+Lo que va entre `` sería como una variable. Es el acento de la derecha de la P.
+
+
+== unalias contar
+Eliminar el alias. Se elimina el de memoria, si lo creamos editando el archivo .bashrc no se eliminaría con este comando, habría que ir al archivo para eliminarlo.
+
+== alias vs="pwd; id; echo hola"
+Se puede guardar un alias con comandos concatenados. Nos haría los tres comandos al ejecutar el alias.
+
+___
+
+Variables de usuario
+
+== nombre="Felipe"
+Se declara una variable.
+
+== echo $nombre
+Visualizamos el nombre de la variable.
+
+Puede usarse un echo con el texto que sea y meterle las variables que quieras por medio.
+
+=== echo Me llamo $nombre y mi pc es el `tty`
+Aquí usamos tanto variable como comando tty para que nos diga el nombre y el pc que usamos.
+
+=== a=`pwd`
+Guardamos una variable con un comando. Cuando invoquemos la variable va a ejecutar ese comando.
+
+=== echo \$a = $a
+A veces necesitaremos escapar el $ para que no lo tome como variable.
+
+
+=== a=
+Así no se borra la variable, así ahora la variable va a estar vacía, pero seguirá estando en memoria
+
+=== unset a
+Así sí, la variable queda borrada.
+
+___
+
+Variables de entorno
+
+== set | less
+ves variables de entorno y scripts
+
+
+== env | less
+Este solo las variables de entorno; env de enviroment.
+
+A diferencia de las variables del usuario, las variables del sistema están en mayúsculas. 
+
+== echo $HOME
+Nos mostraría nuestro home.
+
+== set | grep ^HOME
+Buscar la variable HOME.
+
+== env | grep ^HOME
+Buscar la variable HOME también.
+
+== echo $MAIL
+
+
+== echo $USER
+Saber cuál es mi usuario.
+
+== echo $PATH
+Esta a veces la cambiamos nosotros.
+
+== echo $PS1
+Todo lo que sale es el prompt, pero con codificaciones de color, letra...
+Aquí se guarda la configuración de nuestro prompt. 
+
+---
+Ver el documento de las variables de entorno del aula virtual.
+---
+
+== echo `ls`
+
+== echo -e Estoy utilizando el shell $SHELL\n en la versión $BASH_VERSION
+El -e se tiene que poner en el echo para que interprete los escapes \
+En este caso quiero hacer un salto de línea con \n, por lo que el -e es necesario.
+
+== echo Hola "*"
+Si en cualquier parte del texto del echo hay que poner un *, hay que meterlo entre comillas. Puede ponerse también "Hola *", pero el * entre las comillas.
+
+== echo $LOGNAME
+Es lo mismo que el comando logname. Hace exactamente lo mismo.
+
+== hostname
+este comando tiene también una variable de entorno que hace lo mismo: $HOSTNAME
+
+== echo $OLDPWD
+Me dice el último directorio donde estuve.
+
+
+== cd $OLDPWD
+Te manda al último directorio donde estuve.
+
+=== cd $OLDPWD && touch fichero.txt
+Que se vaya al último directorio donde estuve y cree un fichero; si la primera parte no la puede hacer, la segunda tampoco la hace. El segundo comando es dependiente del primero. El && es un AND, se tiene que cumplir la primera para ejecutarse la segunda.
+
+Si lo que no puede hacer es la segunda parte, la primera sí que la hace igualmente.
+
+== echo Hola || echo Adios
+El || es un OR, o se cumple la primera o se cumple la segunda.
+Si la primera se ejecuta, la segunda ya no se ejecuta; si no se cumple la primera, se cumplirá la segunda si puede hacer. Si no pues ninguna xd.
+
+[NOTE]
+A estos dos anteriores se les llama comandos en cortocircuito.
+
+___
+
+== whereis passwd
+Sirve para ubicar dónde está un comando.
+
+== apropos date
+En qué lugares del manual se menciona este comando (se menciona como comando o como palabra).
+
+== stat ejer4
+El estado completo, información, sobre un fichero: tamaño, bloques, dónde está, inodo, enlaces, acceso, permisos (octal/simbólico), propietario (nº/nombre), grupo, último acceso, última modificación, cambio, creación...
+
+=== stat Documentos/
+El estado de un directorio; nos dirá que es un fichero de tipo directorio y por lo demás es lo mismo que hacer un stat a un fichero ordinario.
+
+=== stat * | less
+El less es solo porque como va a ser largo es mejor paginarlo. Va a hacerle el stat a todos los archivos.
+
 
 
 
