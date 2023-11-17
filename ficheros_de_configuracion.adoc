@@ -1,0 +1,103 @@
+Todos los ficheros de configuracion están en /etc.
+
+___
+
+== /etc/passwd
+
+less /etc/passwd
+
+Es el fichero donde está la configuración de los usuarios; se le llama fichero etc/passwd, se le llama así.
+
+La primera línea siempre es el superusuario.
+
+Si no es la última, de las últimas líneas, aparece nuestra cuenta.
+
+* asir1 es el nombre del usuario.
+* la contraseña está encriptada.
+* el 1000 es el número de identificación del usuario.
+* el siguiente número es el de nuestro grupo principal. 
+* el campo de las comas (,,,) es donde se guarda una serie de información, como el número de teléfono, en qué oficina y piso de la empresa está,...
+* dice cuál es el home del usuario, en este caso, /home/asir1; puede ser que muchos usuarios compartan la misma carpeta personal, que en realidad no sería personal xd, sino carpeta compartida. 
+* Por último, /bin/bash, que es el shell que estamos utilizando.
+
+En Linux tenemos muchos tipos de shell, nosotros trbajamos el bash, un entorno al que pertenecen todos estos comandos que estamos utilizando.
+Este shell tiene una serie de comandos que nos interpreta.
+
+Linux tiene varios shell y podemos cambiarlos, en función de lo que necesitemos, si somos desarrolladores, científicos, etc.
+
+En la columna de los otros usuarios del archivo de configuración aparece _nologin_, porque no pueden abrir la terminal. Si a un usuario le restringimos cosas y él abre una terminal, puede volverlas a activar; por eso es útil no dejarles utilizar terminal.
+
+grep asir1 /etc/passwd: con esto nos trae la línea que queremos de nuestro usuario.
+grep -on asir1 /etc/passwd: nos dice en qué línea aparece asir1.
+grep asir1 /etc/passwd | cut -d: -f7: con este filtro sabremos con qué shell estamos trabajando.
+
+___
+
+
+== /etc/group
+
+less /etc/group
+
+Este es el fichero de grupos, normalmente se crean antes los grupos que los usuarios.
+
+Los números bajos pertenecen al sistema, hasta el 999, y a partir del 1000, tanto grupos como usuarios, son los que vamos creando.
+
+En algunos grupos aparece nuestro nombre de cuenta, porque somos los instaladores, y por eso pertenecemos a varios grupos. Hay que recordar que para Linux todo es un fichero, por ejemplo, para conectar un usb hay que pertenecer a un grupo que nos deje hacerlo. El grupo cdrom nos permite trabajar con cdrom (más bien con las ISO en este caso).
+
+No es muy fiable en UBUNTU, porque no siempre pone todas las cuentas a las que pertenece un grupo.
+
+Tenemos que pertenecer a *adm* para poder trabajar como administradores, y luego el grupo *sudo* es para hacer trabajos en nombre del superusuario.
+
+
+== /etc/shadow
+
+Si hacemos el _less /etc/shadow_ nos va a denegar el permiso, por lo que hay que utilizar el comando *sudo*.
+
+Inmediatamente después nos pedirá contraseña.
+
+Ahora nos mostrará el fichero de contraseñas encriptadas.
+
+Tiene el mismo formato que el de /etc/passwd, si asir1 estaba en la línea 48, aquí también está en la 48; por eso NO SE DEBEN EDITAR ESTOS FICHEROS. Hay unos comandos especiales para editar estos ficheros.
+
+Campos:
+
+* nombre de usuario.
+* en unos tiene un _*_ y en otros un _!_; el primero es que no necesitan identificarse, son aplicaciones que trabajan en el sistema y demás, y el último significa que no tiene contraseña. Nuestro usuario tiene la contraseña encriptada. La encriptación es individual, cada usuario tiene una encriptación distinta.
+* Los últimos campos están vacíos, y se refieren a la contraseña (mínimo de días que tengo que tener la contraseña, cuándo tengo que cambiarla, antes de que me venza cuántos días antes me va a avisar el sistema que cambie la contraseña,...).
+
+Si ahora diesemos de alta un usuario y no le pusieramos contraseña, hay algunas distribuciones de Linux que no lo permiten, obligan a poner contraseña. Pero en caso de que no hubiesemos puesto contraseña, aparecería un _!_.
+
+Delante de nuestra contraseña puede aparecer ese _!_, y significa que el administrador nos bloqueó la cuenta.
+
+=== Cambiar la contraseña
+
+[source, bash]
+----
+passwd
+----
+
+
+
+== /var/mail/asir1
+
+está nuestra cuenta de correos no leídos
+
+
+== cat /etc/shells
+Muestra los shells que tenemos. Por defecto el que usamos es el /bin/bash, pero podemos cambiarlo. Si lo cambiamos, podremos usar más o menos comandos.
+
+- /bin/sh: es el más básico de todos, de aquí salió el bash
+- /bin/rbash
+- /bin/dash
+[...]
+
+Si fuesemos desarrolladores necesitariamos uno especializado para ello. Lo mismo si fuesemos matemáticos o lo que fuese.
+
+Aparte de los disponibles que muestra el archivo, podemos instalar otros.
+
+
+
+
+
+
+
