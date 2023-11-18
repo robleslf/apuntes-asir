@@ -1,0 +1,3275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<title>Comandos ISO</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>Comandos ISO</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_pwd">pwd</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En qué directorio estamos posicionados.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_clear">clear</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Limpia pantalla.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exit">exit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Salir de la terminal.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_history">history</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>muestra el historial de comandos.</p>
+</div>
+<div class="sect2">
+<h3 id="_history_c">history -c</h3>
+<div class="paragraph">
+<p>borra el historial de comandos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_id">id</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Toda la información sobre nuestra cuenta: grupos, nombres y números.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>usuario=número_de_grupo(nombre_de_grupo)</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_id_nu">id -nu</h3>
+<div class="paragraph">
+<p>Nombre de usuario; el parámetro (los parámetros van con guión) nu es "name user", y puede ir en diferente orden <strong>-un</strong>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_id_u">id -u</h3>
+<div class="paragraph">
+<p>Número de usuario.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_id_g">id -g</h3>
+<div class="paragraph">
+<p>Número de grupo principal.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_id_gn">id -gn</h3>
+<div class="paragraph">
+<p>Nombre del grupo principal.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>groups:</strong> Nos muestra todos los grupos a los que pertenece el usuario actual.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uname">uname</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Muestra información sobre el sistema operativo.
+Nombre del sistema (Unix NAME). Se suele utilizar con parámetros, es raro usarlo solo.</p>
+</div>
+<div class="sect2">
+<h3 id="_n">-n</h3>
+<div class="paragraph">
+<p>Nodo. Es el nombre del PC.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_o">-o</h3>
+<div class="paragraph">
+<p>Nombre completo del Sistema Operativo.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_p">-p</h3>
+<div class="paragraph">
+<p>Procesador. Muestra la arquitectura del procesador, p.ej: x86_64.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_r">-r</h3>
+<div class="paragraph">
+<p>Release; versión del kernell, núcleo, del SO.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a">-a</h3>
+<div class="paragraph">
+<p>muestra todo (all). Muestra el nombre del kernell (Linux), el nombre del host, la
+versión del kernell, la arquitectura del hardware y la fecha y hora de compilación del kernell.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><span class="image"><img src="assetsa/imgs/001_grafico.png" alt="Gráfico 001"></span></p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_date">date</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nos muestra la fecha/hora.</p>
+</div>
+<div class="sect2">
+<h3 id="_date_tee_fichero_ext">date | tee fichero.ext</h3>
+<div class="paragraph">
+<p>Mostrará la fecha y la hora actual en la pantalla y, al mismo tiempo, guardará esa información en un archivo llamado "fichero.ext".</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bc">bc</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Entras a la calculadora.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ctrl+D (^D) para salir.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_man">man</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Manual del sistema. Va seguido del comando del que quieres saber la ayuda.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Por ejemplo, <strong>man date</strong> Ayuda del comando date.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_info">info</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Información. Se basa en el man, pero suele ser más entendible. Es indistinto usar uno u otro, donde se encuentre mejor. Suele dar más ejemplos el info.
+Al igual que <em>man</em>, se usa seguido de un comando:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Por ejemplo, <strong>info date</strong></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Para salir, tanto de <em>man</em> como de <em>info</em>, hay que pulsar la <em>q</em> de <em>quit</em>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whatis">whatis [&#8230;&#8203;]</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nos dice para qué sirve un parámetro, por ejemplo: <strong>whatis pwd</strong>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo">echo [&#8230;&#8203;]</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Emite el mensaje que le pongas por pantalla.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ls">ls</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>(Listar), nos muestra el contenido de donde estamos. Tiene una serie de colores (en Ubuntu al menos).</p>
+</div>
+<div class="sect2">
+<h3 id="_a_2">-a</h3>
+<div class="paragraph">
+<p>Nos muestra los ficheros y directorios, incluídos ocultos.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="">.</h3>
+<div class="paragraph">
+<p>Nos muestra lo del directorio actual, es lo mismo que no poner nada.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2">..</h3>
+<div class="paragraph">
+<p>Nos muestra lo que hay en el directorio padre.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_3">-A</h3>
+<div class="paragraph">
+<p>Lista los archivos y directorios en un directorio, excluyendo los directorios especiales " . " (punto) y " .. " (punto-punto).</p>
+</div>
+<div class="paragraph">
+<p>Estos dos directorios son referencias al directorio actual y al directorio padre, respectivamente, y se omiten en la salida cuando se utiliza ls -A. Muestra también los ocultos.</p>
+</div>
+<div class="paragraph">
+<p>Vamos, resumiendo, muestra lo mismo que el <strong>ls -a</strong> pero sin las referencias al directorio padre y el directorio actual.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_l">-l</h3>
+<div class="paragraph">
+<p>Listado largo, tiene la mayoría de la información que estamos buscando: nombre, tamaño de la carpeta, hora y fecha de creación&#8230;&#8203; Y el tipo de fichero que es (la <em>d</em> es de directorio, el <em>.</em> un fichero oculto, la _ un fichero ordinario&#8230;&#8203;) y los permisos (rwx), quién es el propietario del fichero y cuál es el grupo primario (el grupo que sale es el grupo principal que era en el momento de la creación).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+    El CHAR al principio del directorio en el <strong>ls -l</strong> hace referencia al tipo de archivo:
+</td>
+</tr>
+</table>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>d → directorio</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>→ fichero ordinario</p>
+<div class="literalblock">
+<div class="content">
+<pre>l → link</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>c → CHAR</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>b →ficheros por bloque</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>p → pipe</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>s → socket</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1">-1</h3>
+<div class="paragraph">
+<p>La lista la quiero en una columna; no existe el -2 xD. Obviamente si lo combinas con -l no hace falta porque ya lo saca en una columna, carece de sentido.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_d_rutaaldirectorio">ls -d /ruta/al/directorio</h3>
+<div class="paragraph">
+<p>El comando mostrará el nombre del directorio <em>/ruta/al/directorio</em> en lugar de listar los archivos y subdirectorios que contiene.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_2">ls /</h3>
+<div class="paragraph">
+<p>En este caso nos muestra lo que hay en la raíz del sistema; se puede poner otro sitio en vez de <em>/</em>, por ejemplo <strong>ls /home -l</strong>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_m">-M*</h3>
+<div class="paragraph">
+<p>Que liste todo lo que empiece por M. Si buscamos directorios hay que hacer el siguiente comando.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_d_m">-d M*</h3>
+<div class="paragraph">
+<p>Especifica que buscas un directorio la <em>-d</em>. Con la -d te muestra tanto directorios como archivos-</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_ld_m_musica_vacio">ls -ld M* &gt; Musica.vacio</h3>
+<div class="paragraph">
+<p>Te crea el directorio que le pones detrás del <em>&gt;</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_ld_ca">ls -ld *ca*</h3>
+<div class="paragraph">
+<p>Que muestre lo que empiece como sea, que contenga <em>ca</em>, y que acabe como sea, como si no hay nada más del <em>ca</em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_ld_s_termina_s">ls -ld *s &gt; termina.s</h3>
+<div class="paragraph">
+<p>No lo mostrará por pantalla, porque le estás cambiando la salida al archivo que le mandas crear después del <em>&gt;</em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_ddee">ls -[DdEe]*</h3>
+<div class="paragraph">
+<p>Lista los elementos que empiecen con D, d, E o e. En el ejemplo se pone tanto minúscula como mayúscula porque discrimina estas.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_d_char_char">ls -d [{CHAR}-{CHAR}]*</h3>
+<div class="paragraph">
+<p>Lista elementos que empiecen por los CHAR(S) dentro de un rango. Es sensible a mayúsculas y minúsculas.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>▪ Ejemplo: ls -d [A - E] → Buscará todo lo que contenga desde una “A” hasta una “E”</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>▪ Ejemplo: ls -d [A - EI]* → Buscará todo lo que acaba con una “A” hasta una “E” o acabe en una “I”</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Los parámetros se pueden combinar; por ejemplo: <strong>ls -la</strong>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+La ruta y el parámetro pueden ir uno delante del otro indistintamente: <strong>ls .. -l</strong> = <strong>ls -l ..</strong>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_ld_chars_chars">ls -ld *[CHAR(S)-CHAR(S)]*</h3>
+<div class="paragraph">
+<p>Busca elementos que contengan caracteres de un rango determinado.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ejemplo: ls -ld <strong>[0-9]</strong>: busca elementos que contengan un caracter en el rango entre corchetes ambos inclusive → lista todos los elementos que contengan 0, 1, 2, 3, 4, 5, 6, 7, 8 y/o 9, independientemente de donde estén los números en el nombre del elemento.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_ld">ls -ld [*][.][?]</h3>
+<div class="paragraph">
+<p>Lista los elementos que después de un punto tengan determinado número de caracteres, determinados por el número de &lt;?&gt;.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_ld_f">ls -ld [^f]]*</h3>
+<div class="paragraph">
+<p>Lista los elementos que NO empiecen por <em>f</em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_ld_chars">ls -ld {CHAR(S)}?</h3>
+<div class="paragraph">
+<p>Lista elementos que después del caracter contiene determinado número de caracteres, determinados por el número de &lt;?&gt;.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_ld_f0_9">ls -ld <strong>f</strong>[0-9]*</h3>
+<div class="paragraph">
+<p>Lista los elementos que contengan un &lt;f&gt; y después, un número de 0 a 9, ambos inclusive.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_r">ls -r</h3>
+<div class="paragraph">
+<p>Hace un listado en orden alfabético inverso (Z-A)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_lr_directorio">ls -lR &lt;directorio&gt;</h3>
+<div class="paragraph">
+<p>R (de 🔁 recursividad)
+Ver todo el directorio y su contenido</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_r_2">ls -R</h3>
+<div class="paragraph">
+<p>Registra todos los directorios de la raíz. Los ordena en orden alfabético
+        ◦ 2&gt; /dev/null: redirige la salida y descarta aquellos a los que no puede acceder, considerándolos como errores y la salida va a /dev/null, es decir, la “papelera”
+        ◦ ls -lR / 2&gt; /dev/null: hace un listado recursivo del directorio raíz (root), e indica que en caso de error, redirige a una salida</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_id_muestra_el_inodo_de_un_elemento">ls -id: muestra el inodo de un elemento</h3>
+<div class="literalblock">
+<div class="content">
+<pre>◦ para listar el inodo de los elementos dentro de un directorio, utilizamos los comodines
+    ▪ ejemplo: ls -id *</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+El inodo o i-nodo es un identificador único de un archivo o directorio, y es irrepetible. La única manera de que se repita es utilizando un enlace
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_concatenación_de_comandos">; (Concatenación de comandos)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Para concatenar comandos, utilizaremos [;]
+    • Por ejemplo: date; pwd; ls &gt; informe.txt ejecuta los tres comandos juntos, seguidos y de manera independiente, pero solo redirige el último como salida a un fichero, y mostrando el resultado de todo
+    • Ejemplo 2: (date; pwd; ls) &gt; informe.txt ejecuta los tres comandos de forma simultánea y redirige la salida de los tres juntos a un fichero.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_redireccionamiento">&lt;/&gt;/&gt;&gt; (Redireccionamiento)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>&lt; redirecciona la entrada</p>
+</li>
+<li>
+<p>&gt; redirecciona la salida hacia un archivo, si este existe, lo sobreescribirá, si no existe, lo creará.</p>
+</li>
+<li>
+<p>&gt;&gt; redirecciona la salida, pero no sobreescribirá el archivo existente, sino que se añadirá al fichero al final. En caso de no existir el fichero, lo creará.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>La mayoría de estos se usan para editar ficheros con cat</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tee">tee</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>redirecciona la salida a un fichero y luego lo muestra por pantalla
+    ◦ tee - a fichero.extensión: redirecciona la salida, muestra por pantalla y añade contenido al fichero
+        ▪ Ejemplo: date | tee -a informe.txt crea el informe.txt y le añade información resultante del comando date</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cat_nombre_fichero">cat nombre.fichero</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Visualiza contenidos de un fichero (solo muestra el contenido)
+        ◦ para crear un fichero, de manera interactiva, redireccionamos la salida del comando a un nuevo	fichero
+            ▪ Ejemplo: cat &gt; ejemplo.txt → Después Ctrl + D para terminar</p>
+</div>
+<div class="sect2">
+<h3 id="_cat_n">cat -n</h3>
+<div class="paragraph">
+<p>Enumera las líneas de un fichero
+        ▪ Si nuestro fichero contiene los números rojo, azul y blanco uno en cada línea, visualizamos 1	rojo, 2 azul, 3 amarillo&#8230;&#8203;
+        ◦ cat {fichero1} {fichero2} &gt;&gt; {fichero3}: une dos ficheros, uno añadido al final del otro</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tac">tac</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Visualizar un fichero en orden inverso.
+            ▪ Si nuestro fichero contiene los números 1, 2 y 3, uno en cada línea, visualizamos 3, 2 y 1.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+No se puede usar -n con el tac.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_history_2">history</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Muestra un historial de los comandos utilizados hasta el momento</p>
+</div>
+<div class="sect2">
+<h3 id="_history_c_2">history -c</h3>
+<div class="paragraph">
+<p>Elimina todas las entradas del historial (<em>c</em> de clean).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_history_numero">history {NUMERO}</h3>
+<div class="paragraph">
+<p>Muestra los últimos comandos del historial, el número de entradas es el establecido por el {NUMERO}
+        ▪ Ejemplo: history 10: muestra los 10 últimos comandos utilizados.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_número">!{NÚMERO}</h3>
+<div class="paragraph">
+<p>Vuelve a realizar el comando con este número en el historial.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_more">more</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Permite visualizar un fichero como listado largo, permitiendo saltar líneas o páginas enteras.</p>
+</div>
+<div class="sect2">
+<h3 id="_more_3_fichero_extensión">more +3 fichero.extensión</h3>
+<div class="paragraph">
+<p>Muestra el fichero a partir de la línea 3, incluída.
+Se puede poner cualquier número.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_comando_more">&lt;comando&gt; | more</h3>
+<div class="paragraph">
+<p>Para paginar un listado.</p>
+</div>
+<div class="sect3">
+<h4 id="_history_more">history | more</h4>
+<div class="paragraph">
+<p>Muestra el listado del historial de comandos en forma paginada.
+Al pulsar [intro] vamos a una línea más abajo y  al pulsar [espacio] nos movemos una página entera, Para salir pulsamos [Q]</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_less">less</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Permite visualizar un fichero paginado pudiendo ir hacia delante o hacia atrás en las páginas.</p>
+</div>
+<div class="sect2">
+<h3 id="_comando_less">&lt;comando&gt; | less</h3>
+<div class="paragraph">
+<p>Para paginar un listado. Permite movernos hacia atrás.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>cat nombre.fichero:</strong> Visualizamos el contenido de un fichero ordinario.</p>
+</li>
+<li>
+<p><strong>cat &gt; nombre.fichero:</strong> Crear un fichero de forma interactiva; le vas a poner datos y los va guardando en el fichero; cuando quieras acabar, Ctrl+D.</p>
+</li>
+</ul>
+</div>
+<hr>
+<div class="paragraph">
+<p>Estos comandos están repetidos, no los borro por si acaso.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_l_d_uno">ls -l d-uno</h3>
+<div class="paragraph">
+<p>Mostrar el contendio del directorio d-uno</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_l_d_unod_dos">ls -l d_uno/d_dos</h3>
+<div class="paragraph">
+<p>Mostrar el contenido de d_dos.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_r_2devnull">ls -R / 2&gt;/dev/null</h3>
+<div class="paragraph">
+<p>Que haga un listado recursivo desde la raíz (/)
+El 1 es para que muestre por pantalla, no es necesario porque lo pone por defecto. Pero el 2 es de error, y lo de null es papelera, para que se deshaga del error y lo mande a la papelera.
+Si quiero hacer un listado recursivo a partir del directorio actual, vale con no ponerle nada, o sino: <strong>ls -R . 2&gt;/dev/null</strong>; y si quieres desde la raíz <strong>ls -R / 2&gt;/dev/null</strong></p>
+</div>
+<div class="paragraph">
+<p>Con la -R va entrando en todos los subdirectorios desde la raíz y diciéndote qué hay en cada uno.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_r_3">ls -r</h3>
+<div class="paragraph">
+<p>La r minúscula es de reverse, y va a ir de la Z a la A.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+No confundir -R con -r, la primera es recursividad, la segunda es reverse, de la A a la Z-
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rmdir_d_tres">rmdir d_tres</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Borra el directorio d_tres, pero tiene que estar vacío. Dará fallo si tiene contenido.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rm_r_d_uno">rm -r d_uno</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Elimina el directorio aunque tenga contenido. Aquí la -r es remove, no reverse.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Los siguientes vuelven a ser comando repetidos</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cat_n_colores_txt">cat -n colores.txt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>El - n enumera las líneas del archivo.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_more_colores_txt">more colores.txt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nos permite ver un fichero por dentro a partir de cierta línea; por ejemplo, <strong>more +3</strong> muestra a partir de la línea 3, esta incluída.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_less_colores_txt">less colores.txt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Va igual que el more pero cambia algo que no se que es.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ls_1_more_3">ls -1 / | more +3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vemos el listado a partir de la línea 3.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cp_colores_txt_color_txt">cp colores.txt color.txt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copiar un archivo <em>colores.txt</em> y guardarlo con el nombre <em>color.txt</em>.</p>
+</div>
+<div class="sect2">
+<h3 id="_cp_colores_txt_cinco">cp colores.txt cinco/</h3>
+<div class="paragraph">
+<p>Que haga una copiar de colores.txt en el directorio cinco/
+Formato → <strong>cp origen destino</strong>
+La "/" es opcional, va a entender que es un directorio aunque no se la pongas.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mv_colores_txt_lista_color_txt">mv colores.txt lista.color.txt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Renombrar el archivo colores.txt a lista.color.txt.
+Con mover no generas nada, simplemente cambias el nombre del fichero.
+<strong>mv</strong> también renombra directorios: <strong>mv seis dire</strong></p>
+</div>
+<div class="sect2">
+<h3 id="_mv_planetas_txt_dire">mv planetas.txt dire/</h3>
+<div class="paragraph">
+<p><strong>mv</strong> también sirve para mover, aquí está moviendo el archivo planetas.txt al directorio dire/.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mv_color_txt_sietecolor_siete_txt">mv color.txt siete/color.siete.txt</h3>
+<div class="paragraph">
+<p>No solo lo mueve, sino que lo renombra a la vez.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mv_txt">mv *.txt ..</h3>
+<div class="paragraph">
+<p>Cuando usemos comodines como mover todo lo que termine en .txt, puede dar problemas, sobre todo si en vez de en el origen como en el ejemplo, usamos el comodín en el destino. Verificar siempre con <em>ls</em>. Por ejemplo, si quiero coger todos los ficheros .txt y renombrarlos a .doc (<strong>mv *.txt *.doc</strong>) nos va a dar error, se piensa que *.doc es un directorio</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cp_c1_txtc2_txtlscolor_txt">cp ~/{c1.txt,c2.txt,lscolor.txt} .</h3>
+<div class="paragraph">
+<p>Le estamos pidiendo que con una ruta absoluta vaya a home, y coja los tres ficheros que hay entre llaves y los copie aquí (.) OJO NO PONER ESPACIOS DESPUÉS DE LAS COMAS.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cp_c1_txt_c2_txt_color_txt_ocho">cp ../c1.txt ../c2.txt ../COLOR.txt ocho/</h3>
+<div class="paragraph">
+<p>Es lo mismo, que copie los fichero del directorio padre (vamos, realmente el archivo está en el directorio donde estamos xd) y los copie a ocho/. Las rutas de origen pueden ser todas las que quieras, la que tenga cada archivo que quieres copiar, pero el destino tiene que ser el mismo para todos, solo puede ser uno.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_touch">touch</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Crea fichero vacío; puede crear varios a la vez: <strong>touch iso.txt fol.txt bases.txt</strong>; si quiero crearlos en diferentes rutas, se especifica en cada fichero: <strong>touch ../xbd.txt /../apuntes/fundamentos.adoc</strong>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mkdir_p_facturacioncomprasc_2020c_2021">mkdir -p facturacion/compras/{C_2020,C_2021}</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La opción -p le indica a mkdir que cree todos los directorios necesarios en el camino especificado, incluso si los directorios padres aún no existen. Sin la opción -p, mkdir podría dar un error si intenta crear un directorio dentro de un camino que aún no existe.
+Si todos los directorios en la ruta especificada ya existen, entonces puedes omitir la opción -p. La opción -p es útil para asegurarse de que todos los directorios en el camino se creen, pero si ya existen, no causará ningún problema.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_touch_facturacioncomprasc_2020ene_2020_txtfeb_2020_txtmazo_2020_txt">touch facturacion/compras/C_2020/{ene_2020.txt,feb_2020.txt,mazo_2020.txt}</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Crear tres archivo a la vez en un directorio (destino{ficheros}); ojo a no poner espacio después de las comas.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Ojo a no poner espacios en blanco después de las comas en lo que va entre llaves {}
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_file">file</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Te dice el tipo de archivo que es.</p>
+</div>
+<div class="sect2">
+<h3 id="_file_2">file *</h3>
+<div class="paragraph">
+<p>Te dice qué tipo de archivos son todos los del directorio actual.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_file_archivo_txt">file archivo.txt</h3>
+<div class="paragraph">
+<p>Te dice qué tipo de archivo es el que tú le pones.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cambiar_fecha_a_un_archivo">Cambiar fecha a un archivo</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ls -l colores.txt:</strong> puedes ver por ahí la fecha.</p>
+</li>
+<li>
+<p><strong>touch colores.txt:</strong> haces un touch al fichero que ya existe.</p>
+</li>
+<li>
+<p><strong>ls -l colores.txt:</strong> ahora la fecha es otra.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_touch_c_colores_txt">touch -c colores.txt</h3>
+<div class="paragraph">
+<p>Así es mejor cambiar la fecha, porque como no exista el archivo y no le pongas el -c, te lo crea; en caso de que no exista, con el -c no crea nada.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_touch_t_12311200_colores_txt">touch -t 12311200 colores.txt</h3>
+<div class="paragraph">
+<p>Cambias la fecha al archivo, el formato de la fecha es mmddhhmm -mes, día, hora, minuto-). Se puede añadir año al principio (touch -t 2004011200 colores.txt pondría el año 2020 -solo se pone el 20-), sino asume que es el actual; si no pones hora suele poner las 12pm.</p>
+</div>
+<div class="paragraph">
+<p>La -t es de <em>timestamp</em>.</p>
+</div>
+<div class="paragraph">
+<p>El comando touch en sistemas Unix y Linux permite especificar una marca de tiempo específica utilizando la opción -t. Puedes usar el formato [[CC]YY]MMDDhhmm[.ss], donde:</p>
+</div>
+<div class="paragraph">
+<p>CC es el primer componente del año (siglo).
+YY es el segundo componente del año (dos últimos dígitos).
+MM es el mes.
+DD es el día.
+hh es la hora.
+mm es el minuto.
+.ss es opcional y representa los segundos.
+Por ejemplo:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">touch -t 202311152030.00 colores.txt</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_touch_r_color_txt_colores_txt">touch -r color.txt colores.txt</h3>
+<div class="paragraph">
+<p>La -r es de referencia, color.txt es el archivo al que hace esa referencia, y colores.txt el archivo al que va dirigido; así, la fecha y hora del archivo color.txt será también ahora la fecha de colores.txt.
+Funciona también con directorios, eh.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_enlaces">Enlaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tenemos dos tipos de enlaces:</p>
+</div>
+<div class="sect2">
+<h3 id="_simbólicos">Simbólicos</h3>
+<div class="paragraph">
+<p>Lo que en Windows son los accesos directos; acceso directo a un fichero o a un directorio. Trabajan sobre:
+    - Ficheros
+    - Directorios</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">ln -s facturacion/compras/c_2020/ enlace_c_2020</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Primero se pone la ruta donde va a dirigir el link, y después el nombre que queramos.</p>
+</div>
+<div class="paragraph">
+<p>Ahora cuando quiera cambiar a ese directorio, usaremos cd con el enlace:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd enlace_c_2020</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Y al hacer <strong>pwd</strong> veremos que nos ha llevado a la ruta del enlace.</p>
+</div>
+<div class="paragraph">
+<p>Si en vez de a un directorio el enlace es a un fichero, un cd nos dará error porque no se le hace cd a un fichero ordinario, pero se podría hacer un cat al enlace, por ejemplo.</p>
+</div>
+<div class="paragraph">
+<p>Si queremos borrar los archivos que hay en esa ubicación.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">rm enlace_c_2020/*</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Y nos eliminará todos los archivos, pero nos dejará el accesos directo, solo que ahora es inservible.</p>
+</div>
+<div class="paragraph">
+<p>Si además eliminas el directorio de la ruta, cuando haces un ls -l el enlace aparece en rojo y negro, porque es inservible; por eso habrá que eliminar el enlace.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">rm enlace_c_2020/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Se elimina normal porque para Linux es un fichero más.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hard_link">hard link</h3>
+<div class="paragraph">
+<p>Solo trabajan sobre <strong>FICHEROS</strong>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">ls -id *</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>El -i es de inodo (y la -d de directorio), es como el DNI de una entrada, un número que no se repite. Si sacamos cada inodo de cada entrada. No es solo un número, contiene una serie de información donde guarda ese número de inodo, el nombre del fichero o directorio, el tipo, cuándo fue creado, por quién. cuando se modificó por última vez, cuándo se accedió por última vez en solo lectura&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>En el caso de los enlaces duros, los inodos se repiten, es la única excepción que tenemos, el inodo es por esencia irrepetible.</p>
+</div>
+<div class="paragraph">
+<p>En Windows esto no existe.</p>
+</div>
+<div class="paragraph">
+<p>La idea es la siguiente, crear un fichero y todo el mundo accediendo a él, y modificando. Si uno lo modifica, entra la modificación a todos. Todos ven las modificaciones, porque el fichero es uno, aunque tengamos cada uno el fichero en su propia carpeta personal.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ls -lih:</strong> vas a ver los números de inodos y los KB que ocupan. La -h es de humanizar, para que te lo muestre en una medida que entiendas.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Para crear un enlace duro:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">ln /home/asir1/colores.txt colores.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>El fichero está en el sistema una sola vez, no repetido tantas veces como ln se hagan.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wc_datos_txt">wc datos.txt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>El comando wc (word count) en Unix y sistemas similares se utiliza para contar palabras, líneas y caracteres en un archivo. Si ejecutas el comando wc con el nombre de un archivo, proporcionará tres valores por defecto: el número de líneas, el número de palabras y el número de caracteres en ese archivo.</p>
+</div>
+<div class="sect2">
+<h3 id="_wc_l_datos_txt">wc -l datos.txt</h3>
+<div class="paragraph">
+<p>Cuenta las líneas que tiene el fichero datos.txt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wc_w_datos_txt">wc -w datos.txt</h3>
+<div class="paragraph">
+<p>Cuenta las palabras del fichero datos.txt; solo cuenta las palabras por espacio, es decir, si tenemos maria:blanco:negreira:1500 solo lo toma como una palabra.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wc_c_datos_txt">wc -c datos.txt</h3>
+<div class="paragraph">
+<p>Cuenta los caracteres del fichero datos.txt.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>*wc -L datos.txt:</strong>
+Nos dice cuántos caracteres tiene la línea más larga del fichero datos.txt.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Estos parámetros se pueden combinar, por ejemplo, si quiero saber el número de caracteres que tiene la línea más larga, y a la vez el número de caracteres del archivo, usaría <strong>wc -L -c datos.txt</strong>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wc_como_filtro">wc como filtro</h3>
+<div class="paragraph">
+<p>wc puede usarse, además de como comando, como filtro.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ls / | wc</strong></p>
+</li>
+<li>
+<p><strong>ls / | wc -l</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Dos métodos para ver el número de líneas de un fichero:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Como comando: <strong>wc -l reporte.txt</strong></p>
+</li>
+<li>
+<p>Como filtro: <strong>cat reporte.txt | wc -l</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ambas hacen exactamente lo mismo.</p>
+</div>
+<div class="paragraph">
+<p>Y si uso el <strong>tac</strong> para que las cuente al revés lo mismo, da igual que las cuente de un lado o de otro que son las mismas.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wc_l_reporte_txt_datos_txt">wc -l reporte.txt datos.txt</h3>
+<div class="paragraph">
+<p>Me cuenta las líneas de los dos ficheros y además me hace la suma.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wc_lc_etc">wc -lc /etc/*</h3>
+<div class="paragraph">
+<p>dará una salida que incluye el conteo de líneas y caracteres para cada archivo individual en ese directorio y sus subdirectorios, así como el total acumulado al final. Muchos son directorios por lo que dará errores.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wc_lc_etc_2devnull">wc -lc /etc/* 2&gt;/dev/null:</h3>
+<div class="paragraph">
+<p>Así, todos los errores no se muestran.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_paginarlo">Paginarlo</h3>
+<div class="paragraph">
+<p>La salida es larguísima, por lo que podemos usar un filtro para paginarla.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>wc -lc /etc/* 2&gt;/dev/null | less:</p>
+</li>
+<li>
+<p>wc -lc /etc/* 2&gt;/dev/null | more:</p>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unir_varios_ficheros">Unir varios ficheros</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tengo dos ficheros: datos.txt y reporte:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>cat datos.txt reporte &gt; reporte.datos:</strong> se añade el segundo debajo del primero en un nuevo fichero llamado reporte.datos. El orden en el que se escriben los ficheros es importante.</p>
+</li>
+<li>
+<p><strong>cat dichos_3.txt &gt;&gt; dichos.txt:</strong> así unes el fichero dichos_3.txt con el ficheros dichos.txt; queda el fichero dichos.txt con su contenido original y al final se le ha añadido el contenido del fichero dichos.3.txt.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Con el &gt; lo que haces es meter el contenido en el fichero tal cual, es decir, vas a sobreescribir el contenido del fichero de destino (a no ser que no exista, entonces crea uno nuevo y da un poco igual); con el &gt;&gt; lo que haces es añadir el nuevo contenido al fichero de destino, es decir, el fichero de destino queda igual que estaba y además se le añaden al final nuevo contenido.
+<em>_</em>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cat_n_reporte_datos">cat -n reporte.datos</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enumera cada una de las filas, es solo visual y no modifica el fichero.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_head_5_reporte_datos">head -5 reporte.datos</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Quiero ver, desde el top (head, cabecera) las cinco primeras líneas, se puede poner cualquier número, empieza desde la cabecera y va cogiendo las cinco primeras líneas. Si no pongo ningún parámetro va a mostrar 10 líneas.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>El head funciona como comando y como filtro: cat reporte.datos | head -3
+---</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tail_2_reporte_datos">tail -2 reporte.datos</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Funciona al revés que el head, desde abajo. Muestra también 10 por defecto si no le indicas parámetro.</p>
+</div>
+<div class="sect2">
+<h3 id="_cat_n_reporte_datos_head_5_tail_2">cat -n reporte.datos | head -5 | tail -2</h3>
+<div class="paragraph">
+<p>Si queremos que solo nos muestre las líneas 4 y 5, le pedimos dos filtros a la vez: el del head nos muestra hasta la línea 5, y ahora el tail nos muestra solo la 5 y la 4 que son las dos primeras desde abajo.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tail_4_reporte_datos">tail +4 reporte.datos</h3>
+<div class="paragraph">
+<p>En vez de poner un - pongo el + para decirle que se posicione en la línea 4; va a mostrar <strong>desde</strong> línea 4; hace lo mismo como filtro <strong>cat -n reporte.datos | tail +4</strong>; si además se le añade un filtro head -2 te coge las dos primeras líneas de las que filtró. Quedaría <strong>cat -n reporte.datos | tail +4 | head -2</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_head_1">head -1 *</h3>
+<div class="paragraph">
+<p>Te muestra la primera línea de todos los ficheros que hay en el directorio actual. Puede usarse cualquier comodín, por ejemplo, head -1 rep*; con los directorios dará error, así que se le puede añadir esto: <em>head -1 * 2&gt;/dev/null</em></p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Lo normal en Linux para separar campos son los dos puntos:</p>
+</div>
+<div class="paragraph">
+<p><em>maria:blanco:negreira:1500</em></p>
+</div>
+<div class="paragraph">
+<p>Si tengo un fichero con varios registros como el anterior, y quisiera guardar en otro fichero todos los nombres de la primera columna (maria en el registro de ejemplo), usaríamos el comando <em>cut</em> para cortar la columna.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cut_d_f1_datos_txt_usuarios_txt">cut -d: -f1 datos.txt &gt; usuarios.txt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La -d es el delimitador, donde va a cortar, en este caso le indicamos que un campo termina con los dos puntos; la -f es de field, campo, y le decimos que queremos que saque el primer campo (maria).</p>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f2_datos_txt_tee_colorin_txt">cut -d: -f2 datos.txt | tee colorin.txt</h3>
+<div class="paragraph">
+<p>Aquí usamos el tee; el -f2 solo coge el campo 2 eh, no el 1 y el 2.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f14_datos_txt">cut -d: -f1,4 datos.txt</h3>
+<div class="paragraph">
+<p>así es solo visual, no lo estamos guardando en ningún sitio, lo que si en el parámetro -f le estamos diciendo que queremos dos campos, el 1 y el 4.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f1_3_datos_txt">cut -d: -f1-3 datos.txt</h3>
+<div class="paragraph">
+<p>Con el guión en vez de la coma, lo que indicas es un rango, coges de la columna 1 a la 3.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cut_también_funciona_como_filtro">cut también funciona como filtro:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ls_l_cut_d_f1">ls -l | cut -d " " -f1</h3>
+<div class="paragraph">
+<p>Aquí le pido un listado largo, y le filtro con el delimitador espacio y columna 1. Ojo con dejar espacio entre la d y la comilla de apertura, no pegarlos nunca. (En este caso va a pasar una cosa no deseada, y es que algunas columnas del listado tienen dos espacios de separación entre ellas, por ejemplo cuando en una columna hay números, algunos son de 3 cifras y otros de 2, por lo que los de 2 tienen un espacio en blanco de más, y cuenta otra columna de más).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_l_tee_nombre_fichero">ls -l | tee nombre.fichero</h3>
+<div class="paragraph">
+<p>Muestra el ls por pantalla y a la vez lo guarda en el archivo nombre.fichero.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sort_datos_txt">sort datos.txt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ordena el fichero, sin ningún parámetro simplemente toma el primera caracter de cada registro y lo ordena.</p>
+</div>
+<div class="sect2">
+<h3 id="_sort_t_k2_datos_txt">sort -t: -k2 datos.txt</h3>
+<div class="paragraph">
+<p>Aquí la -t es el delimitador, entonces le estamos diciendo que los dos puntos son el delimitador, la -k es de clave, queremos la segunda clave (el segundo campo); entonces ordena en función de la segunda columna.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Mucho cuidado con confundir los delimitadores y campos/claves entre cut y sort; en cut el delimitador es -d de delimitador, mientras que en sort es -t de separator; en cut el campo es -f de field, en sort es -k de key.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sort_t_k4_n_datos_txt">sort -t: -k4 -n datos.txt</h3>
+<div class="paragraph">
+<p>Para ordenar por campos numéricos, lo que haría normalmente es ordenar por primer caracter, y tomaría primero el 1100 antes que un 990, por el 1 y el 9. Por eso hay que añadir el -n de numérico.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sort_t_k4_nr_datos_txt">sort-t: -k4 -nr datos.txt</h3>
+<div class="paragraph">
+<p>La -r es de reverse, lo ordenará de mayor a menor.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>sort puede actuar como filtro:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f3_datos_txt_sort">cut -d: -f3 datos.txt | sort</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f3_datos_txt_sort_uniq">cut -d: -f3 datos.txt | sort | uniq</h3>
+<div class="paragraph">
+<p>Así no habrá datos repetidos.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f3_datos_txt_sort_uniq_u">cut -d: -f3 datos.txt | sort | uniq -u</h3>
+<div class="paragraph">
+<p>Con -u nos muestra solo datos que no se repiten.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f3_datos_txt_sort_uniq_c">cut -d: -f3 datos.txt | sort | uniq -c</h3>
+<div class="paragraph">
+<p>cuenta cuántas veces se repite cada resultado.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Siempre que usemos <em>unique</em> es importante usar el <em>sort</em> antes, porque lo que está comparando el <em>unique</em> es la fila de arriba con la de abajo, y si no están ordenados, va a mostrar repetidos:
+ames
+ames
+ames
+negreira
+santiago
+santiago
+Así compararía santiago con santiago y ames con ames con ames. Si no está ordenado,  no los compara.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f3_datos_txt_sort_uniq_c_cut_d_f2">cut -d: -f3 datos.txt | sort | uniq -c | cut -d " " -f2</h3>
+<div class="paragraph">
+<p>Así no nos muestra la columna que queremos porque hay varios espacios antes y toma más columnas de las que queremos.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f3_datos_txt_sort_uniq_c_cut_d_f8">cut -d: -f3 datos.txt | sort | uniq -c | cut -d " " -f8</h3>
+<div class="paragraph">
+<p>Así sí, porque está en la columna 8 realemnte con lo de los espacios.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f3_datos_txt_sort_uniq_c_cut_c_9_20">cut -d: -f3 datos.txt | sort | uniq -c | cut -c 9-20</h3>
+<div class="paragraph">
+<p>Así le pedimos que coja a partir del carácter 8 y coja hasta el 20, en vez de usar delimitadores.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f3_datos_txt_sort_uniq_c_cut_c_9_20_tee_ciudades_txt">cut -d: -f3 datos.txt | sort | uniq -c | cut -c 9-20 | tee ciudades.txt</h3>
+<div class="paragraph">
+<p>Así además lo guardamos en un fichero ciudades.txt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_l_cut_d_f3_tail_2_sort_uniq_c_tee_usuarios2_txt">ls -l | cut -d " " -f3 | tail +2 | sort | uniq -c | tee usuarios2.txt:</h3>
+<div class="paragraph">
+<p>me sale cuántos usuarios diferentes hay en el listado y cuántas veces se repiten.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cut_d_f1_datos_txt_estado_civil">cut -d: -f1 datos.txt &gt; estado.civil</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cortamos la columna que queremos y la guardamos en un fichero.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_paste_d_datos_2_txt_estado_civil_tee_datos_3_txt">paste -d: datos.2.txt estado.civil | tee datos.3.txt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Si no lo guardas, el paste es solo visual.
+Para usar el paste lo mejor es crear un archivo temp antes con lo que queremos pegar.
+El -d le pones tu el que quieras para que cuando lo pegue, use ese delimitador.</p>
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f4_datos_3_txt_sort_n_r_head_1">cut -d: -f4 datos.3.txt | sort -n -r | head -1</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_cut_d_f4_datos_3_txt_sort_n_tail_1">cut -d: -f4 datos.3.txt | sort -n | tail -1</h3>
+<div class="paragraph">
+<p>Ambos comandos nos devolverían lo mismo, en uno usamos reversa y otro no, así que filtramos el primero por el principio o por el final dependiendo.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<em>cut</em> trabaja como comando y como filtro.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>cut -d: -f5 datos.3.txt | sort | uniq -c | head -2 | tail -1</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tr_a_z_a_z_datos3_txt_datos_min_txt">tr [A-Z] [a-z] &lt; datos3.txt &gt; datos.min.txt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>tr es un traductor; todo lo que está en mayúsculas lo ponga en minúsculas. Necesita obligatoriamente un redireccionamiento de ENTRADA (&lt;);</p>
+</div>
+<div class="sect2">
+<h3 id="_tr_datos_3_txt">tr ":" "*" &lt; datos.3.txt</h3>
+<div class="paragraph">
+<p>Que cambie todos los : a *. Aquí es solo visualmente el cambio.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tr_a_z_a_z_datos_3_txt_tr">tr [A-Z] [a-z] &lt; datos.3.txt | tr ":" "*"</h3>
+<div class="paragraph">
+<p>Doble traducción, no hace falta poner otra vez el archivo.</p>
+</div>
+<div class="paragraph">
+<p>También funciona como filtro:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cat_datos_3_txt_tr_a_z_x">cat datos.3.txt | tr [A-Z] X</h3>
+<div class="paragraph">
+<p>Que todas las mayúsculas las cambie por una X.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cat_tr_d_a_z">cat | tr -d [A-Z]</h3>
+<div class="paragraph">
+<p>El -d es de delete, y borrará todos los caractéres que estén en mayúscula.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+El archivo de entrada y salida no puede ser el mismo, porque entonces habría un bucle ahí que no funcionaría, queda el archivo en blanco.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ls_l_tr_d_cut_d_f6">ls -l | tr -d ' ' | cut -d ' ' -f6</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Aquí al quitar los espacios nos queda solo una columna.</p>
+</div>
+<div class="sect2">
+<h3 id="_ls_l_tr_s_cut_d_f6">ls -l | tr -s ' ' | cut -d ' ' -f6</h3>
+<div class="paragraph">
+<p>Aquí el -s nos quita solo los espacios repetidos, que es lo que necesitamos justo para esto.
+La -s es de squeezing y es la que se encarga de eliminar repeticiones de caracteres</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_l_tr_s_cut_d_f6_sort_uniq_c">ls -l | tr -s ' ' | cut -d ' ' -f6 | sort | uniq -c</h3>
+<div class="paragraph">
+<p>Aquí nos diría cada mes y cuántos salen por cada mes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tr_c_a_z_prueba">tr -c [a-z] " " &lt; prueba</h3>
+<div class="paragraph">
+<p>El -c es de contrario, va a reemplazar todo lo que no sea minúsculas de la a-z por un espacio en blanco. Lo contrario no son solo las mayúsculas, también números, signos de puntuación&#8230;&#8203; cualquier caracter que no esté entre a-z.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uname_v">uname -v</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Muesta la fecha de la última compilación del kernell.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grep_blanca_datos">grep blanca datos</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nos va a permitir buscar palabras en ficheros; pueden ser palabras enteras, partes de palabras&#8230;&#8203; El orden es <em>grep → lo que busco → dónde lo busco</em>.</p>
+</div>
+<div class="sect2">
+<h3 id="_grep_bla_datos">grep bla datos</h3>
+<div class="paragraph">
+<p>En este caso nos devolvería tanto blanca, como blanco.</p>
+</div>
+<div class="paragraph">
+<p>Discrimina entre MAY y min, si tengo MARIA en un fichero, pero busco grep maria datos, no nos lo encuentra. Por eso:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_i_maria_datos">grep -i maria datos</h3>
+<div class="paragraph">
+<p>-i de ignore-case, va a darle igual ahora si son MAY. o min.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_i_maria_datos_datos_txt_datos_2_txt">grep -i maria datos datos.txt datos.2.txt</h3>
+<div class="paragraph">
+<p>Puedes buscar en varios ficheros a la vez. En la salida de la terminal va a mostrar el nombre del fichero donde aparece y la línea donde aparece en ese fichero.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_i_maria_datos_2">grep -i maria datos*</h3>
+<div class="paragraph">
+<p>aquí nos trae lo mismo que el anterior, pero como usamos el comodín no hace falta escribir los tres archivos, ya entiende que estás buscando en todos los ficheros que comiencen por <em>datos</em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_i_juan_carlos_dat">grep -i "Juan Carlos" dat*</h3>
+<div class="paragraph">
+<p>En caso de que lo que busquemos tenga espacio en blanco, es OBLIGATORIO meterlo entre comillas, porque si no va a entender que lo que va despues del espacio en blanco es el archivo.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_ic_maria_dat">grep -ic maria dat*</h3>
+<div class="paragraph">
+<p>El -c es un contador, entonces nos dice las ocurrencias, es decir, cuántas veces aparece el texto "maria" en cada fichero. La terminal devolvería algo similar a esto:
+                datos:1
+                datos.2.txt:1
+                datos.4.txt:0
+                datos.min.txt:1
+                datos.txt:1</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_icv_ia">grep -icv ia *</h3>
+<div class="paragraph">
+<p>Con el -v de invert-match hace lo contrario, cuenta las líneas donde NO aparece.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_in_santiago_datos">grep -in santiago datos</h3>
+<div class="paragraph">
+<p>El -n númera la línea en la que está lo que busco.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>También funciona como filtro el grep</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ls_grep_ia_1_os">ls | grep -iA 1 os</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La -A es de after, y lo que hace es traer lo que buscas con el grep y, además, una línea después. El 1 puede ser cualquier número, y entonces serían las n líneas anteriores.</p>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_ib_1_os">ls | grep -iB 1 os</h3>
+<div class="paragraph">
+<p>La -B es de before, y lo que hace es traer lo que buscas con el grep y, además, una línea anterior.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_ic_1_os">ls | grep -iC 1 os</h3>
+<div class="paragraph">
+<p>La -C es lo que hace es traer lo que buscas con el grep y, además, una línea después y una línea antes. La -C es por A, B y C.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_in_a_color_txt_busca_las_líneas_que_comiencen_por_a_es_la_línea_no_la_palabra">grep -in ^a color.txt: busca las líneas que comiencen por a. Es la línea, no la palabra.</h3>
+<div class="paragraph">
+<p>grep -in ^a..l$ color.txt: busca las líneas que comiencen por a, contengan 2 carácteres y finalicen con l.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+^ Para indicar el comienzo.
+. Para indicar cualquier caracter.
+$ Para indicar el final.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_in_m_o">grep -in ^m..*o$</h3>
+<div class="paragraph">
+<p>el asterisco es para indicar que después de los dos caracteres que siguen a la m, vienen más caracteres, pero no se cuántos son.
+Es aconsejable poner entre "" la palabra que buscamos cuando escribimos caracteres especiales como *, en algunas terminales podría dar error si no.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_in_m_ia_datos">grep -in ^m.*ia datos</h3>
+<div class="paragraph">
+<p>Luego puedes poner tú las combinaciones que necesites.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_0_9">ls | grep [0-9]</h3>
+<div class="paragraph">
+<p>Buscamos todas las entradas que contengan un número en el nombre.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_i_s0_9">ls | grep -i s[0-9]</h3>
+<div class="paragraph">
+<p>Delante del número tiene que haber una s.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_i_ce">ls | grep -i ^[ce]&#8230;&#8203;&#8230;&#8203;</h3>
+<div class="paragraph">
+<p>La palabra que busco empieza o por c o por e, y luego tiene tantos caractéres como puntos como mínimo. Es la longitud mínima lo que le indicas, luego puede ser mayor lo que te devuelva.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_24">ls | grep [24]</h3>
+<div class="paragraph">
+<p>Busco una entrada que contenga o el 2 o el 4.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Cuando escribo algo entre los corchetes se lee de forma individual.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_24_2">ls | grep 24</h3>
+<div class="paragraph">
+<p>Si quisiese buscar un 24 lo pondría así.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_a_fa_f">ls | grep ^[a-fA-F]</h3>
+<div class="paragraph">
+<p>Que empiece por algo que sea de la "a" a la "f" o de la "A" a la "F". En este caso es válido también ls | grep -i [a-f]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_i_aeiou">ls | grep -i [aeiou]$</h3>
+<div class="paragraph">
+<p>Que termine en vocal. Que sería lo mismo que ls | grep [aeiouAEIOU]$</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_i_aeiou_2">ls | grep -i [aeiou]&#8230;&#8203;$</h3>
+<div class="paragraph">
+<p>Empezando por detrás, el cuarto es una vocal.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_i_aeiouaeiou">ls | grep -i [aeiou][aeiou]</h3>
+<div class="paragraph">
+<p>Contiene dos vocales juntas, en cualquier posición.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_i_aeiouaeiou_2">ls | grep -i [aeiou][aeiou]*</h3>
+<div class="paragraph">
+<p>Una vocal y la segunda puede que no aparezca.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_i_aeiouaeiouaeiou">ls | grep -i [aeiou][aeiou][aeiou]*</h3>
+<div class="paragraph">
+<p>Dos vocales obligatorias y la tercera puede que no aparezca.</p>
+</div>
+<div class="paragraph">
+<p>La que está pegada al asterisco es opcional, puede que no aparezca ninguna vez.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_i_a_e">ls | grep -i <sup>[</sup>a-e]</h3>
+<div class="paragraph">
+<p>Que NO empiece por ninguna letra de la a a la e.</p>
+</div>
+<div class="paragraph">
+<p>Dentro de los corchetes, el circunflejo ES NEGACIÓN</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_a_grep">ls -a | grep "^\."</h3>
+<div class="paragraph">
+<p>El punto hay que escaparlo para que no interprete que es un caracter cualquiera, sino que es un punto lo que buscamos.  SIEMPRE que escapemos algo, hay que meterlo entre comillas.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_a_grep_2">ls -a | grep "<sup>[</sup>\.]"</h3>
+<div class="paragraph">
+<p>Que no empiecen por punto</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_grep_i_tostad">ls | grep -i "\(tos\|tad\)"</h3>
+<div class="paragraph">
+<p>Estoy buscando que tenga tos, o que tenga tad; el | no es un filtro, es un "o", por lo que hay que escaparlo; además hay que meterlo entre paréntesis para que sepa que es lo que buscamos, lo que pasa que hay que escapar también estos paréntesis, y debemos meterlo entre comillas porque está escapado; puede contener ambas, tanto tos como tad.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_grep_asir1_etcpasswd">grep asir1 /etc/passwd</h3>
+<div class="paragraph">
+<p>Con esto nos trae la línea que queremos de nuestro usuario.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_on_asir1_etcpasswd">grep -on asir1 /etc/passwd</h3>
+<div class="paragraph">
+<p>Nos dice en qué línea aparece asir1.
+La -o de output, hace que solo se muestre la salida de la parte que buscamos, y no toda la línea.
+La -n es la que se encarga de enumerar la línea en la que está.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep_asir1_etcpasswd_cut_d_f7">grep asir1 /etc/passwd | cut -d: -f7</h3>
+<div class="paragraph">
+<p>Con este filtro sabremos con qué shell estamos trabajando.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_passwd">passwd</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cambia la contraseña</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ls_l_etcpasswd">ls -l /etc/passwd</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Fijate en el usuario y grupo. Fíjate en los permisos.</p>
+</div>
+<div class="sect2">
+<h3 id="_ls_l_etcgroup">ls -l /etc/group</h3>
+<div class="paragraph">
+<p>FIjate en lo mismo&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_l_etcshadow">ls -l /etc/shadow</h3>
+<div class="paragraph">
+<p>Y aquí, al contrario que en los anteriores, nos dice que pertenece al grupo shadow. Además tiene otros permisos.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_permisos">Permisos</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Los tres permisos son escritura (w), lectura (r) y (x).</p>
+</div>
+<div class="paragraph">
+<p>El primer caracter indica el tipo de fichero que es, y los otros 9 los permisos.
+Los tres primeros caractéres de permisos pertenecen al propietario; los tres siguientes al grupo; los últimos a otros.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>-rw-rw-r--
+||  |  |
+||  |  ↓
+||  |  Permisos de otros
+||  ↓
+||  Permisos del grupo
+|↓
+|Permisos de usuario
+↓
+Tipo de fichero</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_umask">umask</h3>
+<div class="paragraph">
+<p>Visualizar la máscara que tenemos.</p>
+</div>
+<div class="paragraph">
+<p>La máscara se calcula sobre los ficheros:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>rw-rw-rw-
+110110110
+ 6  6  6</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ese es el valor más alto que se le puede dar a un fichero, 666 (para directorio es 777).</p>
+</div>
+<div class="paragraph">
+<p>Imaginemos que queremos que los ficheros que creemos a partir de ahora tengan los permisos rw-r-----
+Vemos a qué número equivalen en octal nuestros permisos:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>rw-r-----
+110100000
+ 6  4  0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ahora al valor más alto le restamos el nuestro, y ese es nuestro número de máscara (666 - 640 = 026).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Una máscara SIEMPRE es un número par.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_umask_026">umask 026</h3>
+<div class="paragraph">
+<p>Cambiamos a esa máscara.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_touch_abc_txt">touch abc.txt</h3>
+<div class="paragraph">
+<p>Creamos el archivo abc.txt</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_l">ls -l</h3>
+<div class="paragraph">
+<p>Vemos los permisos de abc.txt → -rw-r-----</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Para calcular los permisos en un directorio el número máximo no es 666, es 777, que es al que hay que restar el valor de los permisos que necesitemos.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mkdir_adir">mkdir adir</h3>
+<div class="paragraph">
+<p>Creamos un directorio</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_ld_adir">ls -ld adir/</h3>
+<div class="paragraph">
+<p>Vemos los permisos de adir → drwxr-x&#8212;&#8203;x</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Tan pronto cerremos la terminal, la máscara se borra, porque la máscara está en un . fichero de configuración.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_en_caso_de_querer_dejarla_fija">En caso de querer dejarla fija:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ls_la">ls -la</h3>
+<div class="paragraph">
+<p>Vemos ficheros como el <em>.bash_history</em>, que es donde se guarda el historial de comandos para cuando usemos el comando history. <em>.bashrc</em> y <em>.profile</em> guardan tipo de letra, color de fondo de la terminal&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_less_bashrc">less .bashrc</h3>
+<div class="paragraph">
+<p>Los valores en mayúscula con un = después son las variables del sistema. Cuando hay # significa comentario.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vi_profile">vi .profile</h3>
+<div class="paragraph">
+<p>Vamos hasta la máscara (#umask xxx), descomentamos la línea donde está la máscara, la modificamos por 026 y guardamos con :wq.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exit_2">exit</h3>
+<div class="paragraph">
+<p>Salimos de la terminal.</p>
+</div>
+<div class="paragraph">
+<p>Abrimos de nuevo; y verificamos:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_touch_abcd_txt">touch abcd.txt</h3>
+<div class="paragraph">
+<p>Creamos un archivo de prueba.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_l_abcd_txt">ls -l abcd.txt</h3>
+<div class="paragraph">
+<p>Nos fijamos en que los permisos sean los que buscábamos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_chmod">chmod</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cambio en los permisos.</p>
+</div>
+<div class="paragraph">
+<p>Hay dos modos de cambiar los permisos, con octal o con forma simbólica.</p>
+</div>
+<div class="sect2">
+<h3 id="_chmod_gwo_w_dos_txt">chmod g+w,o-w dos.txt</h3>
+<div class="paragraph">
+<p>Le agregas permiso de escritura al grupo y le quitas el de escritura a otros.</p>
+</div>
+<div class="paragraph">
+<p>imaginando un fichero con los permisos r&#8212;&#8203;r----- en el que vemos los permisos, podría hacerse con el modo octal:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chmod_660_dos_txt">chmod 660 dos.txt</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_chmod_770_dir">chmod 770 dir</h3>
+<div class="paragraph">
+<p>Esto es cambiar permisos a un directorio con modo octal.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chmod_r_660_dir">chmod -R 660 dir/*</h3>
+<div class="paragraph">
+<p>Para los directorios (para los DIRECTORIOS) tengo una recursiva, -R. Cambia todos los permisos de lo que contiene el directorio.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ls_l_binsu">ls -l /bin/su</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En bin están los comandos, el comando su se utiliza para cambiar de cuentas de usuario.</p>
+</div>
+<div class="paragraph">
+<p>En permisos de este comando aparece una "s", son los permisos especiales, vienen por defecto.
+En vez de <em>rwx</em>, tienen <em>sst</em>.</p>
+</div>
+<div class="paragraph">
+<p>En este caso la "s" la tiene el usuario propietario, es un <strong>permiso de sustitución</strong>; en ese fichero, por unos segundos, va a sustituir al root, porque necesita hacer una comprobación en el fichero "shadow", por lo que por unos segundos hace esa lectura en ese fichero para comprobar que la contraseña es correcta.</p>
+</div>
+<div class="paragraph">
+<p>La diferencia de s y S es que en s, debajo hay un permiso de ejecución, y en S no existe ese permiso de ejecución.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tmp">/tmp</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Este es el directorio temporal. Cada app que abrimos crea ficheros temporales, que al cerrar el programa, se destruyen. Si guardamos cosas en este directorio, al reiniciar el sistema, se borran. Tiene todos los permisos y además, en la última posición, tiene una "t".</p>
+</div>
+<div class="paragraph">
+<p>La diferencia entre t y T es que la t tiene debajo un permiso de ejecución, mientras que la T no lo tiene.</p>
+</div>
+<div class="paragraph">
+<p>La t es lo que se conoce como sticky bit.
+Explicación según chatgpt:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-ChatGPT" data-lang="ChatGPT">El "sticky bit" (bit pegajoso o bit de restricción) es un permiso especial que se puede aplicar a directorios en sistemas Unix y Linux. Cuando el sticky bit está configurado en un directorio, restringe la capacidad de usuarios para eliminar o renombrar archivos en ese directorio, a menos que sean el propietario del archivo o el propietario del directorio.
+
+En un directorio con el sticky bit activado:
+
+Los usuarios pueden eliminar o renombrar sus propios archivos dentro del directorio sin restricciones.
+
+Sin embargo, no pueden eliminar o renombrar archivos de otros usuarios, a menos que sean el propietario del directorio.
+
+El sticky bit se representa en la notación simbólica con el carácter t o T en lugar de x para el bit de ejecución en otros:
+
+t: Indica que el sticky bit está activado y el bit de ejecución en otros también está configurado.
+
+T: Indica que el sticky bit está activado, pero el bit de ejecución en otros no está configurado.</code></pre>
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>Si están en mayúscula es que por debajo no hay permisos de ejecución, si están en minúscula, es que sí.</p>
+</div>
+<div class="paragraph">
+<p>sst
+ugo (usuario, grupo, otro)</p>
+</div>
+<div class="paragraph">
+<p>Añadir permisos sería:</p>
+</div>
+<div class="paragraph">
+<p>chmod u+s nombre.txt → para el usuario
+chmod g+s nombre.txt → para el grupo
+chmod o+t nombre.txt → para otros</p>
+</div>
+<div class="paragraph">
+<p>y todos juntos:</p>
+</div>
+<div class="paragraph">
+<p>chmod u+s,g+s,o+t nombre.txt</p>
+</div>
+<div class="paragraph">
+<p>chmod o+w,t nombre.txt: añades los dos permisos a otro</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.ionos.es/digitalguide/servidores/know-how/asignacion-de-permisos-de-acceso-con-chmod/" class="bare">https://www.ionos.es/digitalguide/servidores/know-how/asignacion-de-permisos-de-acceso-con-chmod/</a></p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_comandos_cuando_estamos_conectados_lo_de_remmina">Comandos cuando estamos conectados (lo de remmina)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_w">w</h3>
+<div class="paragraph">
+<p>De <em>who</em>, muestra quién está conectado.
+Tenemos tambien el who.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_who_t">who -T</h3>
+<div class="paragraph">
+<p>El signo + o - nos muestra qué terminales pueden recibir mensajes con el wall; las que estan con + son las que sí.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_who_q">who -q</h3>
+<div class="paragraph">
+<p>Cuántos usuarios están conectados a la terminal.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_who_grep_pepito">who | grep pepito</h3>
+<div class="paragraph">
+<p>Comprobar si pepito está conectado.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_who_grep_a">who | grep ^a</h3>
+<div class="paragraph">
+<p>Comprobar los usuarios conectados que empiezan por a.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_who_grep_pts7">who | grep pts/7</h3>
+<div class="paragraph">
+<p>Qué usuario está en la pts 7.
+(<em>pts</em> significa pseudo-terminal slave).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_who_grep_192_168_1_42">who | grep 192.168.1.42</h3>
+<div class="paragraph">
+<p>Ver quién está conectado con esa IP.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_last_2">last -2</h3>
+<div class="paragraph">
+<p>Los dos últimos en conectarse. Puede ponerse el nº que se quiera.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wall">wall</h3>
+<div class="paragraph">
+<p>Comando para mandar un mensaje a todos</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mesg">mesg</h3>
+<div class="paragraph">
+<p>Si sale <em>y</em>, es que sí puede recibir interrupciones del wall.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mesg_n">mesg n</h3>
+<div class="paragraph">
+<p>Apagamos el wall para que no me lleguen mensajes del wall.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mesg_y">mesg y</h3>
+<div class="paragraph">
+<p>Encendemos para poder recibir mensajes del wall.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mail">mail</h3>
+<div class="paragraph">
+<p>La primera vez puede salir que no tengo correo.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mail_nombredeusuario">mail nombredeusuario</h3>
+<div class="paragraph">
+<p>Enviar un mail a alguien; para enviar es <em>control+d</em>.
+La <em>q</em> para salir del mail</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ls_l_home">ls -l /home</h3>
+<div class="paragraph">
+<p>La configuración aquí es distinta, están las personas agrupadas por letra, salvo la cuenta principal que está aparte.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cd_homeasir1">cd /home/asir1</h3>
+<div class="paragraph">
+<p>Permiso denegado</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>192.168.1.90 → nada esto no es para estudiar es solo una nota que no se donde poner.
+<em>_</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tty">tty</h3>
+<div class="paragraph">
+<p>Ver donde está mi pseudoterminal, la mía es la 17.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_whoami">whoami</h3>
+<div class="paragraph">
+<p>Quién soy o con qué nombre me he logueado. Útil para cuando manejo varias cuentas a la vez.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Lo de los permisos especiales y su valor en octal:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://blog.alcancelibre.org/staticpages/index.php/permisos-sistema-de-archivos" class="bare">https://blog.alcancelibre.org/staticpages/index.php/permisos-sistema-de-archivos</a>
+<em>_</em></p>
+</div>
+<div class="paragraph">
+<p>Esto es un repaso de lo ya dado:</p>
+</div>
+<div class="paragraph">
+<p>Para buscar cinco caracteres hay que hacerlo de diferentes maneras en <strong>ls</strong> que en <strong>grep</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ls ?????</p>
+</li>
+<li>
+<p>grep &#8230;&#8203;..</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Y el asterisco tiene un significado diferente:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ls ?????*</p>
+</li>
+<li>
+<p>grep &#8230;&#8203;..*</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Se supone que estos dos son los errores mas grandes y fijo q algo asi cae en el examen</p>
+</div>
+<div class="paragraph">
+<p>ls ^???$ → esto es INCORRECTO porque no funciona con el ls, el ^ y el $ son para el grep</p>
+</div>
+<div class="paragraph">
+<p>El -i en el grep es para que no distinga may. y min., pero en el ls son los inodos.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_find_home">find /home</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nos va a permitir encontrar o buscar cosas: <em>find + ruta a partir de donde vamos a buscar</em>.</p>
+</div>
+<div class="sect2">
+<h3 id="_find_atime_7">find ~ -atime 7</h3>
+<div class="paragraph">
+<p>Aquellos que fueron accedidos (por ejemplo, los que leí) desde hace 7 días; el 7 puede ser otro número obviamente. a de accedido.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_atime_7_2">find ~ -atime -7</h3>
+<div class="paragraph">
+<p>Los accedidos de menos de 7 días.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_atime_10">find ~ -atime +10</h3>
+<div class="paragraph">
+<p>Aquellos de más de diez días.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_atime_0">find ~ -atime 0</h3>
+<div class="paragraph">
+<p>En las últimas 24 horas.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_mtime_4">find ~ -mtime 4</h3>
+<div class="paragraph">
+<p>Modificado en los últimos 4 días. m de modificado.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_name_d">find ~ -name "d*"</h3>
+<div class="paragraph">
+<p>(Sigue las mismas reglas que usa el ls). aquí le pedimos que busque lo que empiece por d. Para que termine por d, "<em>*d</em>".</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Cuando hay un caracter especial como un *, hay que ponerlo entre comillas
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_etc_name_passwd">find /etc -name "passwd"</h3>
+<div class="paragraph">
+<p>Para buscar nombre del fichero que se llame passwd</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_etc_iname_passwd">find /etc -iname "passwd"</h3>
+<div class="paragraph">
+<p>Sin importar may. y min -ignore-case-.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_iname_passwd_2devnull">find ~ -iname "passwd" 2&gt;/dev/null</h3>
+<div class="paragraph">
+<p>Así no nos da los permisos denegados, los manda a la papelera.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_etc_user_felipe">find /etc -user felipe</h3>
+<div class="paragraph">
+<p>Buscar lo que le pertenece a un usuario.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_etc_group_nombregrupo">find /etc -group nombregrupo</h3>
+<div class="paragraph">
+<p>Buscar lo que pertenece a un grupo de usuarios. Está bien añadirle el 2&gt;/dev/null.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_group_asir1_user_asir1_iname_f">find . -group asir1 -user asir1 -iname "f*"</h3>
+<div class="paragraph">
+<p>Tiene que cumplir <strong>TODAS</strong> las condiciones: que pertenezca al grupo asir1, al usuario asir1 y el nombre del archivo empiece por f. Se tienen que cumplir las tres (<em>AND</em>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_iname_f_type_f">find . -iname "f*" -type f</h3>
+<div class="paragraph">
+<p>El type es el tipo de archivo, en este caso es un fichero (<em>f</em>). Se pueden poner otros dependiendo de lo que estemos buscando:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>f: Archivo regular (fichero ordinario).
+d: Directorio.
+l: Enlace simbólico (si queremos el duro hay que usar -links).
+c: Dispositivo de caracteres.
+b: Dispositivo de bloques.
+p: Tubería con nombre (también conocida como FIFO).
+s: Socket.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_type_f_nouser_2devnull">find . -type f -nouser 2&gt;/dev/null</h3>
+<div class="paragraph">
+<p>Un fichero que no tenga propietario.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_type_f_nogroup_2devnull">find . -type f -nogroup 2&gt;/dev/null</h3>
+<div class="paragraph">
+<p>Un fichero que no tenga grupo.</p>
+</div>
+<div class="paragraph">
+<p>Cuando eliminas un grupo, o usuario&#8230;&#8203;el sistema pone un número larguísimo al propietario de los archivos que pertenecían a ese grupo o usuario (o queda en blanco), y ahora no tienen grupo o usuario. Por eso hay archivos sin propietario o grupo.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_type_f_size_4c">find . -type f -size 4c</h3>
+<div class="paragraph">
+<p>Un archivo cuyo tamaño sea 4 caracteres
+    4b: 4 bloques
+    1G: 1 giga
+    1k: 1 kilo</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Puede ser +1k, -1G... igual que el -atime. El = es sin nada.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Aquí algunas unidades que puedes pedirle al -size:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>c: Bloques de bytes.
+k: Kilobytes.
+M: Megabytes.
+G: Gigabytes.
+w: Palabras (considerando que cada palabra es de 2 bytes, pero puede variar).
+b: Bloques de 512 bytes (unidad predeterminada).
+B: Bytes.
+p: Bloques de 1024 bytes (kilobytes).
+E: Exabytes.
+Z: Zettabytes.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_type_f_size_1k_size_10k">find . -type f -size +1k -size -10k</h3>
+<div class="paragraph">
+<p>Para buscar en un rango de tamaño hay que usar el -size dos veces.</p>
+</div>
+<div class="paragraph">
+<p>El -size 0 es igual que usar -empty.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_type_f_empty">find ~ -type f -empty</h3>
+<div class="paragraph">
+<p>Buscar un archivo vacío.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_type_f_executable_2devnull">find ~ -type f -executable 2&gt;/dev/null</h3>
+<div class="paragraph">
+<p>Fichero ordinario que sea ejecutable (que tenga permisos de ejecución).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_var_perm_1000">find /var -perm -1000</h3>
+<div class="paragraph">
+<p><em>perm</em> de permisos. Usar sin el -type, para que funcione. <strong>No deberían ir juntos</strong>. Con un permiso -1000 busco que tenga un sticky bit. Puede ir con - o sin nada. Los 0s los ignora.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>perm 666: Busca archivos con EXACTAMENTE permisos 666.</p>
+</li>
+<li>
+<p>perm -666: BUsca archivos con mínimo permisos 666, pero puede tener otros adicionales.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_var_perm_777">find /var -perm 777</h3>
+<div class="paragraph">
+<p>Entradas que tengan esos permisos 777, por lo general con 777 son scripts o executables.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_type_f_size_10k_o_empty">find . -type f -size -10k -o -empty</h3>
+<div class="paragraph">
+<p>El -o es un <em>OR</em>, va a traer los archivos menores de 10k y los vacíos.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_type_f_empty_perm_664">find . -type f -empty -perm 664</h3>
+<div class="paragraph">
+<p>Así es el AND, que estén vacíos Y tengan permisos 664. Así va a entrar en rutas, si solo quiero que me busque archivos del primer nivel y no entre en todos los subdirectorios, hay que limitar la profundidad, agregando <strong>después de la ruta</strong> -maxdepth 1.
+No tiene más, solo es que para el <em>AND</em> con no poner nada ya vale, es el por defecto.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_maxdepth_1_type_f_empty_perm_664">find . -maxdepth 1 -type f -empty -perm 664</h3>
+<div class="paragraph">
+<p>La profundidad <strong>OBLIGATORIAMENTE</strong> tiene que estar después de la ruta. Profundidad 1 es el directorio actual.</p>
+</div>
+<div class="paragraph">
+<p>Si pongo -maxdepth 2 me llegará hasta el nivel 2, pero me incluye el 1 y el 2, en caso de que solo quiera el segundo nivel:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_mindepth_2_maxdepth_2_type_f_empty_perm_664">find . -mindepth 2 -maxdepth 2 -type f -empty -perm 664</h3>
+<div class="paragraph">
+<p>Así afinamos más. Como se dijo antes, la profundidad siempre va después de la ruta.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_maxdepth_1_type_f_empty_perm_664_2">find . -maxdepth 1 ! -type f -empty -perm 664</h3>
+<div class="paragraph">
+<p>El ! es negación, es decir, que no sean ficheros, pueden ser directorios. Solamente niega el tipo. Siempre hay un espacio después de la !. Si quisiese que afectase a todos, tendría que poner ! delante de todos.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_maxdepth_1_type_f_empty_name_rr">find . -maxdepth 1 -type f -empty -name "[rR]*"</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_find_maxdepth_1_type_f_empty_iname_r">find . -maxdepth 1 -type f -empty -iname "r*"</h3>
+<div class="paragraph">
+<p>Es lo mismo que lo de arriba, con el <em>-iname</em> no discriminar entre may. y min, con el name a secas puedes pedirle que empiece o por r o por R, que es lo mismo.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_maxdepth_1_type_f_empty_name_rr_exec_rm">find . -maxdepth 1 -type f -empty -name "[rR]*" -exec rm {} \;:</h3>
+<div class="paragraph">
+<p>Después del -exec siempre va a ir un comando, que es el que queremos que se ejecute. En este caso va a borrar todo lo que está entre las llaves, y en este caso es la lista que ha encontrado el find. Tenemos que poner punto y coma para señalar donde acaba lo del -exec, pero como por lo general el ; en linea de comandos se usa para separar un comando de otro, hay que escaparlo.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_maxdepth_1_type_f_empty_name_rr_exec_chmod_666_2devnull">find . -maxdepth 1 -type f -empty -name "[rR]*" -exec chmod 666 {} \; 2&gt;/dev/null</h3>
+<div class="paragraph">
+<p>Aquí le pedimos que cambie los permisos a 666 a los archivos que encuentre con el find, pero si alguno no te deja cambiarlo que no lo muestre y lo mande al devnull ese.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_maxdepth_1_type_f_size_0_name_r_exec_ls_head_1">find . -maxdepth 1 -type f -size +0 -name "r*" -exec ls {} \; | head -1</h3>
+<div class="paragraph">
+<p>El <em>-size +0</em> es lo mismo que <em>! -empty</em>; quiero que me haga un ls de esa búsqueda. Y luego le metemos el filtro head -1 para que muestre solo el primero que encontró, es el primero de lo que está en las {}.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_maxdepth_1_type_f_size_0_name_r_exec_head_1_ls">find . -maxdepth 1 -type f -size +0 -name "r*" -exec head -1 ls {} \;</h3>
+<div class="paragraph">
+<p>Esto en cambio es diferente al anterior, porque primero hace el head. Va a ejecutar el head tantas veces como ficheros haya encontrado, con la primera linea de cada fichero.</p>
+</div>
+<div class="paragraph">
+<p>Esto pasa con el head, con el tail&#8230;&#8203;alguno más por ahí.
+<em>_</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_maxdepth_1_links_3_exec_ls_l">find / -maxdepth 1 -links +3 -exec ls -l {} \;</h3>
+<div class="paragraph">
+<p>El error más común es poner link en singular, pero es <strong>links</strong>. La opción -links en el comando find se utiliza para buscar archivos basándose en el número de enlaces duros asociados a un archivo. Puede ser +3, -3, 3&#8230;&#8203; con el número que sea.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_maxdepth_1_links_3_exec_ls_l_informe_raiz">find / -maxdepth 1 -links +3 -exec ls -l {} \; &gt; informe.raiz</h3>
+<div class="paragraph">
+<p>Así lo guardamos.</p>
+</div>
+<div class="paragraph">
+<p>Podemos guardarlo sin erroreS: find / -maxdepth 1 -links +3 -exec ls -l {} \; 2&gt;/dev/null &gt; informe.raiz</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Cuando Rosa pida buscar ficheros no hay que poner el -type f; el -type f hay que ponerlo cuando pida ficheros ORDINARIOS. Esto es por lo de que para Linux todo eran ficheros.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+El enlace duro si lo queremos buscar es un -type f, a diferencia del enlace blando que es -type l
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alias">alias</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nombres que le ponemos a algo, para no olvidarnos, por ejemplo, en vez de estar todo el rato poniendo <em>clear</em>, me creo un alias más corto y lo uso cuando quiera ejecutarlo.</p>
+</div>
+<div class="sect2">
+<h3 id="_alias_cclear">alias c="clear"</h3>
+<div class="paragraph">
+<p>Una vez cierre la consola, cuando vuelva a abrirla ya no estarán, se habrán borrado.</p>
+</div>
+<div class="paragraph">
+<p>Existen ya unos alias predefinidos por Ubuntu, cuando hacemos un less ~/.bashrc se pueden ver, casi al final, algunos. Por ejemplo, hay un alias <em>la</em> para el comando <em>ls-A</em>.</p>
+</div>
+<div class="paragraph">
+<p>Si editamos este fichero y añadimos nuestros alias personalizados, sí que quedarán permanentemente guardados. Si no quiero utilizar alguno, o bien lo elimino, o bien lo comento con # (es lo más sensato).
+Habrá que reiniciar la terminal porque el fichero .bashrc se carga al abrir la terminal.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alias_contarecho_hay_ls_wc_l_entradas_en_mi_directorio_pwd">alias contar="echo Hay <code>ls | wc -l</code> entradas en mi directorio `pwd`"</h3>
+<div class="paragraph">
+<p>Lo que va entre `` sería como una variable. Es el acento de la derecha de la P.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_unalias_contar">unalias contar</h3>
+<div class="paragraph">
+<p>Eliminar el alias. Se elimina el de memoria, si lo creamos editando el archivo .bashrc no se eliminaría con este comando, habría que ir al archivo para eliminarlo.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alias_vspwd_id_echo_hola">alias vs="pwd; id; echo hola"</h3>
+<div class="paragraph">
+<p>Se puede guardar un alias con comandos concatenados. Nos haría los tres comandos al ejecutar el alias.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_variables_de_usuario">Variables de usuario</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_nombrefelipe">nombre="Felipe"</h3>
+<div class="paragraph">
+<p>Se declara una variable.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_echo_nombre">echo $nombre</h3>
+<div class="paragraph">
+<p>Visualizamos el nombre de la variable.</p>
+</div>
+<div class="paragraph">
+<p>Puede usarse un echo con el texto que sea y meterle las variables que quieras por medio.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_echo_me_llamo_nombre_y_mi_pc_es_el_tty">echo Me llamo $nombre y mi pc es el <code>tty</code></h3>
+<div class="paragraph">
+<p>Aquí usamos tanto variable como comando tty para que nos diga el nombre y el pc que usamos.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_apwd">a=<code>pwd</code></h3>
+<div class="paragraph">
+<p>Guardamos una variable con un comando. Cuando invoquemos la variable va a ejecutar ese comando.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_echo_a_a">echo \$a = $a</h3>
+<div class="paragraph">
+<p>A veces necesitaremos escapar el $ para que no lo tome como variable.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_4">a=</h3>
+<div class="paragraph">
+<p>Así no se borra la variable, así ahora la variable va a estar vacía, pero seguirá estando en memoria</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_unset_a">unset a</h3>
+<div class="paragraph">
+<p>Así sí, la variable queda borrada.</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_variables_de_entorno">Variables de entorno</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_set_less">set | less</h3>
+<div class="paragraph">
+<p>ves variables de entorno y scripts</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_env_less">env | less</h3>
+<div class="paragraph">
+<p>Este solo las variables de entorno; env de enviroment.</p>
+</div>
+<div class="paragraph">
+<p>A diferencia de las variables del usuario, las variables del sistema están en mayúsculas.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_echo_home">echo $HOME</h3>
+<div class="paragraph">
+<p>Nos mostraría nuestro home.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_set_grep_home">set | grep ^HOME</h3>
+<div class="paragraph">
+<p>Buscar la variable HOME.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_env_grep_home">env | grep ^HOME</h3>
+<div class="paragraph">
+<p>Buscar la variable HOME también.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_mail">echo $MAIL</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_user">echo $USER</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Saber cuál es mi usuario.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_path">echo $PATH</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esta a veces la cambiamos nosotros.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_ps1">echo $PS1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Todo lo que sale es el prompt, pero con codificaciones de color, letra&#8230;&#8203;
+Aquí se guarda la configuración de nuestro prompt.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Ver el documento de las variables de entorno del aula virtual.
+---</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_ls">echo <code>ls</code></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_e_estoy_utilizando_el_shell_shelln_en_la_versión_bash_version">echo -e Estoy utilizando el shell $SHELL\n en la versión $BASH_VERSION</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>El -e se tiene que poner en el echo para que interprete los escapes \
+En este caso quiero hacer un salto de línea con \n, por lo que el -e es necesario.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_hola">echo Hola "*"</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Si en cualquier parte del texto del echo hay que poner un *, hay que meterlo entre comillas. Puede ponerse también "Hola *", pero el * entre las comillas.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_logname">echo $LOGNAME</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Es lo mismo que el comando logname. Hace exactamente lo mismo.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hostname">hostname</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>este comando tiene también una variable de entorno que hace lo mismo: $HOSTNAME</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_oldpwd">echo $OLDPWD</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Me dice el último directorio donde estuve.
+u
+== cd $OLDPWD
+Te manda al último directorio donde estuve.</p>
+</div>
+<div class="sect2">
+<h3 id="_cd_oldpwd_touch_fichero_txt">cd $OLDPWD &amp;&amp; touch fichero.txt</h3>
+<div class="paragraph">
+<p>Que se vaya al último directorio donde estuve y cree un fichero; si la primera parte no la puede hacer, la segunda tampoco la hace. El segundo comando es dependiente del primero. El &amp;&amp; es un AND, se tiene que cumplir la primera para ejecutarse la segunda.</p>
+</div>
+<div class="paragraph">
+<p>Si lo que no puede hacer es la segunda parte, la primera sí que la hace igualmente.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_hola_echo_adios">echo Hola || echo Adios</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>El || es un <em>OR</em>, o se cumple la primera o se cumple la segunda.
+Si la primera se ejecuta, la segunda ya no se ejecuta; si no se cumple la primera, se cumplirá la segunda si puede hacer. Si no pues ninguna xd.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+A estos dos anteriores se les llama comandos en cortocircuito.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whereis_passwd">whereis passwd</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sirve para ubicar dónde está un comando.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_apropos_date">apropos date</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En qué lugares del manual se menciona este comando (se menciona como comando o como palabra).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stat_ejer4">stat ejer4</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>El estado completo, información, sobre un fichero: tamaño, bloques, dónde está, inodo, enlaces, acceso, permisos (octal/simbólico), propietario (nº/nombre), grupo, último acceso, última modificación, cambio, creación&#8230;&#8203;</p>
+</div>
+<div class="sect2">
+<h3 id="_stat_documentos">stat Documentos/</h3>
+<div class="paragraph">
+<p>El estado de un directorio; nos dirá que es un fichero de tipo directorio y por lo demás es lo mismo que hacer un stat a un fichero ordinario.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stat_less">stat * | less</h3>
+<div class="paragraph">
+<p>El less es solo porque como va a ser largo es mejor paginarlo. Va a hacerle el stat a todos los archivos.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2023-11-18 17:10:03 +0100
+</div>
+</div>
+</body>
+</html>

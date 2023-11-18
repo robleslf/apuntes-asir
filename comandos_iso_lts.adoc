@@ -260,7 +260,7 @@ Elimina todas las entradas del historial (_c_ de clean).
 Muestra los últimos comandos del historial, el número de entradas es el establecido por el {NUMERO}
         ▪ Ejemplo: history 10: muestra los 10 últimos comandos utilizados.
 
-=== history !{NÚMERO}
+=== !{NÚMERO}
 Vuelve a realizar el comando con este número en el historial.
 
 == more 
@@ -811,7 +811,6 @@ grep -in ^a..l$ color.txt: busca las líneas que comiencen por a, contengan 2 ca
 ^ Para indicar el comienzo.
 . Para indicar cualquier caracter.
 $ Para indicar el final.
-* Para indicar un número indeterminado de caracteres.
 
 === grep -in ^m..*o$ 
 el asterisco es para indicar que después de los dos caracteres que siguen a la m, vienen más caracteres, pero no se cuántos son.
@@ -823,124 +822,197 @@ Luego puedes poner tú las combinaciones que necesites.
 === ls | grep [0-9] 
 Buscamos todas las entradas que contengan un número en el nombre.
 
-ls | grep -i s[0-9]: delante del número tiene que haber una s.
+=== ls | grep -i s[0-9] 
+Delante del número tiene que haber una s.
 
-ls | grep -i ^[ce]......: la palabra que busco empieza o por c o por e, y luego tiene tantos caractéres como puntos como mínimo. Es la longitud mínima lo que le indicas, luego puede ser mayor lo que te devuelva.
+=== ls | grep -i ^[ce]......
+La palabra que busco empieza o por c o por e, y luego tiene tantos caractéres como puntos como mínimo. Es la longitud mínima lo que le indicas, luego puede ser mayor lo que te devuelva.
 
-    ls | grep [24]: busco una entrada que contenga o el 2 o el 4.
+=== ls | grep [24] 
+Busco una entrada que contenga o el 2 o el 4.
 
 [NOTE]
 Cuando escribo algo entre los corchetes se lee de forma individual.
 
-    ls | grep 24: si quisiese buscar un 24 lo pondría así.
+=== ls | grep 24 
+Si quisiese buscar un 24 lo pondría así.
 
-    ls | grep ^[a-fA-F]: que empiece por algo que sea de la "a" a la "f" o de la "A" a la "F". En este caso es válido también ls | grep -i [a-f]
+=== ls | grep ^[a-fA-F] 
+Que empiece por algo que sea de la "a" a la "f" o de la "A" a la "F". En este caso es válido también ls | grep -i [a-f]
 
-    ls | grep -i [aeiou]$: que termine en vocal. Que sería lo mismo que ls | grep [aeiouAEIOU]$
+=== ls | grep -i [aeiou]$ 
+Que termine en vocal. Que sería lo mismo que ls | grep [aeiouAEIOU]$
 
-    ls | grep -i [aeiou]...$: empezando por detrás, el cuarto es una vocal.
+=== ls | grep -i [aeiou]...$ 
+Empezando por detrás, el cuarto es una vocal.
 
-    ls | grep -i [aeiou][aeiou]: contiene dos vocales juntas, en cualquier posición.
+=== ls | grep -i [aeiou][aeiou] 
+Contiene dos vocales juntas, en cualquier posición.
 
-    ls | grep -i [aeiou][aeiou]*: una vocal y la segunda puede que no aparezca.
+=== ls | grep -i [aeiou][aeiou]* 
+Una vocal y la segunda puede que no aparezca.
 
-    ls | grep -i [aeiou][aeiou][aeiou]*: dos vocales obligatorias y la tercera puede que no aparezca.
+=== ls | grep -i [aeiou][aeiou][aeiou]* 
+Dos vocales obligatorias y la tercera puede que no aparezca.
 
-    La que está pegada al asterisco es opcional, puede que no aparezca ninguna vez.
+La que está pegada al asterisco es opcional, puede que no aparezca ninguna vez.
 
-    ls | grep -i ^[^a-e]: que NO empiece por ninguna letra de la a a la e.
+=== ls | grep -i ^[^a-e] 
+Que NO empiece por ninguna letra de la a a la e.
 
-
-    Dentro de los corchetes, el circunflejo ES NEGACIÓN
+Dentro de los corchetes, el circunflejo ES NEGACIÓN
     
+=== ls -a | grep "^\." 
+El punto hay que escaparlo para que no interprete que es un caracter cualquiera, sino que es un punto lo que buscamos.  SIEMPRE que escapemos algo, hay que meterlo entre comillas.
 
-    ls -a | grep "^\.": el punto hay que escaparlo para que no interprete que es un caracter cualquiera, sino que es un punto lo que buscamos.  SIEMPRE que escapemos algo, hay que meterlo entre comillas.
+=== ls -a | grep "^[^\.]" 
+Que no empiecen por punto
 
-    ls -a | grep "^[^\.]": que no empiecen por punto
-
-    ls | grep -i "\(tos\|tad\)": estoy buscando que tenga tos, o que tenga tad; el | no es un filtro, es un "o", por lo que hay que escaparlo; además hay que meterlo entre paréntesis para que sepa que es lo que buscamos, lo que pasa que hay que escapar también estos paréntesis, y debemos meterlo entre comillas porque está escapado; puede contener ambas, tanto tos como tad.
-
+=== ls | grep -i "\(tos\|tad\)"
+Estoy buscando que tenga tos, o que tenga tad; el | no es un filtro, es un "o", por lo que hay que escaparlo; además hay que meterlo entre paréntesis para que sepa que es lo que buscamos, lo que pasa que hay que escapar también estos paréntesis, y debemos meterlo entre comillas porque está escapado; puede contener ambas, tanto tos como tad.
 
 ___
 
-grep asir1 /etc/passwd: con esto nos trae la línea que queremos de nuestro usuario.
-grep -on asir1 /etc/passwd: nos dice en qué línea aparece asir1.
-grep asir1 /etc/passwd | cut -d: -f7: con este filtro sabremos con qué shell estamos trabajando.
+=== grep asir1 /etc/passwd 
+Con esto nos trae la línea que queremos de nuestro usuario.
 
-passwd: cambia la contraseña
+=== grep -on asir1 /etc/passwd 
+Nos dice en qué línea aparece asir1.
+La -o de output, hace que solo se muestre la salida de la parte que buscamos, y no toda la línea.
+La -n es la que se encarga de enumerar la línea en la que está.
 
-ls -l /etc/passwd
-ls -l /etc/group
-ls -l /etc/shadow: aquí, al contrario que en los anteriores, nos dice que pertenece al grupo shadow. Además tiene otros permisos.
+=== grep asir1 /etc/passwd | cut -d: -f7 
+Con este filtro sabremos con qué shell estamos trabajando.
 
-los tres permisos son escritura (w), lectura (r) y   (x).
+== passwd 
+Cambia la contraseña
 
-Los tres primeros caractéres pertenecen al propietario; los tres siguientes al grupo; los últimos a otros.
+== ls -l /etc/passwd
+Fijate en el usuario y grupo. Fíjate en los permisos.
 
-umask: visualizar la máscara que tenemos. 
+=== ls -l /etc/group
+FIjate en lo mismo...
+
+=== ls -l /etc/shadow 
+Y aquí, al contrario que en los anteriores, nos dice que pertenece al grupo shadow. Además tiene otros permisos.
+
+___
+
+== Permisos 
+Los tres permisos son escritura (w), lectura (r) y (x).
+
+El primer caracter indica el tipo de fichero que es, y los otros 9 los permisos.
+Los tres primeros caractéres de permisos pertenecen al propietario; los tres siguientes al grupo; los últimos a otros.
+
+----
+-rw-rw-r--
+||  |  | 
+||  |  ↓ 
+||  |  Permisos de otros
+||  ↓
+||  Permisos del grupo
+|↓
+|Permisos de usuario
+↓
+Tipo de fichero
+----
+
+=== umask
+Visualizar la máscara que tenemos. 
 
 La máscara se calcula sobre los ficheros:
 
+----
 rw-rw-rw-
 110110110
  6  6  6
+----
 
 Ese es el valor más alto que se le puede dar a un fichero, 666 (para directorio es 777).
 
+
+Imaginemos que queremos que los ficheros que creemos a partir de ahora tengan los permisos rw-r-----
+Vemos a qué número equivalen en octal nuestros permisos:
+
+----
 rw-r-----
 110100000
  6  4  0
+----
 
-Ahora al valor más alto le restamos el nuestro, y ese es nuestro número de máscara (026). 
+Ahora al valor más alto le restamos el nuestro, y ese es nuestro número de máscara (666 - 640 = +026+). 
 
 [NOTE]
 Una máscara SIEMPRE es un número par.
 
 
-umask 026: cambiamos a esa máscara.
-touch abc.txt: creamos el archivo abc.txt
-ls -l : vemos los permisos de abc.txt → -rw-r-----
+=== umask 026 
+Cambiamos a esa máscara.
+
+=== touch abc.txt 
+Creamos el archivo abc.txt
+
+=== ls -l
+Vemos los permisos de abc.txt → -rw-r-----
 
 
-mkdir adir: creamos un directorio
-ls -ld adir/: vemos los permisos de adir → drwxr-x--x
+[NOTE]
+Para calcular los permisos en un directorio el número máximo no es 666, es 777, que es al que hay que restar el valor de los permisos que necesitemos.
 
+=== mkdir adir
+Creamos un directorio
 
-Tan pronto cerremos la terminal, la máscara se borra, porque la máscara está en un . fichero de configuración.
-
-En caso de querer dejarla fija:
-
-
-ls -la: vemos ficheros como el .bash_history, que es donde se guarda el historial de comandos para cuando usemos el comando history. .bashrc y .profile guardan tipo de letra, color de fondo de la terminal...
-
-less .bashrc → los valores en mayúscula con un = después son las variables del sistema. Cuando hay # significa comentario.
-
-vi profile → vamos hasta la máscara, descomentamos la línea donde está la máscara, la modificamos por 026 y guardamos con :wq. 
-
-exit
-
-abrimos de nuevo; y verificamos:
-
-touch abcd.txt
-ls -l abcd.txt: los permisos son -rw-rw-r--
-
-chmod: cambio en los permisos.
-
-Hay dos modos de cambiar los permisos, con octal o con forma simbólica.
-
-chmod g+w,o-w dos.txt: le agregas permiso de escritura y le quitas el de escritura.
-
-imaginando un fichero con los permisos r--r----- en el que vemos los permisos, podría hacerse con el modo octal:
-
-chmod 660 dos.txt
-
-chmod 770 dir: esto es cambiar permisos a un directorio con modo octal.
-
-chmod -R 660 dir/*: para los directorios (para los DIRECTORIOS) tengo una recursiva, -R. Cambia todos los permisos de lo que contiene el directorio.
+=== ls -ld adir/
+Vemos los permisos de adir → drwxr-x--x
 
 ___
 
-== /bin/su
+Tan pronto cerremos la terminal, la máscara se borra, porque la máscara está en un . fichero de configuración.
+
+== En caso de querer dejarla fija:
+
+
+=== ls -la
+Vemos ficheros como el _.bash_history_, que es donde se guarda el historial de comandos para cuando usemos el comando history. _.bashrc_ y _.profile_ guardan tipo de letra, color de fondo de la terminal...
+
+=== less .bashrc
+Los valores en mayúscula con un = después son las variables del sistema. Cuando hay # significa comentario.
+
+=== vi .profile
+Vamos hasta la máscara (#umask xxx), descomentamos la línea donde está la máscara, la modificamos por 026 y guardamos con :wq. 
+
+=== exit
+Salimos de la terminal.
+
+Abrimos de nuevo; y verificamos:
+
+=== touch abcd.txt
+Creamos un archivo de prueba.
+
+=== ls -l abcd.txt 
+Nos fijamos en que los permisos sean los que buscábamos.
+
+== chmod 
+Cambio en los permisos.
+
+Hay dos modos de cambiar los permisos, con octal o con forma simbólica.
+
+=== chmod g+w,o-w dos.txt
+Le agregas permiso de escritura al grupo y le quitas el de escritura a otros.
+
+imaginando un fichero con los permisos r--r----- en el que vemos los permisos, podría hacerse con el modo octal:
+
+=== chmod 660 dos.txt
+
+=== chmod 770 dir
+Esto es cambiar permisos a un directorio con modo octal.
+
+=== chmod -R 660 dir/*
+Para los directorios (para los DIRECTORIOS) tengo una recursiva, -R. Cambia todos los permisos de lo que contiene el directorio.
+
+___
+
+== ls -l /bin/su
 
 En bin están los comandos, el comando su se utiliza para cambiar de cuentas de usuario.
 
@@ -949,20 +1021,33 @@ En vez de _rwx_, tienen _sst_.
 
 En este caso la "s" la tiene el usuario propietario, es un *permiso de sustitución*; en ese fichero, por unos segundos, va a sustituir al root, porque necesita hacer una comprobación en el fichero "shadow", por lo que por unos segundos hace esa lectura en ese fichero para comprobar que la contraseña es correcta.
 
-Mirar diferencia entre s y S.
+La diferencia de s y S es que en s, debajo hay un permiso de ejecución, y en S no existe ese permiso de ejecución.
 
 == /tmp
 
 Este es el directorio temporal. Cada app que abrimos crea ficheros temporales, que al cerrar el programa, se destruyen. Si guardamos cosas en este directorio, al reiniciar el sistema, se borran. Tiene todos los permisos y además, en la última posición, tiene una "t".
 
-Mirar diferencia entre t y T.
+La diferencia entre t y T es que la t tiene debajo un permiso de ejecución, mientras que la T no lo tiene.
 
 La t es lo que se conoce como sticky bit.
-BUscar qué es.
+Explicación según chatgpt:
 
-Limita las escrituras, puede ser sobre fichero o directorio, y significa que pueden modificar pero no eliminar.
+[source, ChatGPT]
+----
+El "sticky bit" (bit pegajoso o bit de restricción) es un permiso especial que se puede aplicar a directorios en sistemas Unix y Linux. Cuando el sticky bit está configurado en un directorio, restringe la capacidad de usuarios para eliminar o renombrar archivos en ese directorio, a menos que sean el propietario del archivo o el propietario del directorio.
 
-Es útil por ejemplo si compartes una carpeta con un grupo, para que puedan editarlo pero no lo eliminen.
+En un directorio con el sticky bit activado:
+
+Los usuarios pueden eliminar o renombrar sus propios archivos dentro del directorio sin restricciones.
+
+Sin embargo, no pueden eliminar o renombrar archivos de otros usuarios, a menos que sean el propietario del directorio.
+
+El sticky bit se representa en la notación simbólica con el carácter t o T en lugar de x para el bit de ejecución en otros:
+
+t: Indica que el sticky bit está activado y el bit de ejecución en otros también está configurado.
+
+T: Indica que el sticky bit está activado, pero el bit de ejecución en otros no está configurado.
+----
 
 ___
 
@@ -983,181 +1068,257 @@ y todos juntos:
 chmod u+s,g+s,o+t nombre.txt
 
 
-chmod o+w,+t nombre.txt: añades los dos permisos a otro
+chmod o+w,t nombre.txt: añades los dos permisos a otro
 
 https://www.ionos.es/digitalguide/servidores/know-how/asignacion-de-permisos-de-acceso-con-chmod/
 
 
 ___
-comando cuando estamos conectados (lo de remmina)
+== Comandos cuando estamos conectados (lo de remmina)
 
-w: de who, muestra quién está conectado
+=== w 
+De _who_, muestra quién está conectado.
+Tenemos tambien el who.
 
-tenemos tambien el who
+=== who -T 
+El signo + o - nos muestra qué terminales pueden recibir mensajes con el wall; las que estan con + son las que sí.
 
-who -T: el signo + o - nos muestra qué terminales pueden recibir mensajes con el wall; las que estan con + son las que si
+=== who -q
+Cuántos usuarios están conectados a la terminal.
 
-who -q: cuántos usuarios están conectados a la terminal.
+=== who | grep pepito
+Comprobar si pepito está conectado.
 
-who | grep pepito: comprobar si pepito está conectado.
+=== who | grep ^a
+Comprobar los usuarios conectados que empiezan por a.
 
-who | grep ^a: comprobar los usuarios conectados que empiezan por a.
+=== who | grep pts/7 
+Qué usuario está en la pts 7.
+(_pts_ significa pseudo-terminal slave).
 
-who | grep pts/7: qué usuario está en la pts 7
+=== who | grep 192.168.1.42 
+Ver quién está conectado con esa IP.
 
-who | grep 192.168.1.42. ver quién está conectado con esa IP.
+=== last -2
+Los dos últimos en conectarse. Puede ponerse el nº que se quiera.
 
-last -2: los dos últimos en conectarse. Puede ponerse el nº que se quiera.
+=== wall 
+Comando para mandar un mensaje a todos
 
-wall: comando para mandar un mensaje a todos
+=== mesg 
+Si sale _y_, es que sí puede recibir interrupciones del wall. 
 
-mesg: si sale _y_, es que sí puede recibir interrupciones del wall; 
+=== mesg n 
+Apagamos el wall para que no me lleguen mensajes del wall.
 
-mesg n: apagamos el wall para que no me lleguen mensajes del wall
+=== mesg y
+Encendemos para poder recibir mensajes del wall.
 
-mesg y: encendemos para poder recibir mensajes
+=== mail
+La primera vez puede salir que no tengo correo.
 
-mail: la primera vez puede salir que no tengo correo
+=== mail nombredeusuario
+Enviar un mail a alguien; para enviar es _control+d_.
+La _q_ para salir del mail
 
-mail nombredeusuario: enviar un mail a alguien; para enviar es control+d
+=== ls -l /home
+La configuración aquí es distinta, están las personas agrupadas por letra, salvo la cuenta principal que está aparte.
 
-la _q_ para salir del mail
-
-ls -l /home: la configuración aquí es distinta, están las personas agrupadas por letra, salvo la cuenta principal que está aparte.
-
-cd /home/asir1: permiso denegado
-
-192.168.1.90 → nada esto no es para estudiar es solo una nota
-
-tty: ver donde está mi pseudoterminal, la mía es la 17.
-
-whoami: quién soy o con qué nombre me he logueado. Útil para cuando manejo varias cuentas a la vez.
-
-ls
-
+=== cd /home/asir1 
+Permiso denegado
 
 ___
+192.168.1.90 → nada esto no es para estudiar es solo una nota que no se donde poner.
+___
+
+=== tty 
+Ver donde está mi pseudoterminal, la mía es la 17.
+
+=== whoami 
+Quién soy o con qué nombre me he logueado. Útil para cuando manejo varias cuentas a la vez.
+
+___
+Lo de los permisos especiales y su valor en octal:
 
 https://blog.alcancelibre.org/staticpages/index.php/permisos-sistema-de-archivos
-
 ___
 
+Esto es un repaso de lo ya dado:
 
-para buscar cinco caracteres hay que hacerlo de diferentes maneras en ls que en grep
+Para buscar cinco caracteres hay que hacerlo de diferentes maneras en *ls* que en *grep*.
 
-ls ?????
-grep .....
+* ls ?????
+* grep .....
 
-y el asterisco significa diferente
+Y el asterisco tiene un significado diferente:
 
-ls ?????*
-grep .....*
+* ls ?????* 
+* grep .....*
 
-se supone que estos dos son los errores mas grandes y fijo q algo asi cae en el examen
+Se supone que estos dos son los errores mas grandes y fijo q algo asi cae en el examen
 
 
 ls ^???$ → esto es INCORRECTO porque no funciona con el ls, el ^ y el $ son para el grep
 
-el -i en el grep es para que no distinga may. y min., pero en el ls son los inodos.
+El -i en el grep es para que no distinga may. y min., pero en el ls son los inodos.
 
 ___
 
-find /home: nos va a permitir encontrar o buscar cosas. find + ruta a partir de donde vamos a buscar
+== find /home 
+Nos va a permitir encontrar o buscar cosas: _find + ruta a partir de donde vamos a buscar_.
 
-find ~ -atime 7: aquellos que fueron accedidos, por ejemplo los que leí, desde hace 7 días; el 7 puede ser otro número obviamente. a de accedido.
+=== find ~ -atime 7
+Aquellos que fueron accedidos (por ejemplo, los que leí) desde hace 7 días; el 7 puede ser otro número obviamente. a de accedido.
 
-find ~ -atime -7: los de menos de 7 días.
+=== find ~ -atime -7
+Los accedidos de menos de 7 días.
 
-find ~ -atime +10: aquellos de más de diez días.
+=== find ~ -atime +10 
+Aquellos de más de diez días.
 
-find ~ -atime 0: en las últimas 24 horas.
+=== find ~ -atime 0
+En las últimas 24 horas.
 
-find ~ -mtime 4: modificado en los últimos 4 días. m de modificado.
+=== find ~ -mtime 4
+Modificado en los últimos 4 días. m de modificado.
 
-find ~ -name "d*": sigue las mismas reglas que usa el ls. aquí le pedimos que busque lo que empiece por d. Para que termine por d, "*d".
+=== find ~ -name "d*" 
+(Sigue las mismas reglas que usa el ls). aquí le pedimos que busque lo que empiece por d. Para que termine por d, "_*d_".
 
 [NOTE]
 Cuando hay un caracter especial como un *, hay que ponerlo entre comillas
 
-find /etc -name "passwd": para buscar nombre del fichero que se llame passwd
 
-find /etc -iname "passwd": sin importar may. y min.
+=== find /etc -name "passwd"
+Para buscar nombre del fichero que se llame passwd
 
-find ~ -iname "passwd" 2>/dev/null: así no nos da los permisos denegados, los manda a la papelera.
+=== find /etc -iname "passwd" 
+Sin importar may. y min -ignore-case-.
 
-find /etc -user felipe: buscar lo que le pertenece a un usuario.
+=== find ~ -iname "passwd" 2>/dev/null 
+Así no nos da los permisos denegados, los manda a la papelera.
 
-find /etc -group nombregrupo: buscar lo que pertenece a un grupo de usuarios. Está bien añadirle el 2>/dev/null.
+=== find /etc -user felipe
+Buscar lo que le pertenece a un usuario.
 
-find . -group asir1 -user asir1 -iname "f*": tiene que cumplir todas las condiciones, que pertenezca al grupo asir1, al usuario asir1 y el nombre del archivo empiece por f. Se tienen que cumplir las tres (AND).
+=== find /etc -group nombregrupo
+Buscar lo que pertenece a un grupo de usuarios. Está bien añadirle el 2>/dev/null.
 
-find . -iname "f*" -type f: el type es el tipo de archivo, en este caso es un fichero (f). Se puede poner l (enlace simbólico), 
+=== find . -group asir1 -user asir1 -iname "f*" 
+Tiene que cumplir *TODAS* las condiciones: que pertenezca al grupo asir1, al usuario asir1 y el nombre del archivo empiece por f. Se tienen que cumplir las tres (_AND_).
 
-find . -type f -nouser 2>/dev/null: un fichero que no tenga propietario.
-find . -type f -nogroup 2>/dev/null: un fichero que no tenga grupo.
+=== find . -iname "f*" -type f
+El type es el tipo de archivo, en este caso es un fichero (_f_). Se pueden poner otros dependiendo de lo que estemos buscando:
 
-Cuando eliminas un grupo, o usuario...el sistema pone un número largísimo al propietario de los archvios que pertenecían a ese grupo o usuario (o queda en blanco), y ahora no tienen grupo o usuario. Por eso hay archivos sin propietario o grupo.
+----
+f: Archivo regular (fichero ordinario).
+d: Directorio.
+l: Enlace simbólico (si queremos el duro hay que usar -links).
+c: Dispositivo de caracteres.
+b: Dispositivo de bloques.
+p: Tubería con nombre (también conocida como FIFO).
+s: Socket.
+----
 
-find . -type f -size 4c: un archivo cuyo tamaño sea 4 caracteres
+=== find . -type f -nouser 2>/dev/null
+Un fichero que no tenga propietario.
+
+=== find . -type f -nogroup 2>/dev/null 
+Un fichero que no tenga grupo.
+
+Cuando eliminas un grupo, o usuario...el sistema pone un número larguísimo al propietario de los archivos que pertenecían a ese grupo o usuario (o queda en blanco), y ahora no tienen grupo o usuario. Por eso hay archivos sin propietario o grupo.
+
+=== find . -type f -size 4c
+Un archivo cuyo tamaño sea 4 caracteres
     4b: 4 bloques
     1G: 1 giga
     1k: 1 kilo
 
     Puede ser +1k, -1G... igual que el -atime. El = es sin nada.
 
-find . -type f -size +1k -size -10k: para buscar en un rango de tamaño hay que usar el -size dos veces.
+Aquí algunas unidades que puedes pedirle al -size:
 
-    el -size 0 es igual que usar -empty, buscar un archivo vacío:
+----
+c: Bloques de bytes.
+k: Kilobytes.
+M: Megabytes.
+G: Gigabytes.
+w: Palabras (considerando que cada palabra es de 2 bytes, pero puede variar).
+b: Bloques de 512 bytes (unidad predeterminada).
+B: Bytes.
+p: Bloques de 1024 bytes (kilobytes).
+E: Exabytes.
+Z: Zettabytes.
+----
 
-find - -type f -empty
+=== find . -type f -size +1k -size -10k
+Para buscar en un rango de tamaño hay que usar el -size dos veces.
+
+El -size 0 es igual que usar -empty.
+
+=== find ~ -type f -empty
+Buscar un archivo vacío.
 
 
-find - -type f -executable 2>/dev/null: fichero ordinario que sea ejecutable (que tenga permisos de ejecución).
+=== find ~ -type f -executable 2>/dev/null 
+Fichero ordinario que sea ejecutable (que tenga permisos de ejecución).
 
-find /var -perm -1000: perm de permisos. Usar sin el -type, para que funcione. No deberían ir juntos. Con un permiso -1000 busco que tenga un sticky bit. Puede ir el numerito con +, con - o sin nada. Los 0s los ignora.
+=== find /var -perm -1000 
+_perm_ de permisos. Usar sin el -type, para que funcione. *No deberían ir juntos*. Con un permiso -1000 busco que tenga un sticky bit. Puede ir con - o sin nada. Los 0s los ignora.
 
-find /var -perm 777: entradas que tengan esos permisos 777, por lo general con 777 son scripts o executables.
+* perm 666: Busca archivos con EXACTAMENTE permisos 666.
+* perm -666: BUsca archivos con mínimo permisos 666, pero puede tener otros adicionales.
+
+=== find /var -perm 777
+Entradas que tengan esos permisos 777, por lo general con 777 son scripts o executables.
 
 
-___
+=== find . -type f -size -10k -o -empty 
+El -o es un _OR_, va a traer los archivos menores de 10k y los vacíos.
 
-find . -type f -size -10k -o -empty: el -o es un OR, va a traer los archivos menores de 10k y los vacíos.
+=== find . -type f -empty -perm 664
+Así es el AND, que estén vacíos Y tengan permisos 664. Así va a entrar en rutas, si solo quiero que me busque archivos del primer nivel y no entre en todos los subdirectorios, hay que limitar la profundidad, agregando *después de la ruta* -maxdepth 1.
+No tiene más, solo es que para el _AND_ con no poner nada ya vale, es el por defecto.
 
-find . -type f -empty -perm 664: así es el AND, que estén vacíos Y tengan permisos 664. Así va a entrar en rutas, si solo quiero que me busque archivos del primer nivel y no entre en todos los subdirectorios, hay que limitar la profundidad, agregando *después de la ruta* -maxdepth 1.
-
-find . -maxdepth 1 -type f -empty -perm 664: la profundidad OBLIGATORIAMENTE tiene que estar después de la ruta. Profundidad 1 es el directorio actual.
+=== find . -maxdepth 1 -type f -empty -perm 664 
+La profundidad *OBLIGATORIAMENTE* tiene que estar después de la ruta. Profundidad 1 es el directorio actual.
 
 Si pongo -maxdepth 2 me llegará hasta el nivel 2, pero me incluye el 1 y el 2, en caso de que solo quiera el segundo nivel:
 
-find . -mindepth 2 -maxdepth 2 -type f -empty -perm 664: así afinamos más. Como se dijo antes, la profundidad siempre va después de la ruta.
+=== find . -mindepth 2 -maxdepth 2 -type f -empty -perm 664
+Así afinamos más. Como se dijo antes, la profundidad siempre va después de la ruta.
 
 
-find . -maxdepth 1 ! -type f -empty -perm 664: el ! es negación, es decir, que no sean ficheros, pueden ser directorios. Solamente niega el tipo. Siempre hay un espacio después de la !. Si quisiese que afectase a todos, tendría que poner ! delante de todos.
+=== find . -maxdepth 1 ! -type f -empty -perm 664
+El ! es negación, es decir, que no sean ficheros, pueden ser directorios. Solamente niega el tipo. Siempre hay un espacio después de la !. Si quisiese que afectase a todos, tendría que poner ! delante de todos.
 
-find . -maxdepth 1 -type f -empty -name "[rR]*"
-find . -maxdepth 1 -type f -empty -iname "r*": es lo mismo que lo de arriba, con el iname no discriminar entre may. y min, con el name a secas puedes pedirle que empiece o por r o por R que es lo mismo.
+=== find . -maxdepth 1 -type f -empty -name "[rR]*"
 
-___
+=== find . -maxdepth 1 -type f -empty -iname "r*" 
+Es lo mismo que lo de arriba, con el _-iname_ no discriminar entre may. y min, con el name a secas puedes pedirle que empiece o por r o por R, que es lo mismo.
 
-find . -maxdepth 1 -type f -empty -name "[rR]*" -exec rm {} \;: después del -exec siempre va a ir un comando, que es el que queremos que se ejecute. En este caso va a borrar todo lo que está entre las llaves, y en este caso es la lista que ha encontrado el find. Tenemos que poner punto y coma para señalar donde acaba lo del -exec, pero como por lo general el ; en linea de comandos se usa para separar un comando de otro, hay que escaparlo.
+=== find . -maxdepth 1 -type f -empty -name "[rR]*" -exec rm {} \;:
+Después del -exec siempre va a ir un comando, que es el que queremos que se ejecute. En este caso va a borrar todo lo que está entre las llaves, y en este caso es la lista que ha encontrado el find. Tenemos que poner punto y coma para señalar donde acaba lo del -exec, pero como por lo general el ; en linea de comandos se usa para separar un comando de otro, hay que escaparlo.
 
-find . -maxdepth 1 -type f -empty -name "[rR]*" -exec chmod 666 {} \; 2>/dev/null: aquí le pedimos que cambie los permisos a 666 a los arvchivos que encuentre con el find, pero si alguno no te deja cambiarlo que no lo muestre y lo mande al devnull ese.
+=== find . -maxdepth 1 -type f -empty -name "[rR]*" -exec chmod 666 {} \; 2>/dev/null 
+Aquí le pedimos que cambie los permisos a 666 a los archivos que encuentre con el find, pero si alguno no te deja cambiarlo que no lo muestre y lo mande al devnull ese.
+
+=== find . -maxdepth 1 -type f -size +0 -name "r*" -exec ls {} \; | head -1
+El _-size +0_ es lo mismo que _! -empty_; quiero que me haga un ls de esa búsqueda. Y luego le metemos el filtro head -1 para que muestre solo el primero que encontró, es el primero de lo que está en las {}.
 
 
-___
-
-find . -maxdepth 1 -type f -size +0 -name "r*" -exec ls {} \; | head -1: el -size +0 es lo mismo que ! -empty; quiero que me haga un ls de esa búsqueda. Y luego le metemos el filtro head -1 para que muestre solo el primero que encontró, es el primero de lo que está en las {}.
-
-
-find . -maxdepth 1 -type f -size +0 -name "r*" -exec head -1 ls {} \;: esto en cambio es diferente al anterior, porque primero hace el head. Va a ejecutar el head tantas veces como ficheros haya encontrado, con la primera linea de cada fichero.
+=== find . -maxdepth 1 -type f -size +0 -name "r*" -exec head -1 ls {} \;
+Esto en cambio es diferente al anterior, porque primero hace el head. Va a ejecutar el head tantas veces como ficheros haya encontrado, con la primera linea de cada fichero.
 
 
 Esto pasa con el head, con el tail...alguno más por ahí.
 ___
 
-find / -maxdepth 1 -links +3 -exec ls -l {} \;: el error más común es poner link en singular, pero es *links*. Buscar lo que es porque no lo sé. Creo que pone el número de enlaces que tiene cada fichero o algo así. Puede ser +3, -3, 3... con el número que sea.
+=== find / -maxdepth 1 -links +3 -exec ls -l {} \;
+El error más común es poner link en singular, pero es *links*. La opción -links en el comando find se utiliza para buscar archivos basándose en el número de enlaces duros asociados a un archivo. Puede ser +3, -3, 3... con el número que sea.
 
-find / -maxdepth 1 -links +3 -exec ls -l {} \; > informe.raiz: así lo guardamos.
+=== find / -maxdepth 1 -links +3 -exec ls -l {} \; > informe.raiz
+Así lo guardamos.
 
 Podemos guardarlo sin erroreS: find / -maxdepth 1 -links +3 -exec ls -l {} \; 2>/dev/null > informe.raiz
 
@@ -1169,14 +1330,13 @@ El enlace duro si lo queremos buscar es un -type f, a diferencia del enlace blan
 
 ___
 
-alias
+== alias
 Nombres que le ponemos a algo, para no olvidarnos, por ejemplo, en vez de estar todo el rato poniendo _clear_, me creo un alias más corto y lo uso cuando quiera ejecutarlo.
 
-alias c="clear"
-
+=== alias c="clear"
 Una vez cierre la consola, cuando vuelva a abrirla ya no estarán, se habrán borrado.
 
-Existen ya unois alias predefinidos por Ubuntu, cuando hacemos un less ~/.bashrc se pueden ver, casi al final, algunos. Por ejemplo, hay un alias _la_ para el comando _ls-A_.
+Existen ya unos alias predefinidos por Ubuntu, cuando hacemos un less ~/.bashrc se pueden ver, casi al final, algunos. Por ejemplo, hay un alias _la_ para el comando _ls-A_.
 
 Si editamos este fichero y añadimos nuestros alias personalizados, sí que quedarán permanentemente guardados. Si no quiero utilizar alguno, o bien lo elimino, o bien lo comento con # (es lo más sensato).
 Habrá que reiniciar la terminal porque el fichero .bashrc se carga al abrir la terminal.
@@ -1185,20 +1345,20 @@ Habrá que reiniciar la terminal porque el fichero .bashrc se carga al abrir la 
 Lo que va entre `` sería como una variable. Es el acento de la derecha de la P.
 
 
-== unalias contar
+=== unalias contar
 Eliminar el alias. Se elimina el de memoria, si lo creamos editando el archivo .bashrc no se eliminaría con este comando, habría que ir al archivo para eliminarlo.
 
-== alias vs="pwd; id; echo hola"
+=== alias vs="pwd; id; echo hola"
 Se puede guardar un alias con comandos concatenados. Nos haría los tres comandos al ejecutar el alias.
 
 ___
 
-Variables de usuario
+== Variables de usuario
 
-== nombre="Felipe"
+=== nombre="Felipe"
 Se declara una variable.
 
-== echo $nombre
+=== echo $nombre
 Visualizamos el nombre de la variable.
 
 Puede usarse un echo con el texto que sea y meterle las variables que quieras por medio.
@@ -1221,24 +1381,24 @@ Así sí, la variable queda borrada.
 
 ___
 
-Variables de entorno
+== Variables de entorno
 
-== set | less
+=== set | less
 ves variables de entorno y scripts
 
 
-== env | less
+=== env | less
 Este solo las variables de entorno; env de enviroment.
 
 A diferencia de las variables del usuario, las variables del sistema están en mayúsculas. 
 
-== echo $HOME
+=== echo $HOME
 Nos mostraría nuestro home.
 
-== set | grep ^HOME
+=== set | grep ^HOME
 Buscar la variable HOME.
 
-== env | grep ^HOME
+=== env | grep ^HOME
 Buscar la variable HOME también.
 
 == echo $MAIL
@@ -1275,8 +1435,7 @@ este comando tiene también una variable de entorno que hace lo mismo: $HOSTNAME
 
 == echo $OLDPWD
 Me dice el último directorio donde estuve.
-
-
+u
 == cd $OLDPWD
 Te manda al último directorio donde estuve.
 
@@ -1286,7 +1445,7 @@ Que se vaya al último directorio donde estuve y cree un fichero; si la primera 
 Si lo que no puede hacer es la segunda parte, la primera sí que la hace igualmente.
 
 == echo Hola || echo Adios
-El || es un OR, o se cumple la primera o se cumple la segunda.
+El || es un _OR_, o se cumple la primera o se cumple la segunda.
 Si la primera se ejecuta, la segunda ya no se ejecuta; si no se cumple la primera, se cumplirá la segunda si puede hacer. Si no pues ninguna xd.
 
 [NOTE]
