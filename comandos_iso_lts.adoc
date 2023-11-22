@@ -170,6 +170,8 @@ Lista elementos que empiecen por los CHAR(S) dentro de un rango. Es sensible a m
     
     ▪ Ejemplo: ls -d [A - EI]* → Buscará todo lo que acaba con una “A” hasta una “E” o acabe en una “I”
 
+=== ls- s 
+Muestra los bloquess
 
 [NOTE]
 Los parámetros se pueden combinar; por ejemplo: *ls -la*
