@@ -1,0 +1,57 @@
+h1 {
+    border-style: double;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+.tomate {
+    background-color: tomato;
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.ancho-pagina {
+    border-style: solid; 
+    border-bottom-left-radius: 10px;
+    margin-top: 15px;
+    height: 100px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.agua {
+    background-color: aqua;
+    border-style: solid;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.trigo {
+    background-color: wheat;
+    border-style: solid;
+    margin-top: 15px;
+    font-weight: bold;
+    height: 100px;
+    width: 100px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+}
+
+.respirar {
+    margin: 25px;
+    padding: 25px;
+    border-style: solid;
+    border-radius: 35px;
+    font-weight: bold;
+    border-bottom-color: green;
+    border-right-color: green;
+}
+
+
+}

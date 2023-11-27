@@ -1,0 +1,26 @@
+.heading {
+    background-color: #5c94c5;
+    color: #d9ceb2;
+    font-family: "Arial";
+    text-align: center;
+    padding: 15px;
+}
+
+.boton {
+    background-color: #f4be29;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.parrafo {
+    color: white;
+    font-family: "Arial";
+    padding: 15px;
+}
+
+body {
+    background-image: url("https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

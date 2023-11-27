@@ -1,0 +1,35 @@
+html {
+    font-family: "Arial";
+    font-size: 15px;
+}
+
+h1 {
+    padding: 1.15rem;
+    margin: 1.15rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.uno {
+    text-transform: capitalize;
+    text-indent: 1.5rem;
+    line-height: 1.25rem;
+}
+
+div {
+    margin: 0 auto; 
+    line-height: 100px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: wheat;
+    padding: 30px;
+    border: 25px dashed green;
+    box-sizing: border-box;
+}
+
+/* para calcular cuantos px ocupa el div, habría que sumar el ancho, alto, el padding, y el borde, esto se arregla con la propiedad box-sizing: border-box; con ella, independientemente del borde, el padding y demás, el tamaño del div sea el que estipulas en el ancho y el alto; el paddin lo que haría ahora sería estrujar el texto y hacerlo más pequeño*/
+
+
+
+

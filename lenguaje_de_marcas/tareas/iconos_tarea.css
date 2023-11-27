@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300;700&family=Noto+Sans+TC:wght@100&family=Roboto:ital,wght@0,300;1,100&display=swap');
+
+h1 {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+h2 {
+    font-family: 'Marhey', sans-serif;
+
+}
+
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");

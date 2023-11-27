@@ -1,0 +1,31 @@
+.titulo {
+    color: #6D8CA3;
+    background-color: #52697A;
+    font-family: "Arial";
+    text-align: center;
+    padding: 15px;
+}
+
+.boton {
+    background-color: #1E81CC;
+    color: #A1CDF0;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.parrafo {
+    color: #374652;
+    font-family: "Arial";
+    padding: 15px;
+}
+
+body {
+    background-color: #A1CDF0;
+}
+
+img {
+    width: 600px;
+    height: auto;
+    border-style: solid;
+    margin-left: 100px;
+}

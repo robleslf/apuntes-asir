@@ -1,0 +1,47 @@
+body {
+    background-color: #4f86ce;
+    font-family: "Monospace";
+}
+
+
+.columna {
+    margin-top: 100px;
+    display: inline-block;
+    border: 1px groove violet;
+    background-color: rgb(252, 201, 107);
+    position: relative;
+    float: left;
+    width: 33%;
+    overflow: auto;
+    max-height: 600px;
+}
+
+
+.encabezado {
+    background-color: rgb(80, 200, 255);
+    position: fixed;
+    padding: 10px;
+    z-index: 3;
+    width: 97.5%;
+    text-align: center;
+    color: bisque;
+}
+
+
+
+
+#ancelotti {
+    width: 100px;
+    height: auto;
+    float: left;
+}
+
+#boton {
+    border: 2px red solid;
+    color: red;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: yellow;
+}
+

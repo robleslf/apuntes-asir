@@ -1,0 +1,13 @@
+h1 {
+    color: cornflowerblue;
+    text-align: center;
+    border: 10px groove rgb(204, 33, 238);
+    padding: 10px;
+    background: linear-gradient(rgb(196, 196, 252), rgb(252, 172, 186));
+}
+
+body {
+    background-image: url("https://i.stack.imgur.com/SvWWN.png");
+    background-attachment: fixed;
+    background-size: cover;
+   }

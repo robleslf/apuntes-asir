@@ -1,0 +1,10 @@
+h1 {
+    border: 5px dotted red;
+    text-align: center;
+}
+
+p {
+    color: steelblue;
+    font-family: "Arial", "Helvetica", "sans-serif";
+}
+

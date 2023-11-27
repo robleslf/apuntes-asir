@@ -1,0 +1,25 @@
+
+.parent {
+    display: inline-block;
+    border: 2px dotted ;
+}
+
+.box {
+    display: inline-block;
+    background-color: red;
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+}
+
+#dos {
+    top: 20px;
+    left: 20px;
+    background-color: green;
+    position: relative;
+}
+
+#ancelotti {
+    width: 100px !important;
+    height: auto;
+}

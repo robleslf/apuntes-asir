@@ -1,0 +1,8 @@
+= CSS
+
+CSS son las siglas de hojas de estilo en cascada.
+
+Es el lenguaje que nos va a permitir añadir estilos a nuestras páginas web.
+
+Con HTML hacíamos el esqueleto, y ahora lo vamos a poner bonito.
+

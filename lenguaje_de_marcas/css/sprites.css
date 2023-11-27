@@ -1,0 +1,52 @@
+#sprites {
+    background-color: steelblue;
+    width: 200px;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+#sprites ul {
+    display: block;
+    list-style: none;
+    padding: 0px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: orange;
+    max-height: 36px;
+}
+
+#sprites ul li {
+    display: inline-block;
+}
+
+#sprites ul li a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url("https://1.bp.blogspot.com/-CLqcvZtBWCQ/U_oDeDpK-RI/AAAAAAAAA9U/PR7RwGKarOE/s1600/sprite.png");
+    float: left;
+    background-color: grey;
+    margin: 4px;
+    border: 2px solid white;
+    transition: all 1s ease;
+}
+
+#sprites ul li a.Facebook {
+    background-position: 0px 0px;
+}
+
+#sprites ul li a.Mail {
+    background-position: -96px 0px;
+}
+
+#sprites ul li a.RSS {
+    background-position: -72px 0px;
+}
+
+#sprites ul li a:hover {
+    background-color: black;
+    border: 2px black;
+    transform: rotate(360deg);
+    border-radius: 26px;
+}

@@ -1,0 +1,14 @@
+* {
+    background-color: #8AA899;
+    font-family: "Arial";
+}
+
+.columna {
+    display: inline-block;
+    background-color: wheat;
+    border: 1px dotted;
+    position: relative;
+    float: left;
+    width: 33%;
+}
+
