@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+.parent {
+    border: 3px solid rgb(109, 120, 184);
+    box-sizing: border-box;
+    width: 200px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: rgb(109, 120, 184);
+}
+
+.box {
+    background-color: antiquewhite;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(109, 120, 184);
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Salsa";
+    width: 194.3px;
+    height: 175px;
+    align-content: stretch;
+}
+
+#titulo {
+    flex-grow: 1;
+}
+
+
+#foto {
+    flex-grow: 0;
+}
+
+#tres {
+    flex-grow: 3;
+}
+
+#cuatro {
+    flex-grow: 4;
+}
+
+img[alt="Urraca estudiando el paisaje"] {
+    height: 110px;
+    text-align: center;
+    margin-top: 20px;
+    border: 3px rgb(192, 211, 247) solid;
+}

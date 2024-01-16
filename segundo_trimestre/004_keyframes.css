@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url(https://cdn.getyourguide.com/img/location/53bffc573d6bc-m1403099683.jpg/49.webp);
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.floor {
+    position: absolute;
+    top: 590px;
+    width: 100%;
+    border: 20px solid;
+
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-image: url(https://www.icons.com/media/catalog/product/cache/a96918c7a34e3adbc471d6a40dca14fe/i/c/icfib1-_-filippo-inzaghi-signed-adidas-fevernova-football.png);
+    background-repeat:round;
+    border-radius: 50%;
+    animation: rebota 0.75s ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rebota {
+    from {transform: translate3d(0,0,0);}
+    to {transform: translate3d(0,500px,0);}
+}

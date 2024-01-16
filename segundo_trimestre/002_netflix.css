@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+    background-color: black;
+    font-family: "Roboto";
+}
+
+h1 {
+    
+}
+
+.show {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.25rem;
+    max-width: 75%;
+    margin: auto;
+}
+
+.hover {
+    transition: 0.5s ease;
+}
+
+.hover:hover {
+    transform: scale(1.1);
+}
